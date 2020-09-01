@@ -1,4 +1,4 @@
-# Hack-a-Sat 2020 Qualifier #
+# Hack-a-Sat 2020 Final #
 
 This repository contains the open source release for the Hack-a-Sat 2020
 final event.
