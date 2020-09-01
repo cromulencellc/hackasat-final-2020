@@ -1,0 +1,7 @@
+source "https://rubygems.org"
+
+require "yaml"
+gem "sinatra"
+gem "sequel"
+gem "pg"
+gem "bcrypt"

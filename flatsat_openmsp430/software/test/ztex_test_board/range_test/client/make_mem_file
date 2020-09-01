@@ -1,0 +1,5 @@
+#!/bin/bash
+
+msp430-objcopy -O ihex range_client.elf range_client.ihex
+./ihex2mem.tcl -ihex range_client.ihex -out range_client.mem -mem_size 16384
+

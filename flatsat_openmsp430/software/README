@@ -1,0 +1,5 @@
+Setting up MSP430 GCC and development tools (on Ubuntu)
+
+sudo apt-get install msp430-libc mspdebug msp430mcu binutils-msp430 gcc-msp430 gdb-msp430
+
+This contains all the software used for the Badger service including the VIP badge and test code to verify the correct assembly of the badge. This was many many long nights making all this possible --SirGoon

@@ -1,0 +1,8 @@
+Test code... Hello world and shit
+
+ztex_test_board -- Used to test just the Ztex board with their carrier board (LEDs, UARTs, etc.) -- used for early prototype testing
+cdh_board -- These are the final tests for the C&DH board for the EyasSat Kit -- tests here are for final configuration test & checkout
+old_tests -- These are leftover tests that were imported from Badger (LegitBS Badge 2014 DEF CON) which is where most of this stuff was graciously borrowed from and ported to work with our project -- THANKS SirGoon (real name Jason Williams) for all that hard work
+
+
+Cromulence Team

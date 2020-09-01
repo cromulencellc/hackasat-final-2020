@@ -1,0 +1,481 @@
+From b40544f3fe583dff2fecd8489d21a346007d014a Mon Sep 17 00:00:00 2001
+From: chris leaf <cleaf@cromulence.com>
+Date: Thu, 18 Jun 2020 16:17:55 -0700
+Subject: [PATCH] Added Mem-Unaligned Trap handler
+
+---
+ bsps/sparc/leon3/start/spurious.c           |   5 +-
+ bsps/sparc/shared/start/start.S             |  12 +-
+ cpukit/Makefile.am                          |   2 +-
+ cpukit/score/cpu/sparc/mem_alignment_trap.S | 387 ++++++++++++++++++++
+ cpukit/score/cpu/sparc/syscall.S            |   2 +-
+ 5 files changed, 403 insertions(+), 5 deletions(-)
+ create mode 100644 cpukit/score/cpu/sparc/mem_alignment_trap.S
+
+diff --git a/bsps/sparc/leon3/start/spurious.c b/bsps/sparc/leon3/start/spurious.c
+index 23ac4bf4cf..2f0b8d98b9 100644
+--- a/bsps/sparc/leon3/start/spurious.c
++++ b/bsps/sparc/leon3/start/spurious.c
+@@ -158,9 +158,10 @@ void bsp_spurious_initialize()
+      */
+ 
+     if (( trap == 5 ) || ( trap == 6 ) ||
+-#if defined(SPARC_USE_LAZY_FP_SWITCH)
+         ( trap == 4 ) ||
+-#endif
++//#if defined(SPARC_USE_ALIGNMENT_HANDLER)
++        ( trap == 0x7) ||
++//#endif 
+         (( trap >= 0x11 ) && ( trap <= 0x1f )) ||
+         (( trap >= 0x70 ) && ( trap <= 0x83 )) ||
+         ( trap == 0x80 + SPARC_SWTRAP_IRQDIS ) ||
+diff --git a/bsps/sparc/shared/start/start.S b/bsps/sparc/shared/start/start.S
+index 5fc1248a24..a517f2c450 100644
+--- a/bsps/sparc/shared/start/start.S
++++ b/bsps/sparc/shared/start/start.S
+@@ -81,6 +81,16 @@
+  *  Software trap. Treat as BAD_TRAP for the time being...
+  */
+ 
++/*
++ * Memory Address Unaligned trap handler
++ */
++#define MAU_TRAP(_handler) \
++  sethi %hi(_handler), %l4 ; \
++  jmp   %l4+%lo(_handler);  \
++  nop ; \
++  nop
++
++
+ #define SOFT_TRAP BAD_TRAP
+ 
+   .section    ".text"
+@@ -116,7 +126,7 @@ SYM(trap_table):
+ #endif
+   WOTRAP(5, SYM(window_overflow_trap_handler)); ! 05 window overflow
+   WUTRAP(6, SYM(window_underflow_trap_handler));! 06 window underflow
+-  BAD_TRAP;                                     ! 07 memory address not aligned
++  MAU_TRAP(SYM(mem_unaligned_trap_handler));    ! 07 memory address not aligned
+   BAD_TRAP;                                     ! 08 fp exception
+   BAD_TRAP;                                     ! 09 data access exception
+   BAD_TRAP;                                     ! 0A tag overflow
+diff --git a/cpukit/Makefile.am b/cpukit/Makefile.am
+index 930f21aeb1..9be5d0cb09 100644
+--- a/cpukit/Makefile.am
++++ b/cpukit/Makefile.am
+@@ -1771,7 +1771,7 @@ librtemscpu_a_SOURCES += score/cpu/sparc/sparc-context-volatile-clobber.S
+ librtemscpu_a_SOURCES += score/cpu/sparc/sparc-counter-asm.S
+ librtemscpu_a_SOURCES += score/cpu/sparc/syscall.S
+ librtemscpu_a_SOURCES += score/cpu/sparc/window.S
+-
++librtemscpu_a_SOURCES += score/cpu/sparc/mem_alignment_trap.S
+ endif
+ 
+ if CPU_V850
+diff --git a/cpukit/score/cpu/sparc/mem_alignment_trap.S b/cpukit/score/cpu/sparc/mem_alignment_trap.S
+new file mode 100644
+index 0000000000..fa60a4f4c4
+--- /dev/null
++++ b/cpukit/score/cpu/sparc/mem_alignment_trap.S
+@@ -0,0 +1,387 @@
++
++#include <rtems/asm.h>
++#include <rtems/score/cpuimpl.h>
++#include <rtems/score/percpu.h>
++
++	.section    ".text"
++    /* 
++     *	Emulate 16bit/32bit unaligned memory accesses 
++     *  Note: Not intended for speed, memory accesses should be aligned properly
++	 *
++	 *    l0 = psr (from trap table)
++	 *    l1 = pc
++	 *    l2 = npc
++	 *    g1 = system call id (1)
++	 *
++	 *  Exit: 
++     *      Matches the expected result of the emulated command (varies by command)
++     *  Errors:
++     *      Enters Error mode as it normally would for unhandled memory types/operations
++     */ 
++
++.align 32				! Align to 32-byte cache-line
++	PUBLIC(mem_unaligned_trap_handler)
++
++SYM(mem_unaligned_trap_handler):
++  /* %l0 is the instruction word */
++  ld    [%l1 + %g0], %l0
++  mov   %l2, %l1 
++
++  /* Make sure it's a command we handle */
++  /* Memory ops all have (fmt == 3) */
++  /* Only try to handle 'normal' ld/st ops, op3 top bis are 0 */
++  /* We want top 4 bits to be 0b1100 */
++  srl   %l0,  30, %o0
++  cmp   %o0, 0x3
++  tne   %g0
++  srl   %l0, 23, %o0
++  btst  0x3, %o0
++  tne   %g0 
++
++  /* l3 holds op3, should be ld/st type */
++  /* We only care about bottom 4 bits, top two must be 0 due to check */
++  srl   %l0, 19,   %l3
++  and   %l3, 0x0f, %l3
++  
++  /* Only try to handle 16 or 32bit ld/st ops */
++  /* Note that 8bit ops cannot trigger this trap  */
++  and   %l3, 0x3, %o0
++  cmp   %o0, 3
++  te    %g0
++
++  /* l2 holds rd */
++  srl   %l0, 25, %l2
++  and   %l2, 0x1F, %l2
++
++  /* Read the value of rs1 into l4 */
++  srl   %l0, 14, %o0
++  call  read_reg
++  and   %o0, 0x1F, %o0
++  mov   %o0, %l4
++
++  /* Check value of i */
++  srl   %l0, 13, %o0
++  btst  1, %o0
++
++  /* Get bottom 13 bits */
++  set   0x1FFF, %o0
++  
++  /* Branch if i=0, it's a register */
++  be    rs2_reg
++  and   %o0, %l0, %o0
++
++  /* It's a signed immediate, do sign extension */
++  sll   %o0, 19, %o0
++  ba    combine
++  sra   %o0, 19, %o0
++
++rs2_reg: 
++  call  read_reg
++  and   %o0, 0x1F, %o0
++
++combine: 
++  add   %l4, %o0, %l4
++
++  /*
++   * l0 : instruction
++   * l1 : return addr
++   * l2 : rd 
++   * l3 : op3
++   * l4 : address
++   */
++  
++  /* Get Sign bit -> %o2 */
++  srl   %l3, 3, %o2
++  /* Get size info -> %o1 : 0 -> 4bytes, 2 -> 2bytes */
++  btst  2, %l3
++  be    size_done
++  set   4, %o1
++  srl   %o1, 1, %o1
++
++size_done:
++  /* Determine if it's a read/write */
++  btst  4, %l3
++  bne   write
++  mov   %l2, %o3
++
++  /* 
++   * o0 : address
++   * o1 : size
++   * o2 : signed
++   * o3 : dest
++   */ 
++  call  readaddr
++  mov   %l4, %o0 
++
++  ba,a  done
++
++write:
++  mov   %o1, %o2
++  call  read_reg
++  mov   %o3, %o0
++
++  mov   %o2, %o1
++  mov   %o0, %o2
++  call  writeaddr
++  mov   %l4, %o0
++
++done:
++  add   %l1, 4, %l2
++  jmp   %l1
++  rett  %l2
++
++  /* o0 is the index of register */
++read_reg: 
++   sll %o0,3,%o0
++   set read_g0, %o1
++   add %o0,%o1,%o0
++   jmpl %o0, %g0
++   restore
++
++read_g0:
++  save %g0,%g0,%o0
++  ba,a end
++read_g1:
++  save %g1,%g0,%o0
++  ba,a end
++read_g2:
++  save %g2,%g0,%o0
++  ba,a end
++read_g3:
++  save %g3,%g0,%o0
++  ba,a end
++read_g4:
++  save %g4,%g0,%o0
++  ba,a end
++read_g5:
++  save %g5,%g0,%o0
++  ba,a end
++read_g6:
++  save %g6,%g0,%o0
++  ba,a end
++read_g7:
++  save %g7,%g0,%o0
++  ba,a end
++read_o0:
++  save %o0,%g0,%o0
++  ba,a end
++read_o1:
++  save %o1,%g0,%o0
++  ba,a end
++read_o2:
++  save %o2,%g0,%o0
++  ba,a end
++read_o3:
++  save %o3,%g0,%o0
++  ba,a end
++read_o4:
++  save %o4,%g0,%o0
++  ba,a end
++read_o5:
++  save %o5,%g0,%o0
++  ba,a end
++read_o6:
++  save %o6,%g0,%o0
++  ba,a end
++read_o7:
++  save %o7,%g0,%o0
++  ba,a end
++read_l0:
++  save %l0,%g0,%o0
++  ba,a end
++read_l1:
++  save %l1,%g0,%o0
++  ba,a end
++read_l2:
++  save %l2,%g0,%o0
++  ba,a end
++read_l3:
++  save %l3,%g0,%o0
++  ba,a end
++read_l4:
++  save %l4,%g0,%o0
++  ba,a end
++read_l5:
++  save %l5,%g0,%o0
++  ba,a end
++read_l6:
++  save %l6,%g0,%o0
++  ba,a end
++read_l7:
++  save %l7,%g0,%o0
++  ba,a end
++read_i0:
++  save %i0,%g0,%o0
++  ba,a end
++read_i1:
++  save %i1,%g0,%o0
++  ba,a end
++read_i2:
++  save %i2,%g0,%o0
++  ba,a end
++read_i3:
++  save %i3,%g0,%o0
++  ba,a end
++read_i4:
++  save %i4,%g0,%o0
++  ba,a end
++read_i5:
++  save %i5,%g0,%o0
++  ba,a end
++read_i6:
++  save %i6,%g0,%o0
++  ba,a end
++read_i7:
++  save %i7,%g0,%o0
++  ba,a end
++
++end:
++  retl
++  nop
++
++/* o0 is the register index, o1 is the value */
++write_reg:
++   sub  %o0,1,%o0
++   sll  %o0,3,%o0
++   set  write_g1, %o2
++   add  %o0,%o2,%o0
++   jmpl %o0, %g0
++   nop 
++
++write_g1:
++  restore %o1,%g0,%g1 
++  ba,a  end_write
++write_g2:
++  restore %o1,%g0,%g2
++  ba,a end_write
++write_g3:
++  restore %o1,%g0,%g3
++  ba,a end_write
++write_g4:
++  restore %o1,%g0,%g4
++  ba,a end_write
++write_g5:
++  restore %o1,%g0,%g5
++  ba,a end_write
++write_g6:
++  restore %o1,%g0,%g6
++  ba,a end_write
++write_g7:
++  restore %o1,%g0,%g7
++  ba,a end_write
++write_o0:
++  restore %o1,%g0,%o0
++  ba,a end_write
++write_o1:
++  restore %o1,%g0,%o1
++  ba,a end_write
++write_o2:
++  restore %o1,%g0,%o2
++  ba,a end_write
++write_o3:
++  restore %o1,%g0,%o3
++  ba,a end_write
++write_o4:
++  restore %o1,%g0,%o4
++  ba,a end_write
++write_o5:
++  restore %o1,%g0,%o5
++  ba,a end_write
++write_o6:
++  restore %o1,%g0,%o6
++  ba,a end_write
++write_o7:
++  restore %o1,%g0,%o7
++  ba,a end_write
++write_l0:
++  restore %o1,%g0,%l0
++  ba,a end_write
++write_l1:
++  restore %o1,%g0,%l1
++  ba,a end_write
++write_l2:
++  restore %o1,%g0,%l2
++  ba,a end_write
++write_l3:
++  restore %o1,%g0,%l3
++  ba,a end_write
++write_l4:
++  restore %o1,%g0,%l4
++  ba,a end_write
++write_l5:
++  restore %o1,%g0,%l5
++  ba,a end_write
++write_l6:
++  restore %o1,%g0,%l6
++  ba,a end_write
++write_l7:
++  restore %o1,%g0,%l7
++  ba,a end_write
++write_i0:
++  restore %o1,%g0,%i0
++  ba,a end_write
++write_i1:
++  restore %o1,%g0,%i1
++  ba,a end_write
++write_i2:
++  restore %o1,%g0,%i2
++  ba,a end_write
++write_i3:
++  restore %o1,%g0,%i3
++  ba,a end_write
++write_i4:
++  restore %o1,%g0,%i4
++  ba,a end_write
++write_i5:
++  restore %o1,%g0,%i5
++  ba,a end_write
++write_i6:
++  restore %o1,%g0,%i6
++  ba,a end_write
++write_i7:
++  restore %o1,%g0,%i7
++  ba,a end_write
++
++end_write:
++  save 
++  retl
++  nop
++
++/* o0 : address, o1 : size, o2 : sign, o3 : dest */
++readaddr:
++  andcc %o2, 1, %g0
++  be    uread
++  subcc %o1, 1, %o1 
++  ba    readloop
++  ldsb  [%o0 + %g0], %o2
++
++uread:
++  ldub  [%o0 + %g0], %o2
++
++readloop: 
++  be,a  read_ret 
++  mov   %o2, %o1
++  sll   %o2, 8, %o2
++  add   %o0, 1, %o0
++  ldub  [%o0 + %g0], %o4
++  or    %o2, %o4, %o2
++  ba    readloop
++  subcc %o1, 1, %o1 
++  
++read_ret:
++  set   write_reg, %o2
++  jmpl  %o2, %g0
++  mov   %o3, %o0
++
++/* o0 : address, o1 : size, o2 : value  */
++writeaddr:
++  subcc %o1, 1, %o1
++  stb   %o2, [%o0 + %o1]
++
++  bne   writeaddr
++  srl   %o2, 8, %o2
++
++write_ret:
++  retl
++  nop
++
+diff --git a/cpukit/score/cpu/sparc/syscall.S b/cpukit/score/cpu/sparc/syscall.S
+index 4f4ef32c53..ede4e71710 100644
+--- a/cpukit/score/cpu/sparc/syscall.S
++++ b/cpukit/score/cpu/sparc/syscall.S
+@@ -301,4 +301,4 @@ SYM(_SPARC_Set_TBR):
+ 
+ #endif /* defined(RTEMS_PARAVIRT) */
+ 
+-/* end of file */
++/* end of file */
+\ No newline at end of file
+-- 
+2.17.1
+

@@ -1,0 +1,73 @@
+<main role="main" class="flex-shrink-0">
+  <div class="container">
+    <h1 class="mt-5">Power Telemetry</h1>
+    <table class="table">
+      <thead class="thead-light">
+        <th scope="col">SOURCE</th>
+        <th scope="col">TIMESTAMP</th>
+        <th scope="col">CSSDS_STREAMID</th>
+        <th scope="col">CSSDS_SEQUENCE</th>
+        <th scope="col">CSSDS_SECONDS</th>
+        <th scope="col">CSSDS_SUBSECS</th>
+        <th scope="col">TIME_STRING</th>
+        <th scope="col">CALL_SIGN</th>
+        <th scope="col">PACKET_ID</th>
+        <th scope="col">SEP_STATUS</th>
+        <th scope="col">PAD</th>
+        <th scope="col">SWITCH_STATUS</th>
+        <th scope="col">V_BATT</th>
+        <th scope="col">I_BATT</th>
+        <th scope="col">V_SA</th>
+        <th scope="col">I_SA</th>
+        <th scope="col">I_MB</th>
+        <th scope="col">V_5V</th>
+        <th scope="col">I_5V</th>
+        <th scope="col">V_3V</th>
+        <th scope="col">I_3V</th>
+        <th scope="col">BATT_TEMP</th>
+        <th scope="col">SA1_TEMP</th>
+        <th scope="col">SA2_TEMP</th>
+        <th scope="col">PWR_3V</th>
+        <th scope="col">PWR_ADCS</th>
+        <th scope="col">PWR_EXP</th>
+        <th scope="col">PWR_HTR1</th>
+        <th scope="col">PWR_HTR2</th>
+      </thead>
+      <tbody>
+        <% entries.each do |e| %>
+        <tr>
+          <td><%= e.source_ip %></td>
+          <td><%= e.created_at %></td>
+          <td><%= e.packet_identifier %></td>
+          <td><%= e.packet_sequence_counter %></td>
+          <td><%= e.tlm_seconds %></td>
+          <td><%= e.tlm_subseconds %></td>
+          <td><%= e.time_string %></td>
+          <td><%= e.simulator_call_sign %></td>
+          <td><%= e.packet_id %></td>
+          <td><%= e.separation_status %></td>
+          <td><%= e.pad %></td>
+          <td><%= e.switch_status_register %></td>
+          <td><%= e.battery_voltage %></td>
+          <td><%= e.battery_current %></td>
+          <td><%= e.solar_array_voltage %></td>
+          <td><%= e.solar_array_current %></td>
+          <td><%= e.main_bus_current %></td>
+          <td><%= e.bus_voltage_5v %></td>
+          <td><%= e.bus_current_5v %></td>
+          <td><%= e.bus_voltage_3p3v %></td>
+          <td><%= e.bus_current_3p3v %></td>
+          <td><%= e.battery_temperature %></td>
+          <td><%= e.solar_array_1_temperature %></td>
+          <td><%= e.solar_array_2_temperature %></td>
+          <td><%= e.power_on_3p3v %></td>
+          <td><%= e.adcs_power %></td>
+          <td><%= e.experiment_power %></td>
+          <td><%= e.heater_1_power %></td>
+          <td><%= e.heater_2_power %></td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</main>

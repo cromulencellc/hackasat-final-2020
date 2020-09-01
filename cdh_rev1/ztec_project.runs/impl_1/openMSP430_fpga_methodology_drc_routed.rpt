@@ -1,0 +1,867 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
+| Date         : Mon Apr 27 09:26:37 2020
+| Host         : ubuntu running 64-bit Ubuntu 18.04.4 LTS
+| Command      : report_methodology -file openMSP430_fpga_methodology_drc_routed.rpt -pb openMSP430_fpga_methodology_drc_routed.pb -rpx openMSP430_fpga_methodology_drc_routed.rpx
+| Design       : openMSP430_fpga
+| Device       : xc7a75tcsg324-2
+| Speed File   : -2
+| Design State : Fully Routed
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 165
++-----------+------------------+-------------------------------------------------+------------+
+| Rule      | Severity         | Description                                     | Violations |
++-----------+------------------+-------------------------------------------------+------------+
+| TIMING-17 | Critical Warning | Non-clocked sequential cell                     | 117        |
+| DPIR-1    | Warning          | Asynchronous driver check                       | 16         |
+| LUTAR-1   | Warning          | LUT drives async reset alert                    | 2          |
+| PDRC-190  | Warning          | Suboptimally placed synchronized register chain | 12         |
+| SYNTH-12  | Warning          | DSP input not registered                        | 1          |
+| XDCB-5    | Warning          | Runtime inefficient way to find pin objects     | 1          |
+| REQP-1959 | Advisory         | connects_SERDES_RST_driver_not_FF               | 16         |
++-----------+------------------+-------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+TIMING-17#1 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/gupdff.updff/y1.q_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#2 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tnr1_reg[done_sync1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#3 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tnr1_reg[qual_rdata]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#4 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tnr1_reg[run]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#5 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tnr2_reg[addrlo][2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#6 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tnr2_reg[addrlo][3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#7 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tnr2_reg[addrlo][4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#8 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tnr2_reg[addrlo][5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#9 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tnr2_reg[addrlo][6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#10 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tnr2_reg[addrlo][7]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#11 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tnr2_reg[addrlo][8]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#12 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tnr2_reg[addrlo][9]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#13 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tnr2_reg[data][0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#14 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tnr2_reg[data][10]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#15 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tnr2_reg[data][11]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#16 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tnr2_reg[data][12]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#17 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tnr2_reg[data][13]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#18 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tnr2_reg[data][14]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#19 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tnr2_reg[data][15]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#20 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tnr2_reg[data][16]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#21 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tnr2_reg[data][17]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#22 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tnr2_reg[data][18]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#23 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tnr2_reg[data][19]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#24 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tnr2_reg[data][1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#25 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tnr2_reg[data][20]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#26 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tnr2_reg[data][21]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#27 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tnr2_reg[data][22]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#28 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tnr2_reg[data][23]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#29 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tnr2_reg[data][24]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#30 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tnr2_reg[data][25]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#31 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tnr2_reg[data][26]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#32 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tnr2_reg[data][27]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#33 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tnr2_reg[data][28]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#34 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tnr2_reg[data][29]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#35 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tnr2_reg[data][2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#36 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tnr2_reg[data][30]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#37 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tnr2_reg[data][31]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#38 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tnr2_reg[data][32]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#39 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tnr2_reg[data][3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#40 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tnr2_reg[data][4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#41 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tnr2_reg[data][5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#42 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tnr2_reg[data][6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#43 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tnr2_reg[data][7]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#44 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tnr2_reg[data][8]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#45 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tnr2_reg[data][9]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#46 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tpr1_reg[datashft0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#47 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tpr1_reg[done_sync]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#48 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tpr1_reg[holdn]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#49 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tpr1_reg[inshift]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#50 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tpr1_reg[prun]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#51 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tpr2_reg[addr][0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#52 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tpr2_reg[addr][10]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#53 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tpr2_reg[addr][11]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#54 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tpr2_reg[addr][12]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#55 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tpr2_reg[addr][13]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#56 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tpr2_reg[addr][14]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#57 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tpr2_reg[addr][15]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#58 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tpr2_reg[addr][16]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#59 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tpr2_reg[addr][17]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#60 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tpr2_reg[addr][18]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#61 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tpr2_reg[addr][19]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#62 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tpr2_reg[addr][1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#63 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tpr2_reg[addr][20]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#64 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tpr2_reg[addr][21]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#65 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tpr2_reg[addr][22]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#66 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tpr2_reg[addr][23]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#67 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tpr2_reg[addr][24]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#68 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tpr2_reg[addr][25]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#69 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tpr2_reg[addr][26]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#70 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tpr2_reg[addr][27]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#71 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tpr2_reg[addr][28]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#72 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tpr2_reg[addr][29]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#73 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tpr2_reg[addr][2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#74 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tpr2_reg[addr][30]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#75 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tpr2_reg[addr][31]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#76 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tpr2_reg[addr][32]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#77 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tpr2_reg[addr][33]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#78 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tpr2_reg[addr][34]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#79 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tpr2_reg[addr][3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#80 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tpr2_reg[addr][4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#81 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tpr2_reg[addr][5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#82 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tpr2_reg[addr][6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#83 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tpr2_reg[addr][7]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#84 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tpr2_reg[addr][8]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#85 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tpr2_reg[addr][9]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#86 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tpr2_reg[datashft][10]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#87 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tpr2_reg[datashft][11]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#88 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tpr2_reg[datashft][12]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#89 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tpr2_reg[datashft][13]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#90 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tpr2_reg[datashft][14]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#91 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tpr2_reg[datashft][15]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#92 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tpr2_reg[datashft][16]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#93 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tpr2_reg[datashft][17]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#94 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tpr2_reg[datashft][18]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#95 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tpr2_reg[datashft][19]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#96 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tpr2_reg[datashft][1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#97 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tpr2_reg[datashft][20]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#98 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tpr2_reg[datashft][21]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#99 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tpr2_reg[datashft][22]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#100 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tpr2_reg[datashft][23]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#101 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tpr2_reg[datashft][24]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#102 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tpr2_reg[datashft][25]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#103 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tpr2_reg[datashft][26]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#104 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tpr2_reg[datashft][27]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#105 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tpr2_reg[datashft][28]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#106 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tpr2_reg[datashft][29]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#107 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tpr2_reg[datashft][2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#108 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tpr2_reg[datashft][30]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#109 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tpr2_reg[datashft][31]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#110 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tpr2_reg[datashft][32]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#111 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tpr2_reg[datashft][3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#112 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tpr2_reg[datashft][4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#113 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tpr2_reg[datashft][5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#114 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tpr2_reg[datashft][6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#115 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tpr2_reg[datashft][7]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#116 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tpr2_reg[datashft][8]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#117 Critical Warning
+Non-clocked sequential cell  
+The clock pin leon3_system_1/ahbjtaggen0.ahbjtag0/newcom.jtagcom0/tpr2_reg[datashft][9]/C is not reached by a timing clock
+Related violations: <none>
+
+DPIR-1#1 Warning
+Asynchronous driver check  
+DSP omsp_system_radio_inst/openMSP430_0/multiplier_0/product input pin omsp_system_radio_inst/openMSP430_0/multiplier_0/product/A[0] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#2 Warning
+Asynchronous driver check  
+DSP omsp_system_radio_inst/openMSP430_0/multiplier_0/product input pin omsp_system_radio_inst/openMSP430_0/multiplier_0/product/A[10] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#3 Warning
+Asynchronous driver check  
+DSP omsp_system_radio_inst/openMSP430_0/multiplier_0/product input pin omsp_system_radio_inst/openMSP430_0/multiplier_0/product/A[11] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#4 Warning
+Asynchronous driver check  
+DSP omsp_system_radio_inst/openMSP430_0/multiplier_0/product input pin omsp_system_radio_inst/openMSP430_0/multiplier_0/product/A[12] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#5 Warning
+Asynchronous driver check  
+DSP omsp_system_radio_inst/openMSP430_0/multiplier_0/product input pin omsp_system_radio_inst/openMSP430_0/multiplier_0/product/A[13] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#6 Warning
+Asynchronous driver check  
+DSP omsp_system_radio_inst/openMSP430_0/multiplier_0/product input pin omsp_system_radio_inst/openMSP430_0/multiplier_0/product/A[14] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#7 Warning
+Asynchronous driver check  
+DSP omsp_system_radio_inst/openMSP430_0/multiplier_0/product input pin omsp_system_radio_inst/openMSP430_0/multiplier_0/product/A[15] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#8 Warning
+Asynchronous driver check  
+DSP omsp_system_radio_inst/openMSP430_0/multiplier_0/product input pin omsp_system_radio_inst/openMSP430_0/multiplier_0/product/A[1] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#9 Warning
+Asynchronous driver check  
+DSP omsp_system_radio_inst/openMSP430_0/multiplier_0/product input pin omsp_system_radio_inst/openMSP430_0/multiplier_0/product/A[2] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#10 Warning
+Asynchronous driver check  
+DSP omsp_system_radio_inst/openMSP430_0/multiplier_0/product input pin omsp_system_radio_inst/openMSP430_0/multiplier_0/product/A[3] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#11 Warning
+Asynchronous driver check  
+DSP omsp_system_radio_inst/openMSP430_0/multiplier_0/product input pin omsp_system_radio_inst/openMSP430_0/multiplier_0/product/A[4] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#12 Warning
+Asynchronous driver check  
+DSP omsp_system_radio_inst/openMSP430_0/multiplier_0/product input pin omsp_system_radio_inst/openMSP430_0/multiplier_0/product/A[5] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#13 Warning
+Asynchronous driver check  
+DSP omsp_system_radio_inst/openMSP430_0/multiplier_0/product input pin omsp_system_radio_inst/openMSP430_0/multiplier_0/product/A[6] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#14 Warning
+Asynchronous driver check  
+DSP omsp_system_radio_inst/openMSP430_0/multiplier_0/product input pin omsp_system_radio_inst/openMSP430_0/multiplier_0/product/A[7] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#15 Warning
+Asynchronous driver check  
+DSP omsp_system_radio_inst/openMSP430_0/multiplier_0/product input pin omsp_system_radio_inst/openMSP430_0/multiplier_0/product/A[8] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#16 Warning
+Asynchronous driver check  
+DSP omsp_system_radio_inst/openMSP430_0/multiplier_0/product input pin omsp_system_radio_inst/openMSP430_0/multiplier_0/product/A[9] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+LUTAR-1#1 Warning
+LUT drives async reset alert  
+LUT cell leon3_system_1/mig_gen.gen_mig.ddrc/MCB_inst/u_mig_mig/u_iodelay_ctrl/rstdiv2_sync_r[11]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) leon3_system_1/mig_gen.gen_mig.ddrc/MCB_inst/u_mig_mig/u_ddr3_infrastructure/rstdiv0_sync_r1_reg_rep/PRE, leon3_system_1/mig_gen.gen_mig.ddrc/MCB_inst/u_mig_mig/u_ddr3_infrastructure/rstdiv0_sync_r1_reg_rep__0/PRE, leon3_system_1/mig_gen.gen_mig.ddrc/MCB_inst/u_mig_mig/u_ddr3_infrastructure/rstdiv0_sync_r1_reg_rep__1/PRE, leon3_system_1/mig_gen.gen_mig.ddrc/MCB_inst/u_mig_mig/u_ddr3_infrastructure/rstdiv0_sync_r1_reg_rep__10/PRE, leon3_system_1/mig_gen.gen_mig.ddrc/MCB_inst/u_mig_mig/u_ddr3_infrastructure/rstdiv0_sync_r1_reg_rep__11/PRE, leon3_system_1/mig_gen.gen_mig.ddrc/MCB_inst/u_mig_mig/u_ddr3_infrastructure/rstdiv0_sync_r1_reg_rep__12/PRE, leon3_system_1/mig_gen.gen_mig.ddrc/MCB_inst/u_mig_mig/u_ddr3_infrastructure/rstdiv0_sync_r1_reg_rep__13/PRE, leon3_system_1/mig_gen.gen_mig.ddrc/MCB_inst/u_mig_mig/u_ddr3_infrastructure/rstdiv0_sync_r1_reg_rep__14/PRE, leon3_system_1/mig_gen.gen_mig.ddrc/MCB_inst/u_mig_mig/u_ddr3_infrastructure/rstdiv0_sync_r1_reg_rep__15/PRE, leon3_system_1/mig_gen.gen_mig.ddrc/MCB_inst/u_mig_mig/u_ddr3_infrastructure/rstdiv0_sync_r1_reg_rep__16/PRE, leon3_system_1/mig_gen.gen_mig.ddrc/MCB_inst/u_mig_mig/u_ddr3_infrastructure/rstdiv0_sync_r1_reg_rep__17/PRE, leon3_system_1/mig_gen.gen_mig.ddrc/MCB_inst/u_mig_mig/u_ddr3_infrastructure/rstdiv0_sync_r1_reg_rep__18/PRE, leon3_system_1/mig_gen.gen_mig.ddrc/MCB_inst/u_mig_mig/u_ddr3_infrastructure/rstdiv0_sync_r1_reg_rep__19/PRE, leon3_system_1/mig_gen.gen_mig.ddrc/MCB_inst/u_mig_mig/u_ddr3_infrastructure/rstdiv0_sync_r1_reg_rep__2/PRE, leon3_system_1/mig_gen.gen_mig.ddrc/MCB_inst/u_mig_mig/u_ddr3_infrastructure/rstdiv0_sync_r1_reg_rep__3/PRE (the first 15 of 33 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#2 Warning
+LUT drives async reset alert  
+LUT cell omsp_system_radio_inst/openMSP430_0/clock_module_0/sync_reset_por/data_sync[1]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) omsp_system_radio_inst/openMSP430_0/clock_module_0/sync_cell_puc/data_sync_reg[0]/CLR, omsp_system_radio_inst/openMSP430_0/clock_module_0/sync_cell_puc/data_sync_reg[1]/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+PDRC-190#1 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell leon3_system_1/mig_gen.gen_mig.ddrc/MCB_inst/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[0] in site SLICE_X30Y124 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell leon3_system_1/mig_gen.gen_mig.ddrc/MCB_inst/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[0] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#2 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell leon3_system_1/mig_gen.gen_mig.ddrc/MCB_inst/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[10] in site SLICE_X30Y126 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell leon3_system_1/mig_gen.gen_mig.ddrc/MCB_inst/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[10] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#3 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell leon3_system_1/mig_gen.gen_mig.ddrc/MCB_inst/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[11] in site SLICE_X29Y125 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell leon3_system_1/mig_gen.gen_mig.ddrc/MCB_inst/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[11] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#4 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell leon3_system_1/mig_gen.gen_mig.ddrc/MCB_inst/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[1] in site SLICE_X32Y125 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell leon3_system_1/mig_gen.gen_mig.ddrc/MCB_inst/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[1] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#5 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell leon3_system_1/mig_gen.gen_mig.ddrc/MCB_inst/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[2] in site SLICE_X34Y125 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell leon3_system_1/mig_gen.gen_mig.ddrc/MCB_inst/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[2] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#6 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell leon3_system_1/mig_gen.gen_mig.ddrc/MCB_inst/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[3] in site SLICE_X33Y126 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell leon3_system_1/mig_gen.gen_mig.ddrc/MCB_inst/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[3] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#7 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell leon3_system_1/mig_gen.gen_mig.ddrc/MCB_inst/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[4] in site SLICE_X33Y123 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell leon3_system_1/mig_gen.gen_mig.ddrc/MCB_inst/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[4] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#8 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell leon3_system_1/mig_gen.gen_mig.ddrc/MCB_inst/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[5] in site SLICE_X28Y125 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell leon3_system_1/mig_gen.gen_mig.ddrc/MCB_inst/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[5] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#9 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell leon3_system_1/mig_gen.gen_mig.ddrc/MCB_inst/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[6] in site SLICE_X34Y127 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell leon3_system_1/mig_gen.gen_mig.ddrc/MCB_inst/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[6] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#10 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell leon3_system_1/mig_gen.gen_mig.ddrc/MCB_inst/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[7] in site SLICE_X28Y127 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell leon3_system_1/mig_gen.gen_mig.ddrc/MCB_inst/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[7] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#11 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell leon3_system_1/mig_gen.gen_mig.ddrc/MCB_inst/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[8] in site SLICE_X32Y123 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell leon3_system_1/mig_gen.gen_mig.ddrc/MCB_inst/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[8] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#12 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell leon3_system_1/mig_gen.gen_mig.ddrc/MCB_inst/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[9] in site SLICE_X32Y127 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell leon3_system_1/mig_gen.gen_mig.ddrc/MCB_inst/u_mig_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[9] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+SYNTH-12#1 Warning
+DSP input not registered  
+DSP instance leon3_system_1/leon3gen.cpu[0].u0/leon3x0/vhdl.p0/mgen.mul0/xm1616.m1616/pipe2.arch0.dwm/w2.p_i_reg[1] is not fully pipelined on the input side. AREG/BREG/CREG/DREG are not used.
+Related violations: <none>
+
+XDCB-5#1 Warning
+Runtime inefficient way to find pin objects  
+The option '-to : [get_pins -hier -include_replicated_objects -filter {NAME =~ *temp_mon_enabled.u_tempmon/device_temp_sync_r1_reg[*]/D}]' of constraint 'set_max_delay' uses inefficient query to find pin objects (see constraint position '6' in the Timing Constraint window in Vivado IDE). To reduce runtime, it is recommended to get the pins through the cell objects. Please refer to Using Constraints Guide (Constraints Efficiency). An example of optimal query is: get_pins -filter {REF_PIN_NAME=~yy*} -of_objects [get_cells -hierarchical xx*].
+Current XDC: /home/user/hackthesat/fpga/new_project/ztec_project/ztec_project.srcs/sources_1/ip/mig/mig/user_design/constraints/mig.xdc (Line: 350)
+Related violations: <none>
+
+REQP-1959#1 Advisory
+connects_SERDES_RST_driver_not_FF  
+leon3_system_1/mig_gen.gen_mig.ddrc/MCB_inst/u_mig_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/ddr_byte_group_io/input_[0].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#2 Advisory
+connects_SERDES_RST_driver_not_FF  
+leon3_system_1/mig_gen.gen_mig.ddrc/MCB_inst/u_mig_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/ddr_byte_group_io/input_[1].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#3 Advisory
+connects_SERDES_RST_driver_not_FF  
+leon3_system_1/mig_gen.gen_mig.ddrc/MCB_inst/u_mig_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/ddr_byte_group_io/input_[2].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#4 Advisory
+connects_SERDES_RST_driver_not_FF  
+leon3_system_1/mig_gen.gen_mig.ddrc/MCB_inst/u_mig_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/ddr_byte_group_io/input_[3].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#5 Advisory
+connects_SERDES_RST_driver_not_FF  
+leon3_system_1/mig_gen.gen_mig.ddrc/MCB_inst/u_mig_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/ddr_byte_group_io/input_[4].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#6 Advisory
+connects_SERDES_RST_driver_not_FF  
+leon3_system_1/mig_gen.gen_mig.ddrc/MCB_inst/u_mig_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/ddr_byte_group_io/input_[5].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#7 Advisory
+connects_SERDES_RST_driver_not_FF  
+leon3_system_1/mig_gen.gen_mig.ddrc/MCB_inst/u_mig_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/ddr_byte_group_io/input_[6].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#8 Advisory
+connects_SERDES_RST_driver_not_FF  
+leon3_system_1/mig_gen.gen_mig.ddrc/MCB_inst/u_mig_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/ddr_byte_group_io/input_[7].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#9 Advisory
+connects_SERDES_RST_driver_not_FF  
+leon3_system_1/mig_gen.gen_mig.ddrc/MCB_inst/u_mig_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/ddr_byte_group_io/input_[0].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#10 Advisory
+connects_SERDES_RST_driver_not_FF  
+leon3_system_1/mig_gen.gen_mig.ddrc/MCB_inst/u_mig_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/ddr_byte_group_io/input_[1].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#11 Advisory
+connects_SERDES_RST_driver_not_FF  
+leon3_system_1/mig_gen.gen_mig.ddrc/MCB_inst/u_mig_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/ddr_byte_group_io/input_[3].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#12 Advisory
+connects_SERDES_RST_driver_not_FF  
+leon3_system_1/mig_gen.gen_mig.ddrc/MCB_inst/u_mig_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/ddr_byte_group_io/input_[4].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#13 Advisory
+connects_SERDES_RST_driver_not_FF  
+leon3_system_1/mig_gen.gen_mig.ddrc/MCB_inst/u_mig_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/ddr_byte_group_io/input_[6].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#14 Advisory
+connects_SERDES_RST_driver_not_FF  
+leon3_system_1/mig_gen.gen_mig.ddrc/MCB_inst/u_mig_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/ddr_byte_group_io/input_[7].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#15 Advisory
+connects_SERDES_RST_driver_not_FF  
+leon3_system_1/mig_gen.gen_mig.ddrc/MCB_inst/u_mig_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/ddr_byte_group_io/input_[8].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#16 Advisory
+connects_SERDES_RST_driver_not_FF  
+leon3_system_1/mig_gen.gen_mig.ddrc/MCB_inst/u_mig_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/ddr_byte_group_io/input_[9].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+

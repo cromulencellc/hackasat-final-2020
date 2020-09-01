@@ -1,0 +1,7 @@
+public_folder: ./content
+upload_folder: ./content/uploads
+database_type: postgresql
+database_user: launchsip
+database_password: wroashsoxDiculReejLykUssyifabEdGhovHabno
+database_host: localhost
+database_path: launchsip

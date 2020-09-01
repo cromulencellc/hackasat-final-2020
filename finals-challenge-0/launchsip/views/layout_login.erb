@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="TODO">
+    <meta name="author" content="TODO">
+    <title>LaunchDotCom Satellite Imagery Project</title>
+    <!-- TODO: link rel="icon" href="" -->
+    <link rel="stylesheet" href="/styles/bootstrap.min.css">
+    <link rel="stylesheet" href="/styles/launchdotcss.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand" href="/">LaunchDotCom SIP</a>
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item"><a class="nav-link" href="/notes">Notes</a></li>
+          <li class="nav-item"><a class="nav-link" href="/satellites">Satellites</a></li>
+          <li class="nav-item"><a class="nav-link" href="/images">Images</a></li>
+          <% if is_admin %>
+          <li class="nav-item-dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Telemetry</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="/tlmapp">App Telemetry</a>
+              <a class="dropdown-item" href="/tlmint">Internal Telemetry</a>
+              <a class="dropdown-item" href="/tlmadcs">ADCS Telemetry</a>
+              <a class="dropdown-item" href="/tlmtemp">Temperature Telemetry</a>
+              <a class="dropdown-item" href="/tlmpow">Power Telemetry</a>
+              <a class="dropdown-item" href="/tlmpld">Payload Telemetry</a>
+              <a class="dropdown-item" href="/tlmci">CI Telemetry</a>
+              <a class="dropdown-item" href="/tlmephapp">Ephemeris App Telemetry</a>
+              <a class="dropdown-item" href="/tlmeph">Ephemeris Telemetry</a>
+            </div>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="/admin">Admin</a></li>
+          <% else %>
+          <li class="nav-item"><a class="nav-link disabled" href="/admin">Admin</a></li>
+          <% end %>
+        </ul>
+        <% if not current_user %>
+        <form class="form-inline my-2 my-lg-0" method="post">
+          <input class="form-control mr-sm-2" type="text" name="username" placeholder="Username" aria-label="Username">
+          <input class="form-control mr-sm-2" type="password" name="password" placeholder="Password" aria-label="Password">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Register / Log In</button>
+        </form>
+        <% else %>
+        <p class="navbar-text my-2 my-lg-0">
+            <%= current_user.name %>
+        </p>
+        <% end %>
+      </div>
+    </nav>
+
+    <%= yield %>
+
+    <footer class="footer mt-auto py-3">
+      <div class="container">
+        <span class="text-muted">&copy; 1999 LaunchDotCom</span>
+      </div>
+    </footer>
+
+    <script src="/scripts/jquery-3.5.1.slim.min.js"></script>
+    <script src="/scripts/bootstrap.min.js"></script>
+  </body>
+</html>

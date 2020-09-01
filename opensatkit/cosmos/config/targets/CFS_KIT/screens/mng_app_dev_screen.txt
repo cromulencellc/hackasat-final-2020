@@ -1,0 +1,51 @@
+###############################################################################
+# Create Application Screen
+#
+# License:
+#   Written by David McComas, licensed under the copyleft GNU General
+#   Public License (GPL).
+# 
+###############################################################################
+
+SCREEN AUTO AUTO 0.5
+GLOBAL_SETTING BUTTON BACKCOLOR 112 199 204
+GLOBAL_SETTING BUTTON TEXTCOLOR black
+
+TITLE "Manage App Development"
+  SETTING BACKCOLOR 254 156 255
+  SETTING TEXTCOLOR black
+
+HORIZONTAL
+
+  #SETTING BACKCOLOR 254 156 255
+  SETTING TEXTCOLOR black
+
+  CANVAS 400 425
+    CANVASIMAGE "osk_gen_app.png"    20   0
+  END
+  
+  VERTICALBOX
+    MATRIXBYCOLUMNS 3 10 20
+      LABEL "1"
+      BUTTON 'Create App'  'require "#{Cosmos::USERPATH}/config/targets/CFS_KIT/lib/mng_app_dev_screen.rb"; mng_app_dev(self, "CREATE_APP")'
+      LABEL "Launch tool to create new app/lib from a template"
+      LABEL "2"
+      BUTTON 'Edit cmake'  ''
+      LABEL "Add app file to cmake target list TGT#_APPLIST"
+      LABEL "3"
+      BUTTON 'Edit ES Startup'  ''
+      LABEL "Add app to cFE Executive Service startup script"
+      LABEL "4"
+      BUTTON 'Stop cFS/Server'  ''
+      LABEL "Stop cFS and COSMOS cmd-tlm server"
+      LABEL "5"
+      BUTTON 'Build cFS'  ''
+      LABEL "Run cmake to build new app"
+      LABEL "6"
+      BUTTON 'Start Server/cFS'  ''
+      LABEL "Start cFS and COSMOS cmd-tlm server"
+    END
+    SPACER 0 50 FIXED EXPANDING
+  End # Vertical
+  	
+END # Horizontal

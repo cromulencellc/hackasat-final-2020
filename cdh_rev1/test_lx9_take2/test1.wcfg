@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/Users/jdub/Documents/FPGA/test_lx9_take2/test_spi_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="test_spi" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="16" />
+   <wvobject fp_name="/test_spi/spi_irq_tx_done" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">spi_irq_tx_done</obj_property>
+      <obj_property name="ObjectShortName">spi_irq_tx_done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_spi/spi_mosi" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">spi_mosi</obj_property>
+      <obj_property name="ObjectShortName">spi_mosi</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_spi/spi_clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">spi_clk</obj_property>
+      <obj_property name="ObjectShortName">spi_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_spi/per_dout" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">per_dout[15:0]</obj_property>
+      <obj_property name="ObjectShortName">per_dout[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_spi/mclk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">mclk</obj_property>
+      <obj_property name="ObjectShortName">mclk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_spi/per_addr" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">per_addr[13:0]</obj_property>
+      <obj_property name="ObjectShortName">per_addr[13:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_spi/per_din" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">per_din[15:0]</obj_property>
+      <obj_property name="ObjectShortName">per_din[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_spi/per_en" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">per_en</obj_property>
+      <obj_property name="ObjectShortName">per_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_spi/per_we" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">per_we[1:0]</obj_property>
+      <obj_property name="ObjectShortName">per_we[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_spi/puc_rst" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">puc_rst</obj_property>
+      <obj_property name="ObjectShortName">puc_rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_spi/smclk_en" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">smclk_en</obj_property>
+      <obj_property name="ObjectShortName">smclk_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_spi/spi_miso" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">spi_miso</obj_property>
+      <obj_property name="ObjectShortName">spi_miso</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_spi/uut/data_tx" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">data_tx[15:0]</obj_property>
+      <obj_property name="ObjectShortName">data_tx[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_spi/uut/data_rx" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">data_rx[15:0]</obj_property>
+      <obj_property name="ObjectShortName">data_rx[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_spi/uut/clock_cnt" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">clock_cnt[7:0]</obj_property>
+      <obj_property name="ObjectShortName">clock_cnt[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_spi/uut/ctrl_div" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ctrl_div[2:0]</obj_property>
+      <obj_property name="ObjectShortName">ctrl_div[2:0]</obj_property>
+   </wvobject>
+</wave_config>

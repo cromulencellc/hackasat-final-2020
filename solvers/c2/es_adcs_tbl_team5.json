@@ -1,0 +1,29 @@
+{
+   "name": "Eyassat ADCS Control Table",
+   "description": "Attitude Control Parameters",
+   "Config": {
+      "Mode": 0,
+      "YawCmd": 0.0,
+      "PWM_Baseline": 0
+   }, 
+   "DB_Coef": {
+      "Deadband": 10.0,
+      "Deadband_ScaleFactor": 1.0,
+      "Extra": 0.0
+   },
+   "PID_Coef": {
+      "Kp": 5.0,
+      "Ki": 2.0,
+      "Kd": 2.0
+   },
+   "MagCal": {
+      "X": -184.80,
+      "Y": -216.44,
+      "Z": -65.59
+   },
+   "GyroCal": {
+      "X": 1.26,
+      "Y": 1.45,
+      "Z": -1.47 
+   }
+}

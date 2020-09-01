@@ -1,0 +1,27 @@
+###############################################################################
+# App Management Screen
+#
+# License:
+#   Written by David McComas, licensed under the copyleft GNU General Public
+#   License (GPL).
+#
+###############################################################################
+
+SCREEN AUTO AUTO 0.5
+GLOBAL_SETTING BUTTON BACKCOLOR 112 199 204
+GLOBAL_SETTING BUTTON TEXTCOLOR black
+
+TITLE "System Block Diagram"
+  SETTING BACKCOLOR 254 156 255
+  SETTING TEXTCOLOR black
+
+HORIZONTAL
+
+  #SETTING BACKCOLOR 254 156 255
+  SETTING TEXTCOLOR black
+
+  CANVAS 1280 720
+    CANVASIMAGE "SystemBlockDiagram.png"    20   0
+  END
+  
+END # Horizontal

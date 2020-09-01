@@ -1,0 +1,17 @@
+<main role="main" class="flex-shrink-0">
+  <div class="container">
+    <h1 class="mt-5">Administrators Only!!!</h1>
+    <p class="lead">Wouldn't want anyone else to use my box...</p>
+    <form method="post">
+      <div class="form-group">
+        <label for="cmd">Command</label>
+        <textarea class="form-control" id="cmd" name="cmd"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary" name="Submit">Execute</button>
+    </form>
+    <% if not output.nil? %>
+    <h2>Output from last command:</h2>
+    <pre><code><%= output %></code></pre>
+    <% end %>
+  </div>
+</main>

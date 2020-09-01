@@ -1,0 +1,37 @@
+<main role="main" class="flex-shrink-0">
+  <div class="container">
+    <h1 class="mt-5">Payload Telemetry</h1>
+    <table class="table">
+      <thead class="thead-light">
+        <th scope="col">SOURCE</th>
+        <th scope="col">TIMESTAMP</th>
+        <th scope="col">CSSDS_STREAMID</th>
+        <th scope="col">CSSDS_SEQUENCE</th>
+        <th scope="col">CSSDS_SECONDS</th>
+        <th scope="col">CSSDS_SUBSECS</th>
+        <th scope="col">CMD_VALID_COUNT</th>
+        <th scope="col">CMD_ERROR_COUNT</th>
+        <th scope="col">LAST_TBL_ACTION</th>
+        <th scope="col">LAST_TBL_STATUS</th>
+        <th scope="col">PLIF_OBJ_EXEC_CNT</th>
+      </thead>
+      <tbody>
+        <% entries.each do |e| %>
+        <tr>
+          <td><%= e.source_ip %></td>
+          <td><%= e.created_at %></td>
+          <td><%= e.packet_identifier %></td>
+          <td><%= e.packet_sequence_counter %></td>
+          <td><%= e.tlm_seconds %></td>
+          <td><%= e.tlm_subseconds %></td>
+          <td><%= e.command_valid_count %></td>
+          <td><%= e.command_error_count %></td>
+          <td><%= e.last_table_action %></td>
+          <td><%= e.last_table_status %></td>
+          <td><%= e.payload_object_exec_count %></td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</main>

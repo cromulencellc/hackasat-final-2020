@@ -1,0 +1,12 @@
+Storage Target: SPI Flash Single FPGA
+4M
+FF
+out_prom
+C:\Users\jdub\Documents\FPGA\test_lx9_take2/
+
+MCS
+No
+
+MCS
+No
+

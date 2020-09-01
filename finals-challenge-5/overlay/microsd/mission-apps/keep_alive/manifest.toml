@@ -1,0 +1,4 @@
+name = "keep_alive"
+executable = "keep_alive.py"
+version = "0.1.0"
+author = "meenmachine"

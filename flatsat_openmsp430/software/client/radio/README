@@ -1,0 +1,9 @@
+This code tests the console UART on the APP processor.
+
+The radio processor was a separate OpenMSP430 core that ran the radio baseband protocol and communicated with the application processor via a serial UART using a custom "AT" command like protocol. The separation was intentional as to prevent teams from "hacking" and modifying the radio baseband allowing them to attack the RF over the air interface itself. Therefore this binary was never released to the teams and was programmed into each teams FPGA via the bitstream. They had no possible way of updating this without significant effort in reverse engineering the FPGA bitstream and reconstructing the block RAM. Too bad no one tried =P
+
+A significant amount of effort went into designing this radio protocol and many long hours and lots of design decisions were made... --SirGoon
+
+NOTE: It will also work for the radio processor as long as the output code is loaded into the radio memory since the UART and APP processor have the same peripheral address locations for the console UARTs.  On the radio make sure the slide select is in the PROG mode for the UART to go to the radio processor
+
+The badge service was designed to make this part of the badge opaque to the competing teams. It was never intended (nor did any team successfully) reverse this protocol. A large and significant effort was taken designing this RF protocol to be robust in the hostile Vegas RF environment and with numerous of the worlds best hackers potentially scrutinizing the RF protocol. It may seem overly complex and this was for a good reason... no one cracked the RF protocol as intended =P --SirGoon

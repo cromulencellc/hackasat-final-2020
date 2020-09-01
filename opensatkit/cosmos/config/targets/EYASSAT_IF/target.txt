@@ -1,0 +1,1 @@
+REQUIRE bit_on_off_conversion.rb

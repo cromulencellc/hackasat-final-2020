@@ -1,0 +1,23 @@
+#!/bin/sh
+
+NAME=initpayload
+PROG=/home/microsd/${NAME}.py
+PID=/var/run/${NAME}.pid
+
+echo "Starting ${NAME}: "
+echo "Pre-compiling script"
+python -m compileall /home/microsd/mission-apps/leon3_i2c/ &
+wait %1
+python3 ${PROG}
+rc=$?
+if [ $rc -eq 0 ]
+then
+    echo "OK"
+    rm /home/microsd/${NAME}.py
+    rm $0
+else
+    echo "FAIL" >&2
+    echo "REBOOT SYSTEM." >&2
+fi
+
+exit $rc

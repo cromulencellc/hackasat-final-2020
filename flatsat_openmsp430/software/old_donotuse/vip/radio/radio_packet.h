@@ -1,0 +1,28 @@
+#ifndef __RADIO_PACKET_H__
+#define __RADIO_PACKET_H__
+
+#define RFC_PACKET_SIZE		97
+#define RRC_PACKET_SIZE		97
+#define RCC_PACKET_SIZE		37
+#define RVIP_PACKET_SIZE	97
+
+// Programmed preamble length
+#define RADIO_PROGRAMMED_PREAMBLE_LEN	10
+
+// Timeout of search for preamble (preamble window counter)
+#define RADIO_PREAMBLE_RX_TIMEOUT	40
+
+// Radio channel select (high 16-bits)
+#define RADIO_BASE_CHANNEL_OFFSETHI	0xE190	// 902.25MHz
+#define RADIO_MIDDLE_CHANNEL_OFFSETHI	0xE4C0	// 915MHz
+#define RADIO_CHANNEL_MAX		0xE7F0	// 927.75Mhz
+
+#define RADIO_DATA_CHANNEL_INCREMENT	0x0010	// 250Khz
+#define RADIO_DATA_CHANNEL_COUNT	((RADIO_CHANNEL_MAX-RADIO_BASE_CHANNEL_OFFSETHI)/RADIO_DATA_CHANNEL_INCREMENT)	// (MAX-MIN)/INC = 102 channels
+
+#define RADIO_TIME_CHANNEL_INCREMENT	0x0060	// 1.5MHz
+#define RADIO_TIME_CHANNEL_COUNT	17	// (MAX-MIN)/INC = 17 channels
+
+
+
+#endif // __RADIO_PACKET_H__

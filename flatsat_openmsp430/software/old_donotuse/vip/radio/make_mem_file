@@ -1,0 +1,5 @@
+#!/bin/bash
+
+msp430-objcopy -O ihex vip_radio.elf vip_radio.ihex
+./ihex2mem.tcl -ihex vip_radio.ihex -out vip_radio.mem -mem_size 16384
+

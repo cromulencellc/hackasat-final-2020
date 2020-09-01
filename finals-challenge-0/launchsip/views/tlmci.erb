@@ -1,0 +1,43 @@
+<main role="main" class="flex-shrink-0">
+  <div class="container">
+    <h1 class="mt-5">CI Telemetry</h1>
+    <table class="table">
+      <thead class="thead-light">
+        <th scope="col">SOURCE</th>
+        <th scope="col">TIMESTAMP</th>
+        <th scope="col">CSSDS_STREAMID</th>
+        <th scope="col">CSSDS_SEQUENCE</th>
+        <th scope="col">CSSDS_SECONDS</th>
+        <th scope="col">CSSDS_SUBSECS</th>
+        <th scope="col">CMD_VALID_COUNT</th>
+        <th scope="col">CMD_ERROR_COUNT</th>
+        <th scope="col">LAST_TBL_LOAD_STATUS</th>
+        <th scope="col">SPARE_BYTE</th>
+        <th scope="col">LAST_TBL_LOAD_ATTR_ERRS</th>
+        <th scope="col">RECV_CMD_CNT</th>
+        <th scope="col">RECV_CMD_ERR_CNT</th>
+        <th scope="col">BAUD_RATE</th>
+      </thead>
+      <tbody>
+        <% entries.each do |e| %>
+        <tr>
+          <td><%= e.source_ip %></td>
+          <td><%= e.created_at %></td>
+          <td><%= e.packet_identifier %></td>
+          <td><%= e.packet_sequence_counter %></td>
+          <td><%= e.tlm_seconds %></td>
+          <td><%= e.tlm_subseconds %></td>
+          <td><%= e.command_count %></td>
+          <td><%= e.error_count %></td>
+          <td><%= e.last_load_status %></td>
+          <td><%= e.spare_byte %></td>
+          <td><%= e.last_load_attr_errors %></td>
+          <td><%= e.recv_command_count %></td>
+          <td><%= e.recv_command_error_count %></td>
+          <td><%= e.baud_rate %></td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</main>

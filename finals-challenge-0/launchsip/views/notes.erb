@@ -1,0 +1,39 @@
+<main role="main" class="flex-shrink-0">
+  <div class="container">
+    <h1 class="mt-5">Create New Note</h1>
+    <form method="post">
+      <div class="form-group">
+        <label for="title">Title</label>
+        <input class="form-control" id="title" name="title">
+      </div>
+      <div class="form-group">
+        <label for="body">Body</label>
+        <textarea class="form-control" id="body" name="body"></textarea>
+      </div>
+      <div class="form-check">
+        <input type="checkbox" class="form-check-input" id="public" name="public">
+        <label class="form-check-label" for="public">Public</label>
+      </div>
+      <button type="submit" class="btn btn-primary" name="Submit">Submit</button>
+    </form>
+    <h1 class="mt-5">Notes</h1>
+    <table class="table">
+      <thead class="thead-light">
+        <th scope="col">User</th>
+        <th scope="col">Title</th>
+        <th scope="col">Contents</th>
+        <th scope="col">Updated</th>
+      </thead>
+      <tbody>
+        <% notes.each do |n| %>
+        <tr>
+          <td><%= LaunchSIP::Account.find(:id => n.user).name %></td>
+          <td><%= n.title %></td>
+          <td><a href="/note/<%= n.id %>">show</a></td>
+          <td><%= n.created_at %></td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</main>

@@ -1,0 +1,97 @@
+<main role="main" class="flex-shrink-0">
+  <div class="container">
+    <h1 class="mt-5">ADCS Telemetry</h1>
+    <table class="table">
+      <thead class="thead-light">
+        <th scope="col">SOURCE</th>
+        <th scope="col">TIMESTAMP</th>
+        <th scope="col">CSSDS_STREAMID</th>
+        <th scope="col">CSSDS_SEQUENCE</th>
+        <th scope="col">CSSDS_SECONDS</th>
+        <th scope="col">CSSDS_SUBSECS</th>
+        <th scope="col">TIME_STRING</th>
+        <th scope="col">CALL_SIGN</th>
+        <th scope="col">PACKET_ID</th>
+        <th scope="col">X_ROD</th>
+        <th scope="col">Y_ROD</th>
+        <th scope="col">CTRL_MODE</th>
+        <th scope="col">PAD</th>
+        <th scope="col">SUN_TOP</th>
+        <th scope="col">SUN_BOTTOM</th>
+        <th scope="col">PWM</th>
+        <th scope="col">SUN_YAW_ANG</th>
+        <th scope="col">YAW</th>
+        <th scope="col">PITCH</th>
+        <th scope="col">ROLL</th>
+        <th scope="col">MAG_X</th>
+        <th scope="col">MAG_Y</th>
+        <th scope="col">MAG_Z</th>
+        <th scope="col">ACC_X</th>
+        <th scope="col">ACC_Y</th>
+        <th scope="col">ACC_Z</th>
+        <th scope="col">ROT_X</th>
+        <th scope="col">ROT_Y</th>
+        <th scope="col">ROT_Z</th>
+        <th scope="col">ACT_WHEEL_SPD</th>
+        <th scope="col">CMD_WHEEL_SPD</th>
+        <th scope="col">WHEEL_ANG_MOM</th>
+        <th scope="col">DELTA_T</th>
+        <th scope="col">YAW_CMD</th>
+        <th scope="col">POINTING_ERROR</th>
+        <th scope="col">DEADBAND</th>
+        <th scope="col">EXTRA</th>
+        <th scope="col">KP</th>
+        <th scope="col">KI</th>
+        <th scope="col">KD</th>
+        <th scope="col">DEADBAND_SCALE_FACTOR</th>
+      </thead>
+      <tbody>
+        <% entries.each do |e| %>
+        <tr>
+          <td><%= e.source_ip %></td>
+          <td><%= e.created_at %></td>
+          <td><%= e.packet_identifier %></td>
+          <td><%= e.packet_sequence_counter %></td>
+          <td><%= e.tlm_seconds %></td>
+          <td><%= e.tlm_subseconds %></td>
+          <td><%= e.time_string %></td>
+          <td><%= e.simulator_call_sign %></td>
+          <td><%= e.packet_id %></td>
+          <td><%= e.torque_x %></td>
+          <td><%= e.torque_y %></td>
+          <td><%= e.control_mode %></td>
+          <td><%= e.pad_bits %></td>
+          <td><%= e.top_sun_sensor %></td>
+          <td><%= e.bottom_sun_sensor %></td>
+          <td><%= e.pwm %></td>
+          <td><%= e.yaw_angle_sun %></td>
+          <td><%= e.yaw_angle_magnetometer %></td>
+          <td><%= e.pitch_angle_magnetometer %></td>
+          <td><%= e.roll_angle_magnetometer %></td>
+          <td><%= e.magnetometer_x %></td>
+          <td><%= e.magnetometer_y %></td>
+          <td><%= e.magnetometer_z %></td>
+          <td><%= e.acceleterometer_x %></td>
+          <td><%= e.acceleterometer_y %></td>
+          <td><%= e.acceleterometer_z %></td>
+          <td><%= e.angular_rotation_x %></td>
+          <td><%= e.angular_rotation_y %></td>
+          <td><%= e.angular_rotation_z %></td>
+          <td><%= e.actual_wheel_speed %></td>
+          <td><%= e.commanded_wheel_speed %></td>
+          <td><%= e.wheel_angular_momentum %></td>
+          <td><%= e.integration_time %></td>
+          <td><%= e.commanded_yaw_angle %></td>
+          <td><%= e.pointing_error %></td>
+          <td><%= e.deadband %></td>
+          <td><%= e.extra_pwm %></td>
+          <td><%= e.p_coefficient %></td>
+          <td><%= e.i_coefficient %></td>
+          <td><%= e.p_coefficient2 %></td>
+          <td><%= e.scaling_factor %></td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</main>

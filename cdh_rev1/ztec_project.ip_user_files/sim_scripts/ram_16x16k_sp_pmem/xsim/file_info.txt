@@ -1,0 +1,2 @@
+ram_16x16k_sp_pmem.v,verilog,xil_defaultlib,../../../../ztec_project.srcs/sources_1/ip/ram_16x16k_sp_pmem/sim/ram_16x16k_sp_pmem.v,
+glbl.v,Verilog,xil_defaultlib,glbl.v

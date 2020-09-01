@@ -1,0 +1,5 @@
+These are tools that were used to create the spreading codes, encryption keys, and various other elements of the service
+
+Every badge was programmed with a set of spreading codes that were unique to each badge. These spreading codes were randomly generated and are all orthogonal to eachother (meaning they do not collide). These spreading codes allowed the badges to pick random frequencies and time slots each round to transmit on. This would make it difficult for teams to selectively other badges vs there badge -- thus discouraging it from happening. I spent a good bit of time worrying about hackers being hackers and screwing with the RF protocol, so it may seem a little complex but with good reason -- No one cracked it :)
+
+--SirGoon

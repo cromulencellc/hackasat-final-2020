@@ -1,0 +1,49 @@
+################################################################################
+# cFS Kit Main Screen ruby scripts
+#
+# License:
+#   Modified from code written by David McComas, licensed under the copyleft GNU General Public
+#   License (GPL).
+#
+################################################################################
+SCREEN AUTO AUTO 0.5
+VERTICAL
+  NAMED_WIDGET heading TITLE "Hack-A-Sat Space Security Challenge 2020"
+  SETTING BACKCOLOR 254 156 255
+  SETTING TEXTCOLOR black
+  LABELVALUE CFE_ES HK_TLM_PKT CCSDS_SECONDS WITH_UNITS 10 right
+  GLOBAL_SETTING BUTTON BACKCOLOR 112 199 204
+  GLOBAL_SETTING BUTTON TEXTCOLOR black
+  HORIZONTALBOX Applications 5
+    MATRIXBYCOLUMNS 3
+      BUTTON 'ADCS' 'display("EYASSAT_IF TLM_ADCS",50,50)'
+      BUTTON 'Power' 'display("EYASSAT_IF POWER",50,50)'
+      BUTTON 'Thermal' 'display("EYASSAT_IF TEMPS",50,50)'
+      BUTTON 'EyasSat Interface' 'display("EYASSAT_IF ALL",50,50)'
+      BUTTON 'Payload Interface' 'display("PL_IF PAYLOAD",50,50)'
+      BUTTON 'Block Diagram' 'display("CFS_KIT SYSTEM_BLOCK_DIAGRAM", 50,50)'
+    END # Matrix
+    SETTING BACKCOLOR black
+    SETTING TEXTCOLOR white
+  END # BOX
+  HORIZONTALBOX "core Flight Executive (cFE)" 5
+    MATRIXBYCOLUMNS 3
+      BUTTON 'Event Service'     'display("CFE_EVS CFE_EVS_SCREEN",50,50)'
+      BUTTON 'Executive Service' 'display("CFE_ES CFE_ES_SCREEN",50,50)'
+      BUTTON 'Software Bus'      'display("CFE_SB CFE_SB_SCREEN",50,50)'
+      BUTTON 'Table Service'     'display("CFE_TBL CFE_TBL_SCREEN",50,50)'
+      BUTTON 'Time Service'      'display("CFE_TIME CFE_TIME_SCREEN",50,50)'
+      BUTTON 'cFE Users Guide'   'require "#{Cosmos::USERPATH}/lib/osk_global.rb"; Cosmos.open_in_web_browser("#{Osk::CFE_UG_DIR}/#{Osk::CFE_UG_FILE}")'
+    END # Matrix
+    SETTING BACKCOLOR black
+    SETTING TEXTCOLOR white
+  END # BOX
+  HORIZONTALLINE
+  LABEL "Flight Event Messages"
+  #SCROLLWINDOW
+    #NAMED_WIDGET evs_msg_t_minus_3 TEXTFIELD 512
+    #NAMED_WIDGET evs_msg_t_minus_2 TEXTFIELD 512
+    #NAMED_WIDGET evs_msg_t_minus_1 TEXTFIELD 512
+    NAMED_WIDGET evs_msg_t TEXTBOX CFE_EVS EVENT_MSG_PKT MESSAGE 768 50
+  #End # Scroll Window
+END # Vertical

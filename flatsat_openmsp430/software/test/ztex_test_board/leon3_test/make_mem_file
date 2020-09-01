@@ -1,0 +1,5 @@
+#!/bin/bash
+
+msp430-objcopy -O ihex leon3.elf leon3.ihex
+./ihex2coe.tcl -ihex leon3.ihex -out leon3.coe -mem_size 32768
+

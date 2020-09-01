@@ -1,0 +1,6 @@
+The application MSP430 code is here
+
+This is for the application processor MSP430 in the badge -- I used nearly all of the available memory to make this work and that wasn't by design -- it just barely fit!!! Yup, used every bit of that block RAM in the Spartan-6 LX-9 FPGA!
+
+--SirGoon
+It was wonderful seeing this grow and eventually work for so many people. I know there were mistakes made and everything didn't work perfectly but it worked!

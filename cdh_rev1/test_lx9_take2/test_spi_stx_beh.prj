@@ -1,0 +1,3 @@
+verilog isim_temp "uspi_0.v"
+verilog isim_temp "test_spi.v"
+verilog isim_temp "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

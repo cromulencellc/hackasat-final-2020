@@ -1,0 +1,21 @@
+<% 
+  require 'osk_config' 
+
+  @APP_PREFIX_STR = "UART_TO_CI"
+  @HK_TLM_MID_STR = "UART_TO_CI_HK_TLM_MID"
+  
+  #TODO - Add data types pkt
+  
+%>  
+
+TELEMETRY UART_TO_CI HK_TLM_PKT BIG_ENDIAN "Telemetry Output Command Ingest Housekeeping Packet"
+  <%= Osk::Cfg.tlm_hdr(@APP_PREFIX_STR, @HK_TLM_MID_STR) %>
+  APPEND_ITEM CMD_VALID_COUNT      16 UINT  "Command Count"
+  APPEND_ITEM CMD_ERROR_COUNT      16 UINT  "Error Count"
+  APPEND_ITEM LAST_TBL_LOAD_STATUS  8 UINT  "0=Undefined, 1=No, 1=Yes"
+  APPEND_ITEM SPARE_BYTE            8 UINT  ""
+  APPEND_ITEM LAST_TBL_LOAD_ATTR_ERRS 16 UINT  "Count of attribute errors in last table load"
+  APPEND_ITEM RECV_CMD_CNT         32 UINT "Count of cmd messages received on uart"
+  APPEND_ITEM RECV_CMD_ERR_CNT     32 UINT "Count of erroneous cmd messages received on uart"
+  APPEND_ITEM SENT_TLM_CNT         32 UINT "Count of tlm messages sent on uart"
+  APPEND_ITEM BAUD_RATE            32 UINT "Configured baud rate for the command and telemetry console"

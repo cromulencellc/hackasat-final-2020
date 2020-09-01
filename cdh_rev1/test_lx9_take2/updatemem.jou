@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# updatemem v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Wed Mar 18 17:02:26 2020
+# Process ID: 79946
+# Current directory: /home/user/hackthesat/fpga/hts_fpga/ztec_project/test_lx9_take2
+# Command line: updatemem -mode batch -source /home/user/tools/Vivado/2019.2/scripts/updatemem/main.tcl -notrace -tclargs -meminfo omsp_bram.mmi -data /home/user/hackthesat/flatsat/flatsat_openmsp430/software/server/radio/radio.elf -proc omsp_radio -bit /home/user/hackthesat/fpga/hts_fpga/ztec_project/ztec_project.runs/impl_1/openMSP430_fpga.bit -out output.bit
+# Log file: /home/user/hackthesat/fpga/hts_fpga/ztec_project/test_lx9_take2/updatemem.log
+# Journal file: /home/user/hackthesat/fpga/hts_fpga/ztec_project/test_lx9_take2/updatemem.jou
+#-----------------------------------------------------------
+source /home/user/tools/Vivado/2019.2/scripts/updatemem/main.tcl -notrace

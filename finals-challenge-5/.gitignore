@@ -1,0 +1,6 @@
+# Dev venv enviroment
+pienv/
+
+# Exclude buildroot files and kubos files
+kubos-linux/*
+!kubos-linux/.empty

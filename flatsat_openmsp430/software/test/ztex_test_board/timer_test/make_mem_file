@@ -1,0 +1,5 @@
+#!/bin/bash
+
+msp430-objcopy -O ihex timer.elf timer.ihex
+./ihex2coe.tcl -ihex timer.ihex -out timer.coe -mem_size 32768
+

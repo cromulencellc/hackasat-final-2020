@@ -1,0 +1,7 @@
+<main role="main" class="flex-shrink-0">
+  <div class="container">
+    <h1 class="mt-5"><%= note.title %></h1>
+    <p><small>Posted by <%= LaunchSIP::Account.find(:id => note.user).name %> at <%= note.created_at %>.</small></p>
+    <p class="lead"><%= note.data %></p>
+  </div>
+</main>

@@ -1,0 +1,49 @@
+<main role="main" class="flex-shrink-0">
+  <div class="container">
+    <h1 class="mt-5">Ephemeris Telemetry</h1>
+    <table class="table">
+      <thead class="thead-light">
+        <th scope="col">SOURCE</th>
+        <th scope="col">TIMESTAMP</th>
+        <th scope="col">CSSDS_STREAMID</th>
+        <th scope="col">CSSDS_SEQUENCE</th>
+        <th scope="col">CSSDS_SECONDS</th>
+        <th scope="col">CSSDS_SUBSECS</th>
+        <th scope="col">PAD</th>
+        <th scope="col">TIME_STRING</th>
+        <th scope="col">ABSOLUTE_TIME_OFFSET</th>
+        <th scope="col">ABSOLUTE_TIME_EPOCH</th>
+        <th scope="col">ABSOLUTE_TIME</th>
+        <th scope="col">POSN_X</th>
+        <th scope="col">POSN_Y</th>
+        <th scope="col">POSN_Z</th>
+        <th scope="col">VELN_X</th>
+        <th scope="col">VELN_Y</th>
+        <th scope="col">VELN_Z</th>
+      </thead>
+      <tbody>
+        <% entries.each do |e| %>
+        <tr>
+          <td><%= e.source_ip %></td>
+          <td><%= e.created_at %></td>
+          <td><%= e.packet_identifier %></td>
+          <td><%= e.packet_sequence_counter %></td>
+          <td><%= e.tlm_seconds %></td>
+          <td><%= e.tlm_subseconds %></td>
+          <td><%= e.padding %></td>
+          <td><%= e.time_string %></td>
+          <td><%= e.absolute_time_offset %></td>
+          <td><%= e.absolute_time_epoch %></td>
+          <td><%= e.absolute_time %></td>
+          <td><%= e.x_position %></td>
+          <td><%= e.y_position %></td>
+          <td><%= e.z_position %></td>
+          <td><%= e.x_velocity %></td>
+          <td><%= e.y_velocity %></td>
+          <td><%= e.z_velocity %></td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</main>

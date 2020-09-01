@@ -1,0 +1,11 @@
+{
+    "tasks": [
+        {
+            "description": "Take an image and send through i2c to Leon3.",
+            "delay": "0s",
+            "app": {
+                "name": "leon3_i2c"
+            }
+        }
+    ]
+}

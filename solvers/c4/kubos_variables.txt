@@ -1,0 +1,5 @@
+setenv mmc_boot "mmc dev 0; fatload mmc 0:1 ${fdt_addr_r} bcm2708-rpi-zero.dtb; fatload mmc 0:1 ${kernel_addr_r} kernel; bootm ${kernel_addr_r} - ${fdt_addr_r}"
+setenv kubos_curr_tried 0
+saveenv
+reset
+

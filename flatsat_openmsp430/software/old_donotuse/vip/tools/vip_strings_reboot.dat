@@ -1,0 +1,8 @@
+00 SPLASH_TITLE 			"DEF CON 22 CTF",
+01 SCOREBOARD_TITLE 		"DEF CON 22 CTF",
+02 SCOREBOARD_UNAVAILABLE 	"\nScoreboard Not Available\nProceed to the CTF Room\n",
+03 SCOREBOARD_OUTDATED 		"\nScoreboard Stale\nProceed to the CTF Room\n",
+04 SCOREBOARD_HIDDEN 		"\nScoreboard Hidden Until Closing Ceremony\n",
+05 LEADERBOARD_TITLE 		"IN THE LEAD\n\n",
+06 LEADERBOARD_UNAVAILABLE "\n  Leaderboard\n Not Available\n",
+07 NEWS_TITLE 				"   CTF NEWS"

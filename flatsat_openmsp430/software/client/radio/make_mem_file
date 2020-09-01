@@ -1,0 +1,5 @@
+#!/bin/bash
+
+msp430-objcopy -O ihex radio.elf radio.ihex
+./ihex2coe.tcl -ihex radio.ihex -out radio.coe -mem_size 32768
+

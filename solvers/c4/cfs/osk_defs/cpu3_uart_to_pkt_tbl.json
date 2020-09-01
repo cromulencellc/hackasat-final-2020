@@ -1,0 +1,503 @@
+{
+   "name": "Telemetry Output Table",
+   "description": "Define default telemetry packets that are forwarded by KIT_TO. KIT_TO does
+                   not have any filtering capabilities. Each packet entry contains:
+                   CFE_SB_MsgId_t, CFE_SB_Qos_t (Priority,Reliability), Buffer Limit",
+   "packet-array": [
+      "packet": {
+         "name": "CFE_ES_APP_TLM_MID",
+         "stream-id": "\u080B",
+         "dec-id": 2059,
+         "priority": 0,
+         "reliability": 0,
+         "buf-limit": 4
+      },
+  
+      "packet": {
+         "name": "CFE_ES_HK_TLM_MID",
+         "stream-id": "\u0800",
+         "dec-id": 2048,
+         "priority": 0,
+         "reliability": 0,
+         "buf-limit": 4
+      },
+
+      "packet": {
+         "name": "CFE_ES_MEMSTATS_TLM_MID",
+         "stream-id": "\u0810",
+         "dec-id": 2064,
+         "priority": 0,
+         "reliability": 0,
+         "buf-limit": 4
+      },
+
+      "packet": {
+         "name": "CFE_ES_SHELL_TLM_MID",
+         "stream-id": "\u080F",
+         "dec-id": 2063,
+         "priority": 0,
+         "reliability": 0,
+         "buf-limit": 4
+      },
+
+      "packet": {
+         "name": "CFE_EVS_EVENT_MSG_MID",
+         "stream-id": "\u0808",
+         "dec-id": 2056,
+         "priority": 0,
+         "reliability": 0,
+         "buf-limit": 40
+      },
+
+      "packet": {
+         "name": "CFE_EVS_HK_TLM_MID",
+         "stream-id": "\u0801",
+         "dec-id": 2049,
+         "priority": 0,
+         "reliability": 0,
+         "buf-limit": 4
+      },
+
+      "packet": {
+         "name": "CFE_SB_HK_TLM_MID",
+         "stream-id": "\u0803",
+         "dec-id": 2051,
+         "priority": 0,
+         "reliability": 0,
+         "buf-limit": 4
+      },
+
+      "packet": {
+         "name": "CFE_SB_STATS_TLM_MID",
+         "stream-id": "\u080A",
+         "dec-id": 2058,
+         "priority": 0,
+         "reliability": 0,
+         "buf-limit": 4
+      },
+
+      "packet": {
+         "name": "CFE_TBL_HK_TLM_MID",
+         "stream-id": "\u0804",
+         "dec-id": 2052,
+         "priority": 0,
+         "reliability": 0,
+         "buf-limit": 4
+      },
+
+      "packet": {
+         "name": "CFE_TBL_REG_TLM_MID",
+         "stream-id": "\u080C",
+         "dec-id": 2060,
+         "priority": 0,
+         "reliability": 0,
+         "buf-limit": 4
+      },
+
+      "packet": {
+         "name": "CFE_TIME_DIAG_TLM_MID",
+         "stream-id": "\u0806",
+         "dec-id": 2054,
+         "priority": 0,
+         "reliability": 0,
+         "buf-limit": 4
+      },
+
+      "packet": {
+         "name": "CFE_TIME_HK_TLM_MID",
+         "stream-id": "\u0805",
+         "dec-id": 2053,
+         "priority": 0,
+         "reliability": 0,
+         "buf-limit": 4
+      },
+
+      "packet": {
+         "name": "CS_HK_TLM_MID",
+         "stream-id": "\u08A4",
+         "dec-id": 2212,
+         "priority": 0,
+         "reliability": 0,
+         "buf-limit": 4
+      },
+
+      "packet": {
+         "name": "DS_HK_TLM_MID",
+         "stream-id": "\u08B8",
+         "dec-id": 2232,
+         "priority": 0,
+         "reliability": 0,
+         "buf-limit": 4
+      },
+
+      "packet": {
+         "name": "DS_DIAG_TLM_MID",
+         "stream-id": "\u08B9",
+         "dec-id": 2233,
+         "priority": 0,
+         "reliability": 0,
+         "buf-limit": 4
+      },
+
+      "packet": {
+         "name": "FM_HK_TLM_MID",
+         "stream-id": "\u088A",
+         "dec-id": 2186,
+         "priority": 0,
+         "reliability": 0,
+         "buf-limit": 4
+      },
+
+      "packet": {
+         "name": "FM_FILE_INFO_TLM_MID",
+         "stream-id": "\u088B",
+         "dec-id": 2187,
+         "priority": 0,
+         "reliability": 0,
+         "buf-limit": 4
+      },
+
+      "packet": {
+         "name": "FM_DIR_LIST_TLM_MID",
+         "stream-id": "\u088C",
+         "dec-id": 2188,
+         "priority": 0,
+         "reliability": 0,
+         "buf-limit": 4
+      },
+
+      "packet": {
+         "name": "FM_OPEN_FILES_TLM_MID",
+         "stream-id": "\u088D",
+         "dec-id": 2189,
+         "priority": 0,
+         "reliability": 0,
+         "buf-limit": 4
+      },
+
+      "packet": {
+         "name": "FM_FREE_SPACE_TLM_MID",
+         "stream-id": "\u088E",
+         "dec-id": 2190,
+         "priority": 0,
+         "reliability": 0,
+         "buf-limit": 4
+      },
+
+      "packet": {
+         "name": "HS_HK_TLM_MID",
+         "stream-id": "\u08AD",
+         "dec-id": 2221,
+         "priority": 0,
+         "reliability": 0,
+         "buf-limit": 4
+      },
+
+      "packet": {
+         "name": "LC_HK_TLM_MID",
+         "stream-id": "\u08A7",
+         "dec-id": 2215,
+         "priority": 0,
+         "reliability": 0,
+         "buf-limit": 4
+      },
+
+      "packet": {
+         "name": "MD_HK_TLM_MID",
+         "stream-id": "\u0890",
+         "dec-id": 2192,
+         "priority": 0,
+         "reliability": 0,
+         "buf-limit": 4
+      },
+
+      "packet": {
+         "name": "MD_HK_TLM_MID",
+         "stream-id": "\u0891",
+         "dec-id": 2193,
+         "priority": 0,
+         "reliability": 0,
+         "buf-limit": 4
+      },
+
+      "packet": {
+         "name": "MD_HK_TLM_MID",
+         "stream-id": "\u0892",
+         "dec-id": 2194,
+         "priority": 0,
+         "reliability": 0,
+         "buf-limit": 4
+      },
+
+      "packet": {
+         "name": "MD_HK_TLM_MID",
+         "stream-id": "\u0893",
+         "dec-id": 2195,
+         "priority": 0,
+         "reliability": 0,
+         "buf-limit": 4
+      },
+
+      "packet": {
+         "name": "MD_HK_TLM_MID",
+         "stream-id": "\u0894",
+         "dec-id": 2196,
+         "priority": 0,
+         "reliability": 0,
+         "buf-limit": 4
+      },
+
+      "packet": {
+         "name": "MM_HK_TLM_MID",
+         "stream-id": "\u0887",
+         "dec-id": 2183,
+         "priority": 0,
+         "reliability": 0,
+         "buf-limit": 4
+      },
+
+      "packet": {
+         "name": "SC_HK_TLM_MID",
+         "stream-id": "\u08AA",
+         "dec-id": 2218,
+         "priority": 0,
+         "reliability": 0,
+         "buf-limit": 4
+      },
+  
+      "packet": {
+         "name": "HK_HK_TLM_MID",
+         "stream-id": "\u089B",
+         "dec-id": 2203,
+         "priority": 0,
+         "reliability": 0,
+         "buf-limit": 4
+      },
+  
+      "packet": {
+         "name": "HK_COMBINED_PKT1_MID",
+         "stream-id": "\u089C",
+         "dec-id": 2204,
+         "priority": 0,
+         "reliability": 0,
+         "buf-limit": 4
+      },
+  
+      "packet": {
+         "name": "HK_COMBINED_PKT2_MID",
+         "stream-id": "\u089D",
+         "dec-id": 2205,
+         "priority": 0,
+         "reliability": 0,
+         "buf-limit": 4
+      },
+  
+      "packet": {
+         "name": "KIT_SCH_HK_TLM_MID",
+         "stream-id": "\u0899",
+         "dec-id": 2201,
+         "priority": 0,
+         "reliability": 0,
+         "buf-limit": 4
+      },
+      
+      "packet": {
+         "name": "UART_TO_CI_HK_TLM_MID",
+         "stream-id": "\u09DC",
+         "dec-id": 2524,
+         "priority": 0,
+         "reliability": 0,
+         "buf-limit": 4
+      },
+
+      "packet": {
+         "name": "UART_TO_CI_DATA_TYPE_TLM_MID",
+         "stream-id": "\u09DD",
+         "dec-id": 2525,
+         "priority": 0,
+         "reliability": 0,
+         "buf-limit": 4
+      },
+      
+      "packet": {
+         "name": "PL_IF_HK_TLM_MID",
+         "stream-id": "\u09DE",
+         "dec-id": 2526,
+         "priority": 0,
+         "reliability": 0,
+         "buf-limit": 4
+      },
+
+      "packet": {
+         "name": "CHAL4_TLM_HK_MID",
+         "stream-id": "\u09E5",
+         "dec-id": 2533,
+         "priority": 0,
+         "reliability": 0,
+         "buf-limit": 4
+      },
+
+      "packet": {
+         "name": "CHAL4_SHELL_OUTPUT_TLM_MID",
+         "stream-id": "\u09DF",
+         "dec-id": 2527,
+         "priority": 0,
+         "reliability": 0,
+         "buf-limit": 4
+      },
+
+      "packet": {
+         "name": "PL_IF_PL_STATUS_MID",
+         "stream-id": "\u09E4",
+         "dec-id": 2532,
+         "priority": 0,
+         "reliability": 0,
+         "buf-limit": 4
+      },
+
+      "packet": {
+         "name": "CF_HK_TLM_MID",
+         "stream-id": "\u08B0",
+         "dec-id": 2224,
+         "priority": 0,
+         "reliability": 0,
+         "buf-limit": 4
+      },
+
+      "packet": {
+         "name": "CF_TRANS_TLM_MID",
+         "stream-id": "\u08B1",
+         "dec-id": 2225,
+         "priority": 0,
+         "reliability": 0,
+         "buf-limit": 4
+      },
+
+      "packet": {
+         "name": "CF_CONFIG_TLM_MID",
+         "stream-id": "\u08B2",
+         "dec-id": 2226,
+         "priority": 0,
+         "reliability": 0,
+         "buf-limit": 4
+      },
+
+      "packet": {
+         "name": "CF_SPACE_TO_GND_PDU_MID",
+         "stream-id": "\u0FFD",
+         "dec-id": 4093,
+         "priority": 0,
+         "reliability": 0,
+         "buf-limit": 20
+      },
+
+      "packet": {
+         "name": "CF_SPARE0_TLM_MID",
+         "stream-id": "\u08B3",
+         "dec-id": 2227,
+         "priority": 0,
+         "reliability": 0,
+         "buf-limit": 4
+      },
+
+      "packet": {
+         "name": "CF_SPARE1_TLM_MID",
+         "stream-id": "\u08B4",
+         "dec-id": 2228,
+         "priority": 0,
+         "reliability": 0,
+         "buf-limit": 4
+      },
+
+      "packet": {
+         "name": "CF_SPARE2_TLM_MID",
+         "stream-id": "\u08B5",
+         "dec-id": 2229,
+         "priority": 0,
+         "reliability": 0,
+         "buf-limit": 4
+      },
+
+      "packet": {
+         "name": "CF_SPARE3_TLM_MID",
+         "stream-id": "\u08B6",
+         "dec-id": 2230,
+         "priority": 0,
+         "reliability": 0,
+         "buf-limit": 4
+      },
+
+      "packet": {
+         "name": "CF_SPARE4_TLM_MID",
+         "stream-id": "\u08B7",         
+	      "dec-id": 2231,
+         "priority": 0,
+         "reliability": 0,
+         "buf-limit": 4
+      },  
+
+      "packet": {
+         "name": "EYASSAT_IF_TLM_HK_MID",
+         "stream-id": "\u09D4",
+         "dec-id": 2516,
+         "priority": 0,
+         "reliability": 0,
+         "buf-limit": 4
+      },
+
+      "packet": {
+         "name": "EYASSAT_IF_TLM_INTERNAL_MID",
+         "stream-id": "\u09D5",
+         "dec-id": 2517,
+         "priority": 0,
+         "reliability": 0,
+         "buf-limit": 4
+      },
+
+      "packet": {
+         "name": "EYASSAT_IF_TLM_TEMP_MID",
+         "stream-id": "\u09D6",
+         "dec-id": 2518,
+         "priority": 0,
+         "reliability": 0,
+         "buf-limit": 4
+      },
+
+      "packet": {
+         "name": "EYASSAT_IF_TLM_POWER_MID",
+         "stream-id": "\u09D7",
+         "dec-id": 2519,
+         "priority": 0,
+         "reliability": 0,
+         "buf-limit": 4
+      },
+
+      "packet": {
+         "name": "EYASSAT_IF_TLM_ADCS_MID",
+         "stream-id": "\u09D9",
+         "dec-id": 2521,
+         "priority": 0,
+         "reliability": 0,
+         "buf-limit": 4
+      },
+
+      "packet": {
+         "name": "EPHEM_TLM_HK_MID",
+         "stream-id": "\u09E2",
+         "dec-id": 2530,
+         "priority": 0,
+         "reliability": 0,
+         "buf-limit": 4
+      },
+
+      "packet": {
+         "name": "EPHEM_TLM_EPHEM_MID",
+         "stream-id": "\u09E3",
+         "dec-id": 2531,
+         "priority": 0,
+         "reliability": 0,
+         "buf-limit": 4
+      },
+
+   ]
+}

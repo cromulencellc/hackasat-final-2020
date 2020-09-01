@@ -1,0 +1,4 @@
+name = "leon3_i2c"
+executable = "leon3_i2c.py"
+version = "0.1.0"
+author = "meenmachine"

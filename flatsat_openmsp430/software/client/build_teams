@@ -1,0 +1,24 @@
+#!/bin/sh
+
+cd $(dirname $0)
+pwd
+mkdir -p bin
+
+cd radio
+make clean
+for team_num in `seq 0 19`
+do
+	make team_$team_num
+	mv team_$team_num/team_$team_num.mem ../bin/
+done
+
+cd ../application
+make clean
+make
+./make_mem_file
+cd ..
+mv application/client_app.mem bin/
+
+
+#mv radio/team_0/team_0.mem bin/
+#mv application/app_team_0/app_team_0.mem bin/

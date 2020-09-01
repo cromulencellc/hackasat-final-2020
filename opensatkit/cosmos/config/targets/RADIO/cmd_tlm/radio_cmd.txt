@@ -1,0 +1,8 @@
+COMMAND RADIO CONFIGURE <%= Osk::Cfg.processor_endian %> "Configure Radio Rate and Power"
+  APPEND_PARAMETER HEADER 32 STRING "RSC:" "Radio Status and control command header"
+  APPEND_PARAMETER RATE 8  UINT 0 1 1 "Configure radio for low(0) or high(1) rate"
+    STATE HIGH 1
+    STATE LOW 0
+  APPEND_PARAMETER POWER 8 UINT 0 1 0 "Configure radio for nominal(0) or high(1) power"
+    STATE HIGH 1
+    STATE NOMINAL 0

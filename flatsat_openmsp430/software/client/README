@@ -1,0 +1,5 @@
+Contains the CLIENT application and radio code for the badge service
+
+The client is the badge build that was distributed to the teams -- the server badge was used by the organizers. All communications passed from a client badge -> server and then was forward from the server -> client badge
+
+SirGoon

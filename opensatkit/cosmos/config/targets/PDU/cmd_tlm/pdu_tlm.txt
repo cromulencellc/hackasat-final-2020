@@ -1,0 +1,11 @@
+<% 
+  require 'osk_config' 
+
+  @APP_PREFIX_STR = "PDU"
+  @SPACE_TO_GND_PDU_MID_STR = "CF_SPACE_TO_GND_PDU_MID"
+
+%>  
+
+TELEMETRY PDU CF_SPACE_TO_GND_PDU <%= Osk::Cfg.processor_endian %> "CF Space-to-Ground PDU"
+  <%= Osk::Cfg.tlm_hdr(@APP_PREFIX_STR, @SPACE_TO_GND_PDU_MID_STR) %>
+  APPEND_ITEM PAYLOAD 0 BLOCK ""

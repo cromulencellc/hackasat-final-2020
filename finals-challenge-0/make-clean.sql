@@ -1,0 +1,14 @@
+truncate accounts;
+truncate notes;
+truncate images;
+truncate satellites;
+truncate telemetry_app;
+truncate telemetry_internal;
+truncate telemetry_adcs;
+truncate telemetry_temperature;
+truncate telemetry_power;
+truncate telemetry_payload;
+truncate telemetry_ci;
+truncate telemetry_ephemeris_app;
+truncate telemetry_ephemeris;
+insert into accounts (name) values ('admin');

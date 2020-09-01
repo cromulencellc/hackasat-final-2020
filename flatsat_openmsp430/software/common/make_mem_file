@@ -1,0 +1,5 @@
+#!/bin/bash
+
+msp430-objcopy -O ihex uart.elf uart.ihex
+./ihex2coe.tcl -ihex uart.ihex -out uart.coe -mem_size 32768
+

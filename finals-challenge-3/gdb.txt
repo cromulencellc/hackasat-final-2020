@@ -1,0 +1,8 @@
+restore implant/build/data_00001900.bin binary 0x1900
+restore implant/build/data_00210580.bin binary 0x210580
+restore implant/build/data_00220000.bin binary 0x220000
+tb *0x4280005c
+tb *0x42800388
+tb *0x4280054c
+tb *0x428002b0
+c

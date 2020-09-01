@@ -1,0 +1,3 @@
+sudo rmmod pl2303
+sudo rmmod usbserial
+sudo modprobe pl2303

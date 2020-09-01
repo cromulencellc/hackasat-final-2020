@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Sat Apr 25 09:15:29 2020
+# Process ID: 41855
+# Current directory: /home/user/hackthesat/fpga/new_project/ztec_project/ztec_project.runs/ram_16x16k_sp_dmem_synth_1
+# Command line: vivado -log ram_16x16k_sp_dmem.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ram_16x16k_sp_dmem.tcl
+# Log file: /home/user/hackthesat/fpga/new_project/ztec_project/ztec_project.runs/ram_16x16k_sp_dmem_synth_1/ram_16x16k_sp_dmem.vds
+# Journal file: /home/user/hackthesat/fpga/new_project/ztec_project/ztec_project.runs/ram_16x16k_sp_dmem_synth_1/vivado.jou
+#-----------------------------------------------------------
+source ram_16x16k_sp_dmem.tcl -notrace

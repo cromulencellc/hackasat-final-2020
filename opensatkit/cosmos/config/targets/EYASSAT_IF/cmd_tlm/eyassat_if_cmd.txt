@@ -1,0 +1,234 @@
+<% 
+  require 'osk_config' 
+
+  @APP_PREFIX_STR = "EYASSAT_IF"
+  @CMD_MID_STR    = "EYASSAT_IF_CMD_MID"  # Replace with your app's MID defined in message_ids.rb
+  
+%>  
+
+COMMAND EYASSAT_IF NOOP <%= Osk::Cfg.processor_endian %> "Generate an info event message with app version"
+  <%= Osk::Cfg.cmd_hdr(@APP_PREFIX_STR, @CMD_MID_STR, 0, 0) %>
+
+COMMAND EYASSAT_IF RESET_CTRS <%= Osk::Cfg.processor_endian %> "Reset command counters"
+  <%= Osk::Cfg.cmd_hdr(@APP_PREFIX_STR, @CMD_MID_STR, 1, 0) %>
+
+COMMAND EYASSAT_IF LOAD_TBL <%= Osk::Cfg.processor_endian %> "Load example object table"
+  <%= Osk::Cfg.cmd_hdr(@APP_PREFIX_STR, @CMD_MID_STR, 2, 66) %>
+  APPEND_PARAMETER ID    8  UINT 0 2 0 "Table ID. 0 is first table registered"
+  APPEND_PARAMETER TYPE  8  UINT 0 1 1 "0=Replace Table, 1=Update Records"
+  APPEND_PARAMETER FILENAME 512 STRING "/cf/es_adcs_tbl.json" "Full path and file name of table to be loaded"
+
+COMMAND EYASSAT_IF DUMP_TBL <%= Osk::Cfg.processor_endian %> "Dump example object table"
+  <%= Osk::Cfg.cmd_hdr(@APP_PREFIX_STR, @CMD_MID_STR, 3, 66) %>
+  APPEND_PARAMETER ID   8 UINT 0 1 0 "Table ID. 0 is first table registered"
+  APPEND_PARAMETER TYPE 8 UINT 0 1 0 "Unused"
+  APPEND_PARAMETER FILENAME 512 STRING "/cf/es_adcs_tbl~.json" "Full path and file name to receive table dump"
+
+COMMAND EYASSAT_IF HOUR BIG_ENDIAN "Set Hour"
+  <%= Osk::Cfg.cmd_hdr(@APP_PREFIX_STR, @CMD_MID_STR, 4, 3) %>
+  APPEND_PARAMETER CODE 16 STRING "ch" "Command Code"
+  APPEND_PARAMETER HOUR 8 UINT 0 23 0 "Hour"
+
+COMMAND EYASSAT_IF MINUTE BIG_ENDIAN "Set Minute"
+  <%= Osk::Cfg.cmd_hdr(@APP_PREFIX_STR, @CMD_MID_STR, 4, 3) %>
+  APPEND_PARAMETER CODE 16 STRING "cm" "Command Code"
+  APPEND_PARAMETER MINUTE 8 UINT 0 59 0 "Minute"
+
+COMMAND EYASSAT_IF SECOND BIG_ENDIAN "Set Second"
+  <%= Osk::Cfg.cmd_hdr(@APP_PREFIX_STR, @CMD_MID_STR, 4, 3) %>
+  APPEND_PARAMETER CODE 16 STRING "cs" "Command Code"
+  APPEND_PARAMETER SECOND 8 UINT 0 59 0 "Second"
+
+COMMAND EYASSAT_IF CALL_SIGN BIG_ENDIAN "Set Call Sign"
+  <%= Osk::Cfg.cmd_hdr(@APP_PREFIX_STR, @CMD_MID_STR, 4, 3) %>
+  APPEND_PARAMETER CODE 16 STRING "is" "Command Code"
+  APPEND_PARAMETER CALL_SIGN 8 UINT 0 9 0 "Call Sign"
+
+COMMAND EYASSAT_IF TLM_DELAY BIG_ENDIAN "Set Telemetry Delay"
+  <%= Osk::Cfg.cmd_hdr(@APP_PREFIX_STR, @CMD_MID_STR, 4, 3) %>
+  APPEND_PARAMETER CODE 16 STRING "id" "Command Code"
+  APPEND_PARAMETER DELAY 8 UINT 2 60 2 "Delay in Seconds"
+
+COMMAND EYASSAT_IF CMD_TIMEOUT BIG_ENDIAN "Set Command Timeout"
+  <%= Osk::Cfg.cmd_hdr(@APP_PREFIX_STR, @CMD_MID_STR, 5, 4) %>
+  APPEND_PARAMETER CODE 16 STRING "it" "Command Code"
+  APPEND_PARAMETER TIMEOUT 16 INT 1 32767 1 "Command Timeout in Seconds"
+
+COMMAND EYASSAT_IF UART0 BIG_ENDIAN "Enable or Disable UART 0"
+  <%= Osk::Cfg.cmd_hdr(@APP_PREFIX_STR, @CMD_MID_STR, 4, 3) %>
+  APPEND_PARAMETER CODE 16 STRING "iu" "Command Code"
+  APPEND_PARAMETER ENABLE 8 UINT 0 1 1 "Enable Flag"
+    STATE TRUE 1
+    STATE FALSE 0
+
+COMMAND EYASSAT_IF PWR_TLM BIG_ENDIAN "Control Power Telemetry"
+  <%= Osk::Cfg.cmd_hdr(@APP_PREFIX_STR, @CMD_MID_STR, 4, 3) %>
+  APPEND_PARAMETER CODE 16 STRING "dp" "Command Code"
+  APPEND_PARAMETER ENABLE 8 UINT 0 1 1 "Enable Flag"
+    STATE ON 1
+    STATE OFF 0
+
+COMMAND EYASSAT_IF ADCS_TLM BIG_ENDIAN "Control ADCS Telemetry"
+  <%= Osk::Cfg.cmd_hdr(@APP_PREFIX_STR, @CMD_MID_STR, 4, 3) %>
+  APPEND_PARAMETER CODE 16 STRING "da" "Command Code"
+  APPEND_PARAMETER ENABLE 8 UINT 0 1 1 "Enable Flag"
+    STATE ON 1
+    STATE OFF 0
+
+COMMAND EYASSAT_IF PWR_RQST BIG_ENDIAN "Power Telemetry Request from UART"
+  <%= Osk::Cfg.cmd_hdr(@APP_PREFIX_STR, @CMD_MID_STR, 7, 2) %>
+  APPEND_PARAMETER CODE 16 STRING "pt" "Command Code"
+
+COMMAND EYASSAT_IF PWR_RESET BIG_ENDIAN "Power Reset from UART"
+  <%= Osk::Cfg.cmd_hdr(@APP_PREFIX_STR, @CMD_MID_STR, 7, 2) %>
+  APPEND_PARAMETER CODE 16 STRING "pr" "Command Code"
+
+COMMAND EYASSAT_IF PWR_SCALE BIG_ENDIAN "Enable or Disable Scaling Power Telemetry"
+  <%= Osk::Cfg.cmd_hdr(@APP_PREFIX_STR, @CMD_MID_STR, 4, 3) %>
+  APPEND_PARAMETER CODE 16 STRING "ps" "Command Code"
+  APPEND_PARAMETER ENABLE 8 UINT 0 1 1 "Enable Flag"
+    STATE TRUE 1
+    STATE FALSE 0
+
+COMMAND EYASSAT_IF PWR_3V BIG_ENDIAN "Control 3.3V Power"
+  <%= Osk::Cfg.cmd_hdr(@APP_PREFIX_STR, @CMD_MID_STR, 4, 3) %>
+  APPEND_PARAMETER CODE 16 STRING "p1" "Command Code"
+  APPEND_PARAMETER STATE 8 UINT 0 1 1 "On/Off Flag"
+    STATE ON 1
+    STATE OFF 0
+
+COMMAND EYASSAT_IF PWR_ADCS BIG_ENDIAN "Control ADCS Power"
+  <%= Osk::Cfg.cmd_hdr(@APP_PREFIX_STR, @CMD_MID_STR, 4, 3) %>
+  APPEND_PARAMETER CODE 16 STRING "p2" "Command Code"
+  APPEND_PARAMETER STATE 8 UINT 0 1 1 "On/Off Flag"
+    STATE ON 1
+    STATE OFF 0
+
+COMMAND EYASSAT_IF PWR_EXP BIG_ENDIAN "Control Experiment Power"
+  <%= Osk::Cfg.cmd_hdr(@APP_PREFIX_STR, @CMD_MID_STR, 4, 3) %>
+  APPEND_PARAMETER CODE 16 STRING "p3" "Command Code"
+  APPEND_PARAMETER STATE 8 UINT 0 1 1 "On/Off Flag"
+    STATE ON 1
+    STATE OFF 0
+
+COMMAND EYASSAT_IF PWR_HTR1 BIG_ENDIAN "Control Heater 1 Power"
+  <%= Osk::Cfg.cmd_hdr(@APP_PREFIX_STR, @CMD_MID_STR, 4, 3) %>
+  APPEND_PARAMETER CODE 16 STRING "p4" "Command Code"
+  APPEND_PARAMETER STATE 8 UINT 0 1 1 "On/Off Flag"
+    STATE ON 1
+    STATE OFF 0
+
+COMMAND EYASSAT_IF PWR_HTR2 BIG_ENDIAN "Control Heater 2 Power"
+  <%= Osk::Cfg.cmd_hdr(@APP_PREFIX_STR, @CMD_MID_STR, 4, 3) %>
+  APPEND_PARAMETER CODE 16 STRING "p5" "Command Code"
+  APPEND_PARAMETER STATE 8 UINT 0 1 1 "On/Off Flag"
+    STATE ON 1
+    STATE OFF 0
+
+COMMAND EYASSAT_IF ADCS_RQST BIG_ENDIAN "ADCS Telemetry Request from UART"
+  <%= Osk::Cfg.cmd_hdr(@APP_PREFIX_STR, @CMD_MID_STR, 7, 2) %>
+  APPEND_PARAMETER CODE 16 STRING "at" "Command Code"
+
+COMMAND EYASSAT_IF ADCS_RESET BIG_ENDIAN "ADCS Reset from UART"
+  <%= Osk::Cfg.cmd_hdr(@APP_PREFIX_STR, @CMD_MID_STR, 7, 2) %>
+  APPEND_PARAMETER CODE 16 STRING "ar" "Command Code"
+
+COMMAND EYASSAT_IF ADCS_ENABLE_IMU BIG_ENDIAN "ADCS Enable 9DOF IMU"
+  <%= Osk::Cfg.cmd_hdr(@APP_PREFIX_STR, @CMD_MID_STR, 7, 2) %>
+  APPEND_PARAMETER CODE 16 STRING "a9" "Command Code"
+
+COMMAND EYASSAT_IF CONNECT <%= Osk::Cfg.processor_endian %> "Connect to the EyasSat UART port"
+  <%= Osk::Cfg.cmd_hdr(@APP_PREFIX_STR, @CMD_MID_STR, 8, 0) %>
+
+COMMAND EYASSAT_IF DISCONNECT <%= Osk::Cfg.processor_endian %> "Disconnect from the EyasSat UART port"
+  <%= Osk::Cfg.cmd_hdr(@APP_PREFIX_STR, @CMD_MID_STR, 9, 0) %>
+
+COMMAND EYASSAT_IF ADCS_X_ROD BIG_ENDIAN "Set Torquer X"
+  <%= Osk::Cfg.cmd_hdr(@APP_PREFIX_STR, @CMD_MID_STR, 12, 4) %>
+  APPEND_PARAMETER CODE 16 STRING "ax" "Command Code"
+  APPEND_PARAMETER X_ROD 16 INT 0 2 0 "Direction"
+    STATE OFF 0
+    STATE POS 1
+    STATE NEG 2
+
+COMMAND EYASSAT_IF ADCS_Y_ROD BIG_ENDIAN "Set Torquer Y"
+  <%= Osk::Cfg.cmd_hdr(@APP_PREFIX_STR, @CMD_MID_STR, 12, 4) %>
+  APPEND_PARAMETER CODE 16 STRING "ay" "Command Code"
+  APPEND_PARAMETER Y_ROD 16 INT 0 2 0 "Direction"
+    STATE OFF 0
+    STATE POS 1
+    STATE NEG 2
+
+COMMAND EYASSAT_IF ADCS_PWM_BASELINE BIG_ENDIAN "Set PWM Baseline Output for Earth/Sun pointing "
+  <%= Osk::Cfg.cmd_hdr(@APP_PREFIX_STR, @CMD_MID_STR, 5, 4) %>
+  APPEND_PARAMETER CODE 16 STRING "am" "Command Code"
+  APPEND_PARAMETER PWM 16 INT 0 250 0 "Output Value"
+
+COMMAND EYASSAT_IF ADCS_WHEEL_SPD BIG_ENDIAN "Set Wheel Speed"
+  <%= Osk::Cfg.cmd_hdr(@APP_PREFIX_STR, @CMD_MID_STR, 6, 6) %>
+  APPEND_PARAMETER CODE 16 STRING "aw" "Command Code"
+  APPEND_PARAMETER SPD 32 FLOAT -8.0 8.0 0.0 "Commanded Speed"
+    UNITS "Rotations Per Second" RPS
+
+COMMAND EYASSAT_IF ADCS_DELTA_T BIG_ENDIAN "Integration Time in Loop"
+  <%= Osk::Cfg.cmd_hdr(@APP_PREFIX_STR, @CMD_MID_STR, 6, 6) %>
+  APPEND_PARAMETER CODE 16 STRING "al" "Command Code"
+  APPEND_PARAMETER DELTA_T 32 FLOAT MIN MAX 1.0 "Integration Time"
+
+COMMAND EYASSAT_IF ADCS_CTRL_ALG BIG_ENDIAN "Set Control Algorithm"
+  <%= Osk::Cfg.cmd_hdr(@APP_PREFIX_STR, @CMD_MID_STR, 5, 4) %>
+  APPEND_PARAMETER CODE 16 STRING "ac" "Command Code"
+  APPEND_PARAMETER CTRL_ALG 16 INT 0 7 0 "Commanded control algorithm"
+    STATE DEFAULT 0
+    STATE PID 1
+    STATE PDSUN 2
+    STATE PDMAG 3
+    STATE DBSUN 4
+    STATE DBMAG 5
+
+COMMAND EYASSAT_IF ADCS_YAW_CMD BIG_ENDIAN "Offset to point from earth"
+  <%= Osk::Cfg.cmd_hdr(@APP_PREFIX_STR, @CMD_MID_STR, 6, 6) %>
+  APPEND_PARAMETER CODE 16 STRING "ao" "Command Code"
+  APPEND_PARAMETER YAW_CMD 32 FLOAT 0.0 360.0 0.0 "Commanded offset"
+
+COMMAND EYASSAT_IF ADCS_P_CONST BIG_ENDIAN "Proportional Constant for PID algorithm"
+  <%= Osk::Cfg.cmd_hdr(@APP_PREFIX_STR, @CMD_MID_STR, 6, 6) %>
+  APPEND_PARAMETER CODE 16 STRING "ap" "Command Code"
+  APPEND_PARAMETER P_CONST 32 FLOAT MIN MAX 5.0 "Commanded constant"
+
+COMMAND EYASSAT_IF ADCS_I_CONST BIG_ENDIAN "Integral Constant for PID algorithm"
+  <%= Osk::Cfg.cmd_hdr(@APP_PREFIX_STR, @CMD_MID_STR, 6, 6) %>
+  APPEND_PARAMETER CODE 16 STRING "ai" "Command Code"
+  APPEND_PARAMETER I_CONST 32 FLOAT MIN MAX 2.0 "Commanded constant"
+
+COMMAND EYASSAT_IF ADCS_D_CONST BIG_ENDIAN "Differential Constant for PID algorithm"
+  <%= Osk::Cfg.cmd_hdr(@APP_PREFIX_STR, @CMD_MID_STR, 6, 6) %>
+  APPEND_PARAMETER CODE 16 STRING "ad" "Command Code"
+  APPEND_PARAMETER D_CONST 32 FLOAT MIN MAX 2.0 "Commanded constant"
+
+COMMAND EYASSAT_IF ADCS_EXTRA BIG_ENDIAN "Kick value for sun point mode"
+  <%= Osk::Cfg.cmd_hdr(@APP_PREFIX_STR, @CMD_MID_STR, 6, 6) %>
+  APPEND_PARAMETER CODE 16 STRING "ae" "Command Code"
+  APPEND_PARAMETER EXTRA 32 FLOAT MIN MAX 20.0 "Kick value for sun point mode"
+
+COMMAND EYASSAT_IF ADCS_DEADBAND BIG_ENDIAN "Deadband value for deadband point mode"
+  <%= Osk::Cfg.cmd_hdr(@APP_PREFIX_STR, @CMD_MID_STR, 6, 6) %>
+  APPEND_PARAMETER CODE 16 STRING "ab" "Command Code"
+  APPEND_PARAMETER DEADBAND 32 FLOAT MIN MAX 10.0 "Deadband value for deadband point mode"
+
+COMMAND ADCS MAG_CAL BIG_ENDIAN "Calibration values for magnetometer"
+  <%= Osk::Cfg.cmd_hdr(@APP_PREFIX_STR, @CMD_MID_STR, 10, 12) %>
+  APPEND_PARAMETER MAGCALX 32 FLOAT MIN MAX 0.0 "Mag cal offset for x axis"
+  APPEND_PARAMETER MAGCALY 32 FLOAT MIN MAX 0.0 "Mag cal offset for y axis"  
+  APPEND_PARAMETER MAGCALZ 32 FLOAT MIN MAX 0.0 "Mag cal offset for z axis"
+
+COMMAND ADCS GYRO_CAL BIG_ENDIAN "Calibration values for gyro"
+  <%= Osk::Cfg.cmd_hdr(@APP_PREFIX_STR, @CMD_MID_STR, 11, 12) %>
+  APPEND_PARAMETER GYROCALX 32 FLOAT MIN MAX 0.0 "Gyro cal offset for x axis"
+  APPEND_PARAMETER GYROCALY 32 FLOAT MIN MAX 0.0 "Gyro cal offset for y axis"  
+  APPEND_PARAMETER GYROCALZ 32 FLOAT MIN MAX 0.0 "Gyro cal offset for z axis"
+
+COMMAND EYASSAT_IF ADCS_DEADBAND_SCALE_FACTOR BIG_ENDIAN "Scaling factor applied to PWM when in PD pointing mode within deadband"
+  <%= Osk::Cfg.cmd_hdr(@APP_PREFIX_STR, @CMD_MID_STR, 6, 6) %>
+  APPEND_PARAMETER CODE 16 STRING "as" "Command Code"
+  APPEND_PARAMETER DEADBAND 32 FLOAT 0 1.0 0.25 "Deadband scale factor PD point mode"

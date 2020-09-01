@@ -1,0 +1,49 @@
+<main role="main" class="flex-shrink-0">
+  <div class="container">
+    <h1 class="mt-5">Temperature Telemetry</h1>
+    <table class="table">
+      <thead class="thead-light">
+        <th scope="col">SOURCE</th>
+        <th scope="col">TIMESTAMP</th>
+        <th scope="col">CSSDS_STREAMID</th>
+        <th scope="col">CSSDS_SEQUENCE</th>
+        <th scope="col">CSSDS_SECONDS</th>
+        <th scope="col">CSSDS_SUBSECS</th>
+        <th scope="col">TIME_STRING</th>
+        <th scope="col">CALL_SIGN</th>
+        <th scope="col">PACKET_ID</th>
+        <th scope="col">DH_TEMP</th>
+        <th scope="col">EXP_TEMP</th>
+        <th scope="col">REF_TEMP</th>
+        <th scope="col">PANEL_A_TEMP</th>
+        <th scope="col">PANEL_B_TEMP</th>
+        <th scope="col">BASE_TEMP</th>
+        <th scope="col">TOP_A_TEMP</th>
+        <th scope="col">TOP_B_TEMP</th>
+      </thead>
+      <tbody>
+        <% entries.each do |e| %>
+        <tr>
+          <td><%= e.source_ip %></td>
+          <td><%= e.created_at %></td>
+          <td><%= e.packet_identifier %></td>
+          <td><%= e.packet_sequence_counter %></td>
+          <td><%= e.tlm_seconds %></td>
+          <td><%= e.tlm_subseconds %></td>
+          <td><%= e.time_string %></td>
+          <td><%= e.simulator_call_sign %></td>
+          <td><%= e.packet_id %></td>
+          <td><%= e.dh_board_temp %></td>
+          <td><%= e.experiment_temp %></td>
+          <td><%= e.reference_temp %></td>
+          <td><%= e.thermal_panel_a_temp %></td>
+          <td><%= e.thermal_panel_b_temp %></td>
+          <td><%= e.base_rods_temp %></td>
+          <td><%= e.top_rods_temp %></td>
+          <td><%= e.top_pipe_temp %></td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</main>

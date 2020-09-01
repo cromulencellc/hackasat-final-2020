@@ -1,0 +1,3 @@
+This code tests the console UART on the APP processor.
+
+NOTE: It will also work for the radio processor as long as the output code is loaded into the radio memory since the UART and APP processor have the same peripheral address locations for the console UARTs.  On the radio make sure the slide select is in the PROG mode for the UART to go to the radio processor
