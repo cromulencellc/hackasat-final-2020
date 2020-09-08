@@ -1,0 +1,534 @@
+finals-samurai
+You created this private channel on August 5th. This is the very beginning of the ﻿finals-samurai channel.
+ Add description Add an app Add people
+
+vito  15:28
+joined finals-samurai along with 4 others.
+
+Bool  16:06
+Thanks for the invite
+
+Frank  12:18
+was added to finals-samurai by Amanda from NY, along with 4 others.
+
+Amanda from NY  21:03
+@Bool you can add a second team member if you'd like
+
+Jordan Wiens  21:27
+Yo, bool, sorry for the impersonal boiler plate, similar is going to all teams. :wink:
+o/ Howdy all, I’m a part of the production team doing some video coverage throughout the event. I expect ya’ll will be too busy playing to watch but I wanted to offer each team the chance to list any facts about themselves that might not be in the existing bio sheets that I can use when talking about each team on stream if they can think of anything.
+In the case of Samurai I’m thinking of mentioning the fact that there is often movement between teams in the CTF community and how I’ve both played on and played /against/ Samurai personally many times over the years and that part of what makes CTF so fun is the community of people you both compete with and against (or both!).
+
+Bool  21:28
+Hey Jordan, yeah that's a good commentary
+21:29
+we are busy trying to apply these updates at the moment
+21:29
+feels a bit like the first challenge of the ctf!
+
+Jordan Wiens  21:30
+Heh. challenge -1. I might use that as a joke on stream. :wink:  Good luck.
+:rolling_on_the_floor_laughing:
+1
+
+
+Bool  21:32
+I was missing a few of the required cables, they just arrived this morning
+21:32
+presently streaming the sat on webcam on discord
+21:32
+so that's fun
+21:32
+the wired article that came out this morning was cool
+
+vito  21:56
+doing another mission control team invitation pass: @SirGoon @0x20guy @Jymbolia @fuzyll @meenmachine
+
+SirGoon  21:56
+was added to finals-samurai by vito, along with 4 others.
+
+Bool  01:08
+omfg finally got this thing upgraded
+01:08
+first blood
+:ab:
+1
+
+
+0x20guy  01:22
+Nice....actually made my night
+
+Deadwood  07:46
+Good morning. Here is your OpenVPN config. Please test it and let us know that you are able to connect. You will not be able to interact with the game resources yet but you should be able to ping 10.100.7.10. Please remember that you are allowed a single connection using these creds.
+openvpn-team7-inline.ovpn
+client
+resolv-retry 20
+keepalive 2 10
+nobind
+mute-replay-warnings
+Click to expand inline (153 lines)
+
+
+
+Bool  09:36
+can confirm a good ping there
+
+Bool  09:59
+is there guidance for connecting the camera?
+
+0x20guy  10:09
+Plug it into the data micro usb on the pi zero using the usb otg cable
+
+Bool  10:14
+Fri Aug  7 07:13:10 2020 [server] Inactivity timeout (--ping-restart), restarting
+Fri Aug  7 07:13:10 2020 SIGUSR1[soft,ping-restart] received, process restarting
+Fri Aug  7 07:13:15 2020 TCP/UDP: Preserving recently used remote address: [AF_INET]12.188.237.77:1194
+Fri Aug  7 07:13:15 2020 UDP link local: (not bound)
+Fri Aug  7 07:13:15 2020 UDP link remote: [AF_INET]12.188.237.77:1194
+Fri Aug  7 07:13:15 2020 [server] Peer Connection Initiated with [AF_INET]12.188.237.77:1194
+Fri Aug  7 07:13:16 2020 Options error: Unrecognized option or missing or extra parameter(s) in [PUSH-OPTIONS]:1: register-dns (2.4.4)
+Fri Aug  7 07:13:16 2020 Preserving previous TUN/TAP instance: tun0
+Fri Aug  7 07:13:16 2020 Initialization Sequence Completed
+64 bytes from 10.100.7.10: icmp_seq=58 ttl=63 time=44.3 ms
+64 bytes from 10.100.7.10: icmp_seq=59 ttl=63 time=44.3 ms
+64 bytes from 10.100.7.10: icmp_seq=60 ttl=63 time=44.2 ms
+64 bytes from 10.100.7.10: icmp_seq=61 ttl=63 time=44.4 ms
+64 bytes from 10.100.7.10: icmp_seq=62 ttl=63 time=44.7 ms
+64 bytes from 10.100.7.10: icmp_seq=63 ttl=63 time=44.2 ms
+64 bytes from 10.100.7.10: icmp_seq=64 ttl=63 time=44.4 ms
+64 bytes from 10.100.7.10: icmp_seq=65 ttl=63 time=44.2 ms
+64 bytes from 10.100.7.10: icmp_seq=66 ttl=63 time=44.1 ms
+64 bytes from 10.100.7.10: icmp_seq=67 ttl=63 time=44.3 ms
+Fri Aug  7 07:13:36 2020 [server] Inactivity timeout (--ping-restart), restarting
+Fri Aug  7 07:13:36 2020 SIGUSR1[soft,ping-restart] received, process restarting
+Fri Aug  7 07:13:41 2020 TCP/UDP: Preserving recently used remote address: [AF_INET]12.188.237.77:1194
+Fri Aug  7 07:13:41 2020 UDP link local: (not bound)
+Fri Aug  7 07:13:41 2020 UDP link remote: [AF_INET]12.188.237.77:1194
+Fri Aug  7 07:13:41 2020 [server] Peer Connection Initiated with [AF_INET]12.188.237.77:1194
+Fri Aug  7 07:13:42 2020 Options error: Unrecognized option or missing or extra parameter(s) in [PUSH-OPTIONS]:1: register-dns (2.4.4)
+Fri Aug  7 07:13:42 2020 Preserving previous TUN/TAP instance: tun0
+10:14
+VPN is angry
+
+Bool  10:21
+restarted and seems to be doing better
+10:21
+confirm everything reachable on 10.* is up for pwning?
+
+vito  10:23
+@Jymbolia ^^
+
+wilhelm  10:23
+was added to finals-samurai by Bool.
+
+Bool  10:23
++1 from samurai
+
+Jymbolia  10:24
+Weapons hot
+
+Bool  10:30
+vpn dropped again
+10:30
+.... and back
+10:30
+... and down
+10:31
+and up
+
+Bool  10:37
+@channel are we the only team experiencing VPN issues?
+
+vito  10:41
+You don’t have multiple people trying to connect to the VPN do you?
+
+Bool  10:41
+just the one box
+
+vito  10:41
+hmm
+
+Deadwood  10:46
+@Jymbolia can you check the firewall log for Samurai?
+
+Jymbolia  10:48
+Team 7
+10:48
+?
+
+vito  10:48
+Yeah
+
+Jymbolia  10:49
+1 minute to check
+10:52
+Pushing a fix let me know if you still have trouble
+
+Bool  10:53
+thanks!
+10:53
+seems to be doing a bit better now
+10:53
+popped a reverse shell on .10 :slightly_smiling_face:
+
+Jymbolia  10:53
+Boom!
+
+Bool  10:53
+would you guys like updates as we progress?
+
+Jymbolia  10:54
+Keep rockin' @ me if it goes south
+
+Deadwood  10:54
+ya
+
+Jymbolia  10:54
+Pushing the fix to every team
+
+Bool  10:55
+got into 7.5
+10:55
+might be first in there?
+10:56
+samurai@has-game-box:~/has$ ssh -i ~/.ssh/id_rsa_hackasat op1@10.100.7.5                                                        │·····························································
+Last login: Fri Aug  7 10:55:55 2020 from 172.16.77.6                                                                           │·····························································
+[op1@cosmos7 ~]$ ls                                                                                                             │·····························································
+cosmos  Desktop  Documents  Downloads  Music  Pictures  Public  Templates  Videos                                               │·····························································
+[op1@cosmos7 ~]$ ls
+
+Jymbolia  10:56
+First blood!!
+
+Bool  10:56
+wooo
+
+Deadwood  10:56
+Nice job.
+
+Bool  10:57
+can we update authorized keys?
+10:57
+or is that just for our team
+
+vito  10:58
+I don’t know, can you? :stuck_out_tongue:
+:wink:
+2
+
+
+Bool  11:00
+I feel like somebody is watching me
+:eye:
+1
+
+
+fuzyll:satellite:  11:00
+pay no attention to the men behind the curtain
+
+Bool  11:02
+we have cosmos running
+
+Jymbolia  11:06
+you guys are internet famous <watches video>
+
+Bool  11:14
+tried send command to set PWM to 0
+11:14
+maybe something happened?
+11:14
+X forwarding is a nightmare at the moment
+11:15
+might be in the wrong comm window
+
+Bool  11:34
+Screenshot from 2020-08-07 10-34-19.png
+Screenshot from 2020-08-07 10-34-19.png
+
+
+
+Jymbolia  11:50
+X11.. its like 2005.  >bus error
+
+Bool  11:52
+oh interesting challenges degrade in points over time
+11:53
+and our air compressor just tripped a thermal protection
+
+Jymbolia  11:53
+*not rated for continuous run
+
+Bool  11:56
+indeed
+
+Bool  12:04
+networking is hard lol
+
+fuzyll:satellite:  12:06
+it is hard :disappointed:
+
+Bool  12:21
+oooooo
+12:21
+[op1@cosmos7 ~]$ cat .viminfo
+# This viminfo file was generated by Vim 7.4.
+# You may edit it if you're careful!
+# Value of 'encoding' when this file was written
+*encoding=utf-8
+# hlsearch on (H) or off (h):
+~H
+# Last Search Pattern:
+~MSle0/kjj
+# Last Substitute Search Pattern:
+~MSle0~&Final_Chal_solve-7\/c4
+# Last Substitute String:
+$c4
+# Command Line History (newest to oldest):
+:q
+:x
+:w
+:q!
+:wq!
+:wq
+:1,$ s/Final_Chal_solve-7\/c4/c4/g
+:1,$ s/c4/Final_Chal_solve-7\/c4/g
+:set list
+:split ./cosmos/config/tools/cmd_tlm_server/cmd_tlm_server.txt
+:sh
+# Search String History (newest to oldest):
+? Final_Chal_solve-7\/c4
+?/kjj
+? c4
+?/LOCAL_CFS_INT
+?/kjkj
+?/serial
+
+Jymbolia  12:58
+you guys are real quiet.
+
+Bool  13:09
+I hate you.
+
+Jymbolia  13:38
+https://media.tenor.com/images/d438a6abbcb58daa7c0517cefdb21756/tenor.gif
+
+(292 kB)
+https://media.tenor.com/images/d438a6abbcb58daa7c0517cefdb21756/tenor.gif
+
+Amanda from NY  13:55
+You guys know we're releasing transcripts of the team channels right?
+
+Jymbolia  13:56
+*now
+
+Bool  14:03
+lol
+
+Bool  14:26
+suspect we've been battling a cosmos version issue when running on remote
+14:26
+I guess the op1 box wasn't updated with the latest stuff from wednesday?
+
+Bool  14:33
+totally want a bonus point for reporting .viminfo :wink:
+
+Jymbolia  14:37
++1 cool points. May be redeemed for future GIFs.
+
+Bool  14:51
+what happens if your solution to challenge 1 doesn't work for us?
+
+Bool  14:58
+We think the intended solution is to simply ssh -X into op1@cosmos7, send the UART_TO_CI ENABLE_TELEMETRY command while we are within the window.
+14:59
+This is working locally
+14:59
+fails on remote
+
+0x20guy  15:04
+You have not solved the challenge
+
+fuzyll:satellite:  15:58
+@Bool an astronaut was deployed to look at your satellite and we believe it has now been fixed
+15:58
+please let us know if that doesn't appear to be the case
+
+Bool  15:59
+yay
+15:59
+we just got telemetry
+
+wilhelm  15:59
+literally 30 seconds ago
+15:59
+After re-running the same commands we were sending before and earlier today (while in window both times)...
+
+Bool  16:00
+yeah, ouch.
+
+Bool  16:09
+we had it and then it was lost
+
+Bool  16:17
+yeah, we think things are broken again
+
+fuzyll:satellite:  16:18
+we've located an aging russian cosmonaut currently in orbit and are sending him to take a look - stand by
+
+Bool  16:19
+:heart:
+:heart_eyes:
+1
+
+
+fuzyll:satellite:  16:28
+if you guys haven't seen the recent messages in #finals-2020, please take a moment to review them :heart:
+
+fuzyll:satellite:  16:31
+set the channel topic: Team 7
+
+Bool  16:37
+ACK, thanks
+16:40
+we are setup with 3055 forwarding now
+
+Bool  16:48
+thank you comrade
+
+Bool  19:01
+omfg that was stressful
+
+fuzyll:satellite:  19:03
+and you guys aren't even the ones trying to keep 8 flatsats running while a bunch of hackers try their best to destroy them :stuck_out_tongue:
+
+Bool  19:03
+this is fair lol
+:wildcatbbs:
+1
+
+
+Bool  10:29
+omg we used the wrong values from appendix A not our specific team value from appendix B
+:wildcatbbs:
+1
+
+
+Jymbolia  12:01
+https://media.tenor.com/images/73dcfbeac646f488451f5cd3b53f96d1/tenor.gif
+
+(97 kB)
+https://media.tenor.com/images/73dcfbeac646f488451f5cd3b53f96d1/tenor.gif
+:wildcatbbs:
+1
+
+
+Bool  12:01
+lol
+:wildcatbbs:
+1
+
+12:02
+I promise we're awake and working hard
+:wildcatbbs:
+1
+:+1:
+1
+
+12:03
+we basically know what's up with the implant
+
+Jymbolia  12:03
+awesome!
+
+1 reply
+10 days agoView thread
+
+Bool  12:03
+pretty cool to have it running in qemu too
+12:04
+we wasted a lot of power trying to break that sha512 hash
+12:05
+and I'm grateful ghidra is open source
+
+Bool  12:50
+space walk spotted via telescope
+
+meenmachine  12:57
+Aliens don't exist.
+
+Jymbolia  13:05
+Me and @meenmachine   https://media.tenor.com/images/a53cf915d684ddec6246d876e2288975/tenor.gif
+
+(415 kB)
+https://media.tenor.com/images/a53cf915d684ddec6246d876e2288975/tenor.gif
+:joy:
+2
+
+
+Deadwood  13:48
+flatsat appears inop.  Will reset for you.
+
+Jymbolia  13:48
+https://media.tenor.com/images/56aac28d21f59b16a4fd63554a09fa29/tenor.gif
+
+(344 kB)
+https://media.tenor.com/images/56aac28d21f59b16a4fd63554a09fa29/tenor.gif
+
+wilhelm  13:49
+Thanks, I've been poking at it and it's not been poking back
+
+Deadwood  13:56
+you are running again.  just in a comms outage.
+
+Bool  14:18
+spent the last 90 minutes trying to get UART to work again
+Screenshot from 2020-08-08 13-17-36.png
+Screenshot from 2020-08-08 13-17-36.png
+
+
+14:19
+suspecting hardware damage after trying 3 FTDI's, several combinations of cabling, power, isolation from radio, etc.
+14:19
+:disappointed:
+
+Bool  17:27
+Fixed it!
+17:27
+Image from iOS
+Image from iOS
+
+
+:joy:
+3
+
+
+Jymbolia  17:29
+#winning
+
+wilhelm  18:14
+We're good without rebooting - we've been conserving battery
+:heavy_check_mark:
+1
+
+
+Bool  18:16
+ha
+18:16
+all part of the plan.....
+
+wilhelm  19:06
+Thanks everyone!
+
+Bool  19:06
+GG
+
+SirGoon  20:13
+GG
+
+Jordan Wiens  20:32
+GG, take care.
+
+Deadwood  21:11
+Thanks for playing and fixing the hardware.  GG, Samurai.
+:point_up_2:
+1

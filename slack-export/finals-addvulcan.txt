@@ -1,0 +1,224 @@
+finals-addvulcan
+You created this private channel on August 5th. This is the very beginning of the ﻿finals-addvulcan channel.
+ Add description Add an app Add people
+
+vito  15:27
+joined finals-addvulcan along with 4 others.
+
+Amanda from NY  19:29
+@AmieDD  do you want to add willc as your second?
+
+AmieDD  19:54
+Yes please!
+:+1:
+1
+
+
+willc  19:54
+was added to finals-addvulcan by AmieDD.
+
+willc  20:27
+Do we ask questions here or in the regular finals chat because your flashing instructions call for a USBasp but your answer to question 36 shows it was crossed out and I'm wondering if I now need to break into some ones home how has one
+
+Amanda from NY  20:31
+@Deadwood @vito ^^^
+
+Deadwood  20:33
+We sent our revised guidance two days ago and listed the cables necessary for the firmware upgrade.  What should have been crossed out is the Xilinx platform cable.
+
+Frank  12:13
+was added to finals-addvulcan by Amanda from NY, along with 3 others.
+
+willc  15:59
+Grmon gives an error that the evaluation version doesn't support this hardware is there a version we should be using?
+
+Deadwood  17:18
+We have used several versions to include evaluation.  Currently we are using 3.2.3.  Check your dip switch settings and that you are connected to the right debug UART.
+
+willc  17:54
+Thanks
+
+Jordan Wiens  21:00
+was added to finals-addvulcan by Amanda from NY.
+
+Jordan Wiens  21:14
+o/ Hi folks. I’m a part of the production team doing some video coverage throughout the event. I expect ya’ll will be too busy playing to watch but I wanted to offer each team the chance to list any facts about themselves that might not be in the existing bio sheets that I can use when talking about each team on stream if they can think of anything.
+In the case of ADDVulcan I’d love to mention your experience on Lego Masters if you don’t mind Amie.
+
+vito  21:56
+doing another mission control team invitation pass: @SirGoon @0x20guy @Jymbolia @fuzyll @meenmachine
+
+SirGoon  21:56
+was added to finals-addvulcan by vito, along with 4 others.
+
+Amanda from NY  22:05
+Okay I’ll fan girl for a second.  LEGO wars was AMAZING ( the dragons on the globe were my favorite of the whole competition).  But @Jordan Wiens If it’s okay with ADDVulcan.  You should mention amie’s STEM scholarship (https://www.amiedd.com/ramblings-of-a-unicorn/scholarship-for-girls-in-stem-application-extended)
+
+amiedd.com
+Scholarship for Girls in STEM 2020
+I started and fund a scholarship at the National Videogame Museum in Frisco, TX for girls in the US going to college for STEM. Applications have been extended to June 1, 2020. Apply now!scholarship-for-girls-in-stem-application-extendedscholarship-for-girls-in-stem-application-extended (1 MB)
+https://uploads-ssl.webflow.com/5ab9df89c827a6570f276a65/5ebdf564cc408080ee56675c_Scholarship_Youtube.png
+:100:
+1
+
+22:06
+The deadline is over but I assume theyll keep it going (2020 was the 3rd year)
+
+Deadwood  07:45
+Good morning. Here is your OpenVPN config. Please test it and let us know that you are able to connect. You will not be able to interact with the game resources yet but you should be able to ping 10.100.5.10. Please remember that you are allowed a single connection using these creds.
+openvpn-team5-inline.ovpn
+client
+resolv-retry 20
+keepalive 2 10
+nobind
+mute-replay-warnings
+Click to expand inline (153 lines)
+
+
+
+willc  09:35
+Good morning and thank you
+
+willc  09:35
+What login credentials do you have listed for the team?
+
+
+7 replies
+Last reply 11 days agoView thread
+
+willc  11:37
+Hi how do we submit a flag? We are able to get on the VPN and have found the site
+
+Jymbolia  11:53
+you don't
+
+willc  11:58
+Thanks
+
+willc  13:09
+Have we sloved challenge 0?
+
+vito  13:10
+Yes, congratulations!
+
+willc  13:11
+Thanks
+
+willc  15:05
+Is our satellite operational?
+
+Jymbolia  15:08
+ISS is burning hard to take a look.
+15:11
+ISS reports your satellite looks intact
+:+1:
+1
+
+
+willc  15:28
+Thanks
+
+fuzyll:satellite:  16:27
+if you guys haven't seen the recent messages in #finals-2020, please take a moment to review them :heart:
+
+fuzyll:satellite:  16:31
+set the channel topic: Team 5
+
+willc  16:38
+How many submissions do we get?
+16:38
+It said we can do one every 15 minutes
+
+fuzyll:satellite:  16:49
+as many submissions as you need to get one accepted, while adhering to the "every 15 minutes" rule
+
+willc  16:56
+Thanks
+
+willc  17:03
+There are two posts for challenge two
+17:03
+Challenge 2: To demonstrate control of your satellite, change control modes and point your solar arrays at the sun for 1 revolution on the carousel
+17:04
+Challenge 2: Repair Guidance, Navigation, and Control (GNC) system. GNC system is inoperable, likely sabotage. Satellite is still spinning uncontrollably. Must reset GNC system.
+17:04
+Are they both for challenge two?
+
+fuzyll:satellite:  17:10
+yes - 99.9% sure the first was meant to clarify the second
+
+willc  17:12
+Thanks
+
+willc  18:12
+Is the example for the on orbit challenge in section E real or not?
+18:15
+Can the server be rebooted what haven't been able two see anything from it for a few hours
+
+vito  18:19
+orbit-app server or something else?
+
+Jymbolia  18:19
+reconnect, restart your cosmos instance
+
+willc  18:20
+Okay
+
+willc  18:27
+When we submit to this or to the satelliteabove.us
+18:27
+For the checking
+
+vito  18:32
+orbit.satellitesabove.us is the on-orbit submission site
+18:32
+https://orbit.satellitesabove.us/submissions/
+
+willc  18:33
+Thanks
+
+AmieDD  09:27
+Hi! We never received a OTG cable with our flatsat, and looks like we will need it with the pixy2 and raspberry pi.
+
+Jymbolia  09:31
+you should be able to use a powered usb hub to power the pixy2.
+09:31
+although that solution is untested
+
+AmieDD  09:51
+So we can use the 6pin to 10pin that came with the pixy2 for the data?
+
+willc  15:00
+Is it normal for the docker imagine to take over and hour to build
+
+meenmachine  15:05
+Seems pretty normal.
+
+willc  15:11
+Thanks
+:+1:
+1
+
+
+0x20guy  16:14
+Just reset you...
+
+AmieDD  16:27
+Ok, thanks.
+
+willc  18:17
+When is it getting changed over?
+
+vito  18:18
+the power? do you want it?
+
+willc  18:18
+Yes
+18:18
+Please
+
+willc  18:47
+Can 5 be sloved with out doing 4?
+
+vito  18:49
+seen

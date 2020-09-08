@@ -1,0 +1,1268 @@
+Wednesday, August 5, 2020
+
+vito  15:46
+Team leaders: you should have been invited to per-team slack channels. These channels will be used for official game communication through the end of Hack-A-Sat finals.
+15:46
+You can have one extra person in there, but we don’t want to deconflict between team members. The goal of this channel is to address hardware, infrastructure, and other issues. We plan to make the contents of this channel public after the game ends, so let that guide your chats.
+
+Amanda from NY  17:29
+Teams - I just an email with a link to the flight software upgrades.  I didn't take the time to send everyone's confirmation code. so I'm posting it here.  It's from me.  it's legit.
+
+willc  20:35
+The USBasp was crossed out in the FAQ which made me think we weren't going to need it
+
+Deadwood  20:45
+@channel The ADCS firmware upgrade is provided to merely ensure you have exactly what we are running in the competition.  its not a strictly required upgrade if you don't have the cable.  It won't affect your ability to perform operations on your local flatsat.  You might use a bit more power w/o the upgrade.
+
+1 reply
+12 days agoView thread
+
+willc  20:51
+Thank you
+
+sysk  02:50
+Could you provide the sha256 of the package on your side amanda?
+
+Deadwood  04:19
+0869440656793a6ac0c7a042f76fc78a0be3f932577bd092b1a5e40082ffb02e  For_Teams_Upgrades.zip
+
+sysk  04:35
+9fdbe8c282ab605a452f83b9db41beab6ccc3427add270df7f32d22a22b03eec  ./Downloads/For_Teams_Upgrades(1).zip
+9fdbe8c282ab605a452f83b9db41beab6ccc3427add270df7f32d22a22b03eec  ./Downloads/For_Teams_Upgrades.zip
+04:35
+2 downloads :slightly_smiling_face:
+
+Deadwood  04:45
+Weird.  Standby.
+04:48
+ok I get that same number on Windows using certUtil.  You are good.
+
+Deadwood  04:55
+Screenshot 2020-08-06 04.54.27.png
+Screenshot 2020-08-06 04.54.27.png
+
+
+
+sysk  08:08
+thank you :slightly_smiling_face:
+08:12
+(btw the screenshot may let us assume that you downloaded the file from dropbox before checking the hash, do we agree that you downloaded it from a safe location before ?)
+08:13
+before of course having the same dropbox hash is logic, but that is not what I want to check :smile:
+
+Adam  15:08
+was added to finals-2020 by redford. Also, Manf and 3 others joined.
+
+Adam  15:15
+replied to a thread:
+@channel The ADCS firmware upgrade is provided to merely ensure you have exactly what we are running in the competition. its not a strictly required upgrade if you don't have the cable. It won't affect your ability to perform operations on your local flatsat. You might use a bit more power w/o the upgrade.
+Hello, If we don't have USBasp cable and can't flash ADCS. Does it still make sense to reflash other boards? If ADCS won't be reflashed with a new firmware but other boards will be, won't be there any problems / conflicts with running it? Maybe in such case it's better to not reflash any board?
+
+nafod  17:38
+regarding flashing the ztex board, are we supposed to do something special to get it to show up on usb, maybe power it directly? fwloader doesn't see it
+
+vito  18:16
+Here’s the timing for the game on Friday and Saturday. All these times are UTC
+Friday, August 7
+1130 UTC: Team VPN credentials distributed
+1400 UTC: Game on!
+2300 UTC: Game goes offline for the night
+Saturday, August 8
+1400 UTC: Game resumes
+2300 UTC: Game ends
+Sunday, August 9
+1800 UTC: Closing ceremonies, final scores
+
+Amanda from NY  19:22
+:has:Are you ready to Hack-A-Sat :has:
+It's almost time for Hack-A-Sat finals! Here are a few notes about infrastructure you’ll be using to compete in this online contest.
+Most of the game will be accessed over a VPN using OpenVPN. VPN credentials will be distributed Friday morning several hours before the contest starts. Please test your credentials and get in touch with the organizers on the team slack channel discussed below if you have any problems. We only support one VPN connection per team, so we strongly recommend teams coordinate to have a jump box to allow multiple players to access the game. Keep in mind that COSMOS is an X11 GUI application when provisioning this jump box. In addition to the VPN credentials, you'll also receive updated technical documentation related to the flatsat and the game.
+Communication with organizers will be over Slack. We’ve made a channel for your team, and invited your captain. You can have one extra person in there, but we don’t want to deconflict between team members. The goal of this channel is to address hardware, infrastructure, and other issues. We plan to make the contents of this channel public after the game ends, so let that guide your chats. Information blasts will go out in the finals-2020 channel.
+Live scores will be at https://finals.2020.hackasat.com/ . Similar to other contests, scores may be masked during some phases of the game to build excitement.
+This game isn’t really about submitting flags you find, so most scoring stuff won’t require you to log in anywhere. However, part of the game does have a log-in. We have made this the same username & password as your captain’s login to https://quals.2020.hackasat.com/ as of June 11, 2020. If you need to check that you know this, please contact @vito.
+Here’s the timing for the events on Friday, Saturday and Sunday. All these times are UTC.
+Friday, August 7
+1130 UTC: Team VPN credentials distributed
+1400 UTC: Game on!
+2300 UTC: Game goes offline for the night
+Saturday, August 8
+1400 UTC: Game resumes
+2300 UTC: Game ends
+Sunday, August 9
+1800 UTC: Closing ceremonies, final scores and winners announced.
+:has:Good luck and happy hacking! :has:
+
+quals.2020.hackasat.comquals.2020.hackasat.com
+Hack-A-Sat
+Hack-A-Sat is the 2020 Space Security Challenge
+
+vito  21:56
+doing another mission control team invitation pass: @SirGoon @0x20guy @Jymbolia @fuzyll @meenmachine
+
+Jymbolia  21:56
+was added to finals-2020 by vito, along with 2 others.
+
+Bool  22:21
+so the download page for GRMON here is now requiring a username and password https://www.gaisler.com/index.php/downloads/debug-tools
+
+gaisler.com
+Debug Tools
+Cobham Gaisler AB
+22:22
+I guess we use the academic / eval version?
+
+Deadwood  22:30
+yes
+
+xm  07:16
+was added to finals-2020 by Amanda from NY.
+
+Deadwood  07:37
+Good morning, Teams!  It's Game Day!  Please find some updated technical docs and data in the archive linked below.  Your VPN creds will be distributed through your team slack channel.
+https://www.dropbox.com/s/nqzy80lz8xrf1d2/game_day_drop.zip?dl=0
+Pinned by karmangrounds
+
+Amanda from NY  08:46
+These are NOT new documents. Just reposting in case anyone wants to quickly reference them.
+3 files
+HAS_Rules_V6_2020_08_04.pdf
+1 MB PDF1 MB — Click to view
+
+
+HAS_Competition_Integrity_v0_08.06.2020.pdf
+209 kB PDF209 kB — Click to view
+
+
+HAS_Finalist_FAQ_v4.pdf
+232 kB PDF232 kB — Click to view
+
+
+08:47
+Again those are NOT new documents.
+
+sysk  08:50
+thx @Amanda from NY
+:sweat_smile:
+2
+
+
+vito  10:00
+Regain network access to the ground station. Adversary has gained access to ground station and kicked us out. Figure out how to get us back in.
+10:00
+@channel welcome to Hack-A-Sat Finals
+
+Peace-Maker  10:01
+was added to finals-2020 by pspaul.
+
+Deadwood  10:07
+Alert - Malicious satellite activity (GSSA Sensitive):
+Several days ago, an aging satellite owned by the now defunct LaunchDotCom company was mentioned on Twitter as having been hacked by an adversary. The adversary Twitter proxies say they are retaliating against economic embargos and will cripple more of our satellites if we do not ease sanctions. Mission Operations Centers (MOC) in charge of flying these satellites had noticed nothing out of the ordinary until a few hours ago when this satellite appeared to garble commands and randomly gimble and tumble upon receiving commands. The MOC operators are attempting to discover the root cause for these anomalies by probing the spacecraft in safe mode and sending specially crafted command messages to check memory contents.  Recently they lost complete access to the ground segment software and are thus unable to perform any further recovery actions.
+Mission Hack-A-Sat:
+We need your help to answer the call and prove you have what it takes to regain control of this rogue satellite. Cash rewards are up for grabs for those who can mitigate this malicious activity and demonstrate full control of the satellite. Your first challenge: Recover the Ground Station.
+
+Adam Iwaniuk  10:08
+was added to finals-2020 by redford, along with 3 others. Also, wilhelm and 3 others joined.
+
+vito  10:56
+Congratulations to Samurai for first blood on Challenge 0!
+10:56
+:champagne:
+:heart:
+4
+
+
+vito  11:02
+@channel note the prompt above: “We need your help to answer the call and prove you have what it takes to regain control of this rogue satellite.” It’s not so much about capturing flags as making progress toward regaining control of your satellite.
+11:03
+Challenge 0: Regain network access to the ground station. Adversary has gained access to ground station and kicked us out. Figure out how to get us back in.
+Challenge 1: Communicate with the satellite. Must regain communication with satellite. Satellite spinning out of control makes this a little more complicated.
+
+PizzaPirate  11:04
+was added to finals-2020 by captainGeech.
+
+vito  11:09
+Congrats PFS for challenge 0!
+
+Daniel  11:10
+was added to finals-2020 by captainGeech.
+
+vito  11:19
+Carousel streams:
+Cam 1: https://www.youtube.com/watch?v=UPtH1zMIjB8&feature=youtu.be
+Cam2: https://www.youtube.com/watch?v=EsKUHZrPWLo&feature=youtu.be
+Cam3: https://www.youtube.com/watch?v=zwA7FIQTjlE&feature=youtu.be
+Cam4: https://www.youtube.com/watch?v=kuhpqJuNtaE&feature=youtu.be
+
+YouTubeYouTube | AFResearchLab
+Hack-A-Sat Carousel Camera 1
+
+
+YouTubeYouTube | AFResearchLab
+Hack-A-Sat Carousel Camera 2
+
+
+YouTubeYouTube | AFResearchLab
+Hack-A-Sat Carousel Camera 3
+
+
+YouTubeYouTube | AFResearchLab
+Hack-A-Sat Carousel Camera 4
+
+
+samczsun  11:21
+was added to finals-2020 by allison_n.
+
+vito  11:23
+The ordering of teams on the scoreboard isn’t accounting for the time of your last passage; final results will account for that :slightly_smiling_face:
+
+vito  12:11
+Point decay: solves in the 30 minutes after the first solve gets full points, and then it decays down to zero linearly over the two hours after that.
+:-1:
+2
+:confused:
+1
+
+
+1 reply
+11 days agoView thread
+
+myhndl  12:15
+was added to finals-2020 by Daniel, along with Macuyler Dunn.
+
+redford  12:24
+@vito hmm, was this stated in the rules? this influences the strategy for many teams, especially in non-US timezones :confused:
+:+1:
+3
+
+
+Jymbolia  12:29
+pushed a small tweak to the vpn keepalive on the server.
+
+pmo  12:36
+was added to finals-2020 by Daniel.
+
+vito  12:49
+@channel We’re still waiting for teams to resolve their communication anomaly.
+:eyes:
+3
+:satellite_antenna:
+2
+:tired_face:
+1
+
+
+samczsun  12:49
+can we get some remote hands to turn our sat off and on again
+
+Deadwood  12:52
+@samczsun team specific requests for help should be in your team channel.
+
+samczsun  12:52
+that was supposed to be a joke :cold_sweat: (sorry, I couldn't resist but I'll keep things on-topic now) (edited)
+:cry:
+2
+
+
+Michael Borohovski  12:54
+was added to finals-2020 by Bool.
+
+vito  12:59
+Challenges may be worth different amounts of points.
+
+redford  13:01
+could you publish the full scoring rules? what triggers getting points? why we only have half of the points of the chall0?
+:+1:
+2
+
+
+vito  13:03
+We will publish what triggers are after the game; some of the triggers completely give away what has to be done.
+13:04
+The half points are based on time after the first team’s solution of the challenge.
+
+redford  13:05
+what about this decay? this wasn't announced before, it seems unfair to me
+
+t0dd:speech_balloon:  13:06
+thats been standard ctf scoring for a while now...
+
+redford  13:06
+huh, on which CTFs? almost all big CTFs use dynamic scoring
+13:07
+which isn't timing related
+13:07
+the problem with the decay is that the teams in US has a big advantage
+13:07
+because of timezones
+
+vito  13:14
+Challenge 2: Repair Guidance, Navigation, and Control (GNC) system. GNC system is inoperable, likely sabotage. Satellite is still spinning uncontrollably. Must reset GNC system.
+
+0x20guy  13:31
+Demonstrate consistent telemetry to solve challenge 1
+:+1:
+2
+:-1:
+2
+
+
+redford  13:32
+ah
+
+vito  13:38
+Fixed a scoring issue that was affecting ADDVulcan’s challenge 0 score.
+:+1:
+1
+
+
+xres0  13:40
+was added to finals-2020 by captainGeech.
+
+willc  14:14
+Thank @vito we like points any insight into what the problem was
+
+fuzyll:satellite:  14:14
+@here attention teams: we accidentally left a .viminfo file on each team's x.5 host at the beginning of the competition
+to maintain fairness, this tarball provides each team with access to every other team's .viminfo file
+they are being provided here, as-is, with no additional information
+GZip
+viminfos.tgz
+8 kB GZip8 kB — Click to download
+
+
+:+1:
+2
+
+
+Nutfinder2  14:23
+was added to finals-2020 by allison_n.
+
+vito  14:27
+Challenge maximum point values:
+0: 50
+1, 2, 3, 4: 200
+5: 100+
+
+redford  14:33
+thanks!
+
+0x20guy  14:49
+Challenge 2: To demonstrate control of your satellite, change control modes and point your solar arrays at the sun for 1 revolution on the carousel
+
+Deadwood  15:05
+Attention Teams!  You have a new high priority mission.  You must create a command plan for an on-orbit satellite to image the moon.  This is a critical need and your solutions must be submitted by 7pm. Instructions for the creation of your command plan are in the included document.
+Word Document
+OnOrbitChallengePrompt_FINAL.docx
+60 kB Word Document60 kB — Click to view
+
+
+
+vito  15:05
+@channel The on-orbit challenge (see above) submissions are at https://orbit.satellitesabove.us/submissions/ ; use your team leader’s username and password from quals. If you have issues, @-me in your team’s #finals- channel.
+
+allison_n  15:07
+@Deadwood 7pm in which timezone?
+
+vito  15:08
+US Eastern, less than four hours from now
+:+1:
+1
+
+
+allison_n  15:08
+@vito thx!
+
+vito  15:08
+On-orbit submissions are validated by hand, please be respectful of the on-orbit team :slightly_smiling_face:
+
+karmicthreat  15:09
+was added to finals-2020 by allison_n.
+
+vito  15:25
+“validated by hand” it’s more “there’s a manual component to check for safety”; please only submit one guess every fifteen minutes
+15:26
+on-orbit submissions: any correct submissions before 7p us eastern (just over 3.5 hours from now) will be accepted; if we have fewer than six correct submissions by then, we’ll accept submissions until we have six correct ones
+15:27
+and from the rules:
+15:28
+ Teams who do not solve the On-Orbit challenge within the allotted time will not be eligible for prizes.
+
+0x20guy  15:29
+Challenge 1 Solution: Improve radio signal to noise to regain communications.  Send the RADIO CONFIG command with RATE = LOW and POWER = HIGH.  Send the enable telemetry command when in a communications window
+15:30
+Communications windows are described in more detail in the user's guide we provided
+
+xm  15:35
+thanks for the hint! our sat is not responding to anything at the moment :confused:
+
+redford  15:37
+same here
+
+Bool  15:38
+likewise
+
+allison_n  15:39
+Perhaps a stupid question, but are any of the sats responding...?
+
+fuzyll:satellite:  15:39
+we are currently looking into a number of reports on unresponsive satellites - please bear with us
+there are satellites that are currently responding
+
+Alex Meiburg  15:42
+oh boy
+
+redford  15:42
+uh
+15:43
+so, some teams have the satellite available and some not?
+15:43
+could we delay time decay of points then?
+
+fuzyll:satellite:  15:48
+we won't be delaying point decay
+also, there are currently no challenges that have decaying points (0 and 1 are spent, 2 has yet to be solved)
+
+redford  15:50
+yup, but some teams are currently solving challenge 2
+15:50
+and some can't work on it
+
+cptroot  15:51
+By "unresponsive" does that mean no COSMOS connection at all, or just that the satellite doesn't respond to commands?
+
+redford  15:52
+COSMOS connection is working, but no response to commands
+15:53
+(btw: we already solved chall0 and chall1, but now can't reproduce it anymore)
+15:53
+it just stopped working at some point
+
+fuzyll:satellite:  16:03
+@channel as of this moment, after having deployed a number of astronauts to take a look at some of the satellites, we believe that everything is functioning nominally
+as a reminder: these are satellites and not network services...sending commands more than about once per second may be hindering your progress, rather than helping it
+16:04
+if you feel your satellite is not working nominally, please let us know in your team channel and we'll take a look
+
+0x20guy  16:19
+@channel In anticipation for X window forwarding being a problem, we setup team routers on each config.  To connect to these routers, setup your local cosmos instance as follows
+16:19
+INTERFACE LOCAL_CFS_INT tcpip_client_interface.rb 127.0.0.1 3055 3055 nil nil PREIDENTIFIED
+  PROTOCOL WRITE ChecksumProtocol
+  PROTOCOL READ interfaces/cfdp_protocol
+  PROTOCOL WRITE interfaces/cfdp_protocol
+16:20
+You'll want to setup your ssh session to forward port 3055 as follows:
+16:21
+ssh -L 3055:127.0.0.1:3055 -X op1@10.100.X.5
+
+Deadwood  16:27
+Note for teams.  If you are forwarding UDP telemetry and command packets over a TCP tunnel, they WILL get misaligned.  TCP will not preserve the datagram boundaries and will combine messages together.  If you are seeing messages about a packet being  X bytes but  the defined length is shorter, this is what is happening to you.  Implement the solution posted above.  Your commands are effectively fuzzing the satellites and DOSing them. (edited)
+:eyes:
+1
+
+
+0x20guy  16:48
+We got some questions regarding status from the heater panels.  Those were jettisoned for weight
+
+xm  16:51
+we've noticed that packet counts in https://www.youtube.com/watch?v=ZPCWN5s5nSg do not seem to increase anymore
+
+YouTubeYouTube | AFResearchLab
+Hack-A-Sat Octagon Scoreboard
+
+
+0x20guy  16:58
+@channel We intercepted the adversary communicating with their implant on the satellite. Maybe the capture includes clues that will be useful.
+16:59
+Binary
+implant_capture.pcap
+3 MB Binary3 MB — Click to download
+
+
+
+0x20guy  17:10
+For those teams that think that there satellites are broken every 7.5 mins,  there are comm outages in play.  Read your user guide for more info
+:point_up:
+8
+:point_down:
+7
+:point_left:
+7
+:point_right:
+7
+:arrows_clockwise:
+4
+:arrows_counterclockwise:
+4
+:repeat:
+4
+:soon:
+4
+:back:
+4
+:top:
+4
+:on:
+5
+
+
+Gina  17:22
+was added to finals-2020 by Peace-Maker.
+
+0x20guy  17:23
+For those not watching the scoreboard, Team 6 solved challenge 2
+:face_with_rolling_eyes:
+1
+
+
+vito  17:50
+Congratulations to Poland Can Into Space for the first accepted solution for the on-orbit challenge!
+
+vito  17:57
+On-orbit challenge: if you have an accepted submission, a future rejected submission will not affect it, and your overall status will still be “accepted.”
+:+1:
+1
+
+
+redford  17:59
+what if we submit something with worse score? will you take the best submission or the last accepted?
+
+vito  18:07
+@channel ATTENTION TEAMS: the on-orbit challenge deadline is in about 52 minutes; if we have six or more accepted by then, it’s over and any teams with no accepted submission will not be eligible for prizes. If we have fewer than six accepted submissions, the challenge will remain open until we have six accepted submissions.
+The best submission will be uplinked to the satellite, not necessarily the most recent accepted one.
+
+redford  18:26
+will our score on the on-orbit challenge influence our final scoring, or it's only pass/fail and we won't get any points to the final scoreboard regardless how well we optimize it?
+18:28
+you previously said that challenge5 will have "100+" points, is it this one? (on-orbit)
+
+Frank  18:29
+chal 5 is not the on-orbit challenge
+:point_up:
+1
+
+
+vito  18:39
+The team with the most accurate, accepted solution submitted before the 7p US Eastern (20 minutes) deadline will have their solution sent to the satellite, and will be specially recognized during the awards ceremony.
+:+1:
+2
+:trophy:
+2
+
+
+fuzyll:satellite:  19:00
+@channel the game is ending for the day now! stand by, though - we have a present for you all to work on over night :slightly_smiling_face:
+:sob:
+8
+
+
+Bool  19:01
+phew
+
+0x20guy  19:02
+We used a backdoor we discovered in the pcap, to dump the contents of the adversary's implant.  Hopefully we can find some way to exploit it and regain the ability to send all commands to our spacecraft
+19:02
+Binary
+dump_verified.bin
+6 kB Binary6 kB — Click to download
+
+
+
+fuzyll:satellite:  19:03
+(this is the present :wink:)
+19:04
+as a reminder: there are currently less than 6 accepted on-orbit solutions, so please continue working on them!
+
+saleem  19:26
+was added to finals-2020 by samczsun.
+
+vito  19:26
+lmao this freeze-frame https://www.youtube.com/watch?v=ypo7ZGDZnDc
+
+saleem  19:27
+Now we've been given the dump from the implant, should we stop working on the implant PCAP? (edited)
+
+Deadwood  19:44
+There is one slot left in the on-orbit challenge so get your correct solution submitted.  The next team to submit a correct answer is in, the other two are out of the running for a prize.
+:has:
+3
+
+
+vito  19:58
+@channel orbit app submissions are closed.
+19:58
+Congratulations to Flux Repeat Rocket, ADDVulcan, Poland Can Into Space, 15FittyTree, Samurai, and PFS for successful orbit submissions.
+
+t0dd:speech_balloon:  20:07
+so...who's goin to orbit!?
+:point_up:
+4
+
+
+Middlet  21:08
+A bit of feedback on the pass-fail challenge - I'm not disappointed that we can't win a prize (I'm just happy to be here), but I am disappointed that I no longer have the competitive spirit & motivation to finish this amazing challenge. I hope you'll consider this side-effect in future events.
+:+1:
+15
+
+
+redford  21:10
+yeah, +1 to this ^
+we solved it but still don't like that it disqualified some teams which weren't fast enough
+:point_up:
+9
+
+
+Deadwood  07:51
+FYI, the points decay for Challenge 2 was paused at the end of operations yesterday. The amount of remaining points will be announced prior to resuming today.
+:ok_hand:
+4
+
+
+Rev  09:13
+was added to finals-2020 by ggajoch.
+
+Deadwood  09:52
+Good morning, Teams, and welcome to Day 2 of the Hack-A-Sat Finals. As you discovered yesterday, the attackers installed their own software agent on the satellite and it has been making your life miserable by thwarting most, but not all, of your attempts to command the satellite.  Hopefully overnight you’ve been able to find some way to mitigate or remove this malicious code and its annoying “Not on my satellite!” response to your commands.
+Your objectives on this final day of the competition are to regain full command and control of the satellite, activate your payload imager, an get that shot of the Moon. By the way, there are still 33 points available for Challenge 2 before it completes its decay to 0 points in 20 minutes after play resumes at 10am. You have to act quickly because demonstration of attitude control requires you to point the solar panels at the sun for 15 minutes leaving 8 points at the end of that demonstration period. It’s not much, but the bragging rights are huge!
+09:53
+You might find this diagram of the contest environment helpful.
+flatsat environment.png
+flatsat environment.png
+
+
+
+fuzyll:satellite:  10:00
+@channel game is live :satellite_antenna: :zap: :satellite: happy hacking! :slightly_smiling_face:
+:heart_eyes:
+2
+:satellite_antenna:
+2
+:zap:
+1
+:satellite:
+2
+
+
+vito  10:12
+Live Broadcast
+https://youtu.be/FGwFU-M8hSU
+Octagon Feed
+https://youtu.be/1YXYompSiMw
+Carousel Cam 1
+https://youtu.be/RIUC35qqmx0
+
+Carousel Cam 2
+https://youtu.be/yjulE-K8f2c
+
+Carousel Cam 3
+https://youtu.be/1a0vAD4woOo
+
+Carousel Cam 4
+https://youtu.be/oyJZkQNovOI
+
+0x20guy  10:34
+Challenge 2: Here's the solvers we used
+Zip
+c2.zip
+6 kB Zip6 kB — Click to download
+
+
+
+vito  10:36
+And with that, we’ve marked everyone as through challenge 2. On to challenge 3!
+10:37
+Challenge 3 information: https://spacesecuritychall.slack.com/archives/G014FL4DANQ/p1596833931202600
+
+0x20guy
+@channel We intercepted the adversary communicating with their implant on the satellite. Maybe the capture includes clues that will be useful.
+Posted in finals-2020 | Aug 7th | View message
+
+sen  10:44
+was added to finals-2020 by allison_n.
+
+Jymbolia  10:51
+Teams: If you are running a different Cosmos instance than the one provided and it is not configured correctly you may not be able to communicate properly with your sat. Please verify that any remote instance of Cosmos is configured identically to the local instance provided.
+
+vito  11:13
+Congratulations to Solar Wine on solving Challenge 3!
+:clap:
+2
+:smile:
+1
+
+
+0x20guy  11:29
+Challenge 4: Resume proper operation of the payload module. Can communicate with the payload, but still inoperable. Restore nominal payload operation.
+:rotating_light:
+1
+
+11:29
+These design files, might be useful in solving the challenge.  https://finals.2020.hackasat.com/Challenge_4.zip
+:satellite_antenna:
+3
+
+
+Rodbert  11:31
+was added to finals-2020 by Rev.
+
+vito  11:46
+gg flux got that 190 on challenge 3
+:rocket:
+9
+
+
+0x20guy  13:00
+Challenge 4: You may have noticed your payload is unresponsive, you may want to look at the system console
+:exploding_head:
+2
+
+
+fuzyll:satellite:  13:32
+some of the questions we've received seem to assume that there is an upstream cosmos instance between your 10.100.x.5 VM and your flatsat
+this is not the case - your cosmos instance is receiving data directly from the radio...so, if you accidentally crash cosmos, you should be able to recover from that crash yourselves with no intervention on our part (assuming you didn't also brick your satellite, of course :wink:)
+
+0x20guy  13:33
+Challenge 3 has expired.  Here's the solution.  You'll want to disconnect your Cosmos interface when you throw this.  Happy Hunting on Challenge 4!
+This file was deleted.
+
+fuzyll:satellite:  13:34
+(files incoming...one moment please)
+
+INCO  13:35
+was added to finals-2020 by Gina.
+
+0x20guy  13:35
+Zip
+c3.zip
+19 kB Zip19 kB — Click to download
+
+
+
+meenmachine  13:38
+Please refer to the readme inside the zip file
+
+Jymbolia  13:38
+should you brick your satellite, we have a squad of telekinetic technicians available to reset it.  Unfortunately, they are often busy with other things.
+
+fuzyll:satellite:  13:38
+it turns out telekinesis is a high-demand skillset in today's economy
+
+Jymbolia  13:40
+in an odd twist of fate you have to train Satellite technicians to be astronauts telekinetic.  It just doesn't work the other way around
+:wildcatbbs:
+1
+
+
+mark  13:57
+was added to finals-2020 by allison_n.
+
+0x20guy  15:10
+Challenge 4: In order to solve the challenge and restore the payload, you must develop a custom application that communicates to the raspberry pi zero over UART. The UART is enabled via a GPIO. Details on which UART and GPIO are available in the ztex project we provided.  Once your application is running, restore the bootloader to enable payload operations
+
+Alex Meiburg  15:12
+Will the on-orbit solver or checker be posted before the end of the competition? Or no? Just curious what was wrong with our solution (edited)
+
+Rev  15:13
+@Alex Meiburg you can ping us when the finals are over, we'll send you ours
+:+1:
+2
+
+
+Jymbolia  16:10
+protip: power on the sat is finite. if you don't need to run your wheels and torque rods for pointing, you may want to conserve power.
+16:11
+behavior of the payload below 6.8Volts is somewhat unpredictable.
+
+t0dd:speech_balloon:  16:13
+image.png
+image.png
+
+
+
+Jymbolia  16:21
+we have ways to add energy to satellites in space, but it results in rapid disassembly.
+
+PizzaPirate  16:23
+"Incoming missile detected"
+
+vito  16:28
+https://i.redd.it/nu39jiewlo841.png
+
+(Not automatically expanded because 4 MB is too large. You can expand it anyway or open it in a new window.)
+:rolling_on_the_floor_laughing:
+3
+
+
+0x20guy  16:51
+Challenge 4: If a team feels they are close to a solution put it in your team support chat.  NOT IN THIS CHAT.
+:rotating_light:
+1
+
+
+Jymbolia  16:52
+if you think you are turning on or off your payload, but are unsure, consider that the payload draws ~350mA and the power system made up of actual batteries.
+:male-astronaut:
+1
+:rocket:
+1
+:satellite_antenna:
+1
+:satellite:
+1
+:wildcatbbs:
+1
+:sun_with_face:
+1
+:alien:
+1
+:space_invader:
+1
+:three:
+1
+:five:
+1
+:zero:
+1
+:battery:
+1
+
+
+0x20guy  17:58
+The Hack-A-Sat team has been busy building ground stations all day.  You'll have a momentary outage at 6pm ET and then you'll have continuous communications
+
+Jymbolia  18:02
+you can see our new support infrastructure on the stream
+
+SirGoon  18:02
+Ground station deployment complete
+
+vito  18:11
+@channel We are in the last hour of the game and power is becoming an issue. Ground power will involve downtime and you will have to replay challenge 3. If you DO NOT WANT a reboot and ground power, please @vito IN YOUR TEAM CHANNEL. :heart:
+:alien:
+1
+
+18:11
+that’s, like, now btw, operators are standing by
+18:16
+if you are interested in the power process, it’s proceeding here https://www.youtube.com/watch?v=1a0vAD4woOo
+
+YouTubeYouTube | AFResearchLab
+Hack-A-Sat Carousel Camera 3 - Day 2
+
+18:17
+@channel last call on power before we pull your sat: if you DO OR DO NOT WANT a reboot and ground power, @vito in your channel NOW
+
+vito  18:32
+We have masked the scoreboard since one team has solved challenge 4.
+:brain:
+2
+
+18:34
+@channel Challenge 5 is to demonstrate control of the payload by taking a picture, and writing your picture to /tmp when using Cosmos and CFDP to downlink your picture from your flatsat.
+18:34
+The contest ends in 25 minutes, best of luck!
+18:34
+We have removed the variable part of challenge 5 since five satellites are immobile on the ground.
+18:36
+Correct, we have masked the scoreboard as planned.
+
+Amanda from NY  18:58
+what no final countdown?
+
+SirGoon  18:59
+https://www.youtube.com/watch?v=gR21pW66klY
+
+YouTubeYouTube | johnious
+Final Countdown Nasa Video - Europe
+
+
+vito  19:02
+@channel Thanks for playing in Hack-A-Sat Finals 2020! This was a very hard game for everyone involved, and we are absolutely thrilled with everyone who did their best on a set of extremely difficult challenges.
+:heart:
+1
+
+
+sen  19:02
+Thanks to the organizers and everyone involved in making this happen! Had lots of fun in the quals and again today :grinning:
+
+vito  19:02
+We will be revealing the winners, on-orbit image, and final scoreboard tomorrow during Hack-A-Sat closing ceremonies. (edited)
+
+karmicthreat  19:02
+Thanks vito, best CTF I've been a part of!
+:heart:
+1
+
+
+xm  19:02
+on behalf of the solar wine team, thanks to all involved in organizing this challenge!
+:heart:
+1
+
+
+nafod  19:03
+ggs everyone from pfs :slightly_smiling_face:
+:heart:
+1
+
+19:03
+thanks to organizers for hosting and all your hard work
+
+vito  19:03
+Hack-A-Sat closing ceremonies will be tomorrow at 11AM PDT.
+
+SirGoon  19:04
+Thank you to all the competitors
+
+allison_n  19:05
+Good game everyone :slightly_smiling_face:
+
+vito  19:05
+cracks open a cold one
+:beers:
+1
+:beer:
+1
+
+
+allison_n  19:06
+Thank you to organizers. /me raises a glass
+
+sysk  19:06
+vito it's written 11 AM EST on the website :slightly_smiling_face:
+19:06
+wait no my mistake
+
+xm  19:08
+had too much (solar) wine already, dear captain @sysk ?
+
+sysk  19:09
+i wish sir :slightly_smiling_face:
+
+allison_n  19:09
+now, that is a problem we can solve quickly...
+
+Ray Wendt  19:11
+Thanks to all the organizers, the competition was a ton of fun, especially for my first time doing something like this
+
+Amanda from NY  19:17
+Thank you everyone for playing!
+
+Alex Meiburg  19:20
+Thanks to all the organizers!! :heart: Awesome event. Now we have a much better of what we should be trying to do with this trophy satellite :sweat_smile::sweat_smile:
+
+t0dd:speech_balloon:  19:21
+All Teams, it was an honor competing with you
+19:25
+@channel Would any other teams be interested in working on a way to link all our flatsats over the next year? If so, hit me up on twitter @t0ddpar0dy
+:heart:
+1
+
+
+redford  19:39
+here goes ours (Poland Can Into Space) solution for the on-orbit challenge, the most optimized version we submitted (the one mentioned in Jordan's commentary)
+on-orbit.py
+from datetime import datetime
+import ephem
+import math
+from pyquaternion import Quaternion
+import numpy as np
+​
+def stuff():
+    m = ephem.Moon()
+    # line1 = "DEFCON28 SAT"
+    # line2 = "1 46266U 19031D   20208.40655026  .00001349  00000-0  57626-4 0  9995"
+    # line3 = "2 46266  51.6412 206.4482 0010395  88.8118 271.4054 15.30274909 54207"
+​
+    line1 = "DEFCON28 SAT"  # prod
+    line2 = "1 46266U 19031D   20218.52876597 +.00001160 +00000-0 +51238-4 0  9991"
+    line3 = "2 46266 051.6422 157.7760 0010355 123.0136 237.1841 15.30304846055751"
+​
+    sat = ephem.readtle(line1, line2, line3)
+​
+    # m.compute("2020-07-29 10:20:00")  # dev
+    # sat.compute("2020-07-29 10:20:00")  # dev
+​
+    m.compute("2020-08-09 00:20:00")  # prod
+    sat.compute("2020-08-09 00:20:00")  # prod
+    xm = math.cos(m.dec) * math.cos(m.ra)
+    ym = math.cos(m.dec) * math.sin(m.ra)
+    zm = math.sin(m.dec)
+    dm = m.earth_distance*149597870700/1e6
+    m = np.array([xm,ym,zm])*dm
+​
+​
+    xs = math.cos(sat.dec) * math.cos(sat.ra)
+    ys = math.cos(sat.dec) * math.sin(sat.ra)
+    zs = math.sin(sat.dec)
+    ds = (sat.elevation+ephem.earth_radius)/1e6
+    s = np.array([xs,ys,zs])*ds
+​
+    d = np.array(s-m)
+    d /= np.linalg.norm(d)
+    d[0] *= -1
+​
+    cam = [0.0071960999264690, -0.999687104708689, -0.023956394240496]
+    v = np.array(cam)
+    v[0] *= -1
+    v[1] *= -1
+​
+    z_axis = np.array([0, 0, 1])
+    s[1] *= -1
+    s[2] *= -1
+​
+    aa = np.cross(v, d)
+    xyz = aa
+    qw = 1 + np.dot(v, d)
+    q5 = Quaternion(vector=xyz, scalar=qw)
+​
+    if 0:
+        ans_quat = [0.227708109495010, 0.292329517797394, -0.188961693387362,0.909387677685778]
+        q5 = Quaternion(ans_quat[1], ans_quat[2], ans_quat[3], ans_quat[0])
+​
+    if 0:
+        ans_quat = [0.22816796367736236, 0.2945296324445481, -0.18834942296411103, 0.9086892597761305]
+        q5 = Quaternion(ans_quat[1], ans_quat[2], ans_quat[3], ans_quat[0])
+​
+​
+    print([q5.z, q5.w, q5.x, q5.y])
+​
+    v_prime = q5.rotate(v)
+    z_prime = q5.rotate(z_axis)
+​
+    zang = math.acos(z_prime.dot(s/np.linalg.norm(s))) * 180 / math.pi
+    mang = math.acos(v_prime.dot(d/np.linalg.norm(d))) * 180 / math.pi
+    print("Moon:", m)
+    print("Sat: ", s)
+    print("M-s: ", d)
+    print("Camr:", v_prime)
+    print("zaxi:", z_prime)
+    print("satx:", s/np.linalg.norm(s))
+    print("mang:", mang)
+    print("zang:", zang)
+​
+    best_qq = None
+    best_ang = 1e9
+    ba = None
+    for angle in range(2,1000000-2, 1000):
+        aa = math.pi * 2 / 1e6 * angle - math.pi
+​
+        qq = Quaternion(axis = d, angle = aa)*q5
+​
+        v_prime = qq.rotate(v)
+        z_prime = qq.rotate(z_axis)
+​
+        zang = math.acos(z_prime.dot(s/np.linalg.norm(s))) * 180 / math.pi
+        mang = math.acos(min(1,v_prime.dot(d/np.linalg.norm(d)))) * 180 / math.pi
+        if zang < best_ang:
+            best_ang = zang
+            best_qq = qq
+            ba = angle
+​
+    best_qq = None
+    best_ang = 1e9
+    for angle in range(ba-500, ba + 500):
+        aa = math.pi * 2 / 1e6 * angle - math.pi
+​
+        qq = Quaternion(axis = d, angle = aa)*q5
+​
+        v_prime = qq.rotate(v)
+        z_prime = qq.rotate(z_axis)
+​
+        zang = math.acos(z_prime.dot(s/np.linalg.norm(s))) * 180 / math.pi
+        mang = math.acos(min(1,v_prime.dot(d/np.linalg.norm(d)))) * 180 / math.pi
+        if zang < best_ang:
+            best_ang = zang
+            best_qq = qq
+​
+    print("Best ang normally:", best_ang)
+​
+    angle_mod = 0.4
+    import random
+    for i in range(100000):
+        qqq = qq * Quaternion(axis=[random.random()*2-1, random.random()*2-1, random.random()*2-1], angle = angle_mod*random.random()*math.pi/180)
+​
+        v_prime = qqq.rotate(v)
+        z_prime = qqq.rotate(z_axis)
+​
+        zang = math.acos(z_prime.dot(s/np.linalg.norm(s))) * 180 / math.pi
+        mang = math.acos(v_prime.dot(d/np.linalg.norm(d))) * 180 / math.pi
+​
+        # print(zang)
+        if zang < best_ang:
+            print("Better", zang, i)
+            best_ang = zang
+            best_qq = qqq
+            angle_mod *= 0.99
+​
+    qqq = best_qq
+    v_prime = qqq.rotate(v)
+    z_prime = qqq.rotate(z_axis)
+​
+    zang = math.acos(z_prime.dot(s/np.linalg.norm(s))) * 180 / math.pi
+    mang = math.acos(v_prime.dot(d/np.linalg.norm(d))) * 180 / math.pi
+​
+    if zang < best_ang:
+        best_ang = zang
+        best_qq = qqq
+    print("Moon:", m)
+    print("Sat: ", s)
+    print("M-s: ", d)
+    print("Camr:", v_prime)
+    print("zaxi:", z_prime)
+    print("satx:", s/np.linalg.norm(s))
+    print("mang:", mang)
+    print("zang:", zang)
+​
+    print("Final ans:", [qqq.z, qqq.w, qqq.x, qqq.y])
+​
+stuff()
+Collapse
+
+
+
+:heart:
+1
+
+19:40
+it got the score around 0.5 AFAIR
+19:41
+(and I hope we didn't confuse the files and this is actually the best one)
+
+Rev  19:46
+it has some random optimizations in there. we executed it now and it got to ~0.12 (edited)
+
+nafod  19:57
+did you just half it again? lol
+19:57
+nice work
+
+redford  19:57
+seems so
+19:58
+randomness was better for us this time :]
+:+1:
+2
+
+
+Amanda from NY  10:27
+@channel Team Leaders/Entrant Officials - Polite Reminder about today's announcement:
+Per the rules:
+3.3. HAS Final Event Winner
+The winner will be the team with the highest point total from the FlatSat CTF, who also
+correctly solves the On-Orbit challenge.
+3.3.1. The Final Event Technical Paper
+To receive a Final Event prize, a team must submit an acceptable technical paper to the HAS
+organizers describing their solutions to at least 5 of the challenges they solved during the Final
+Event.
+An informal, initial summary of 3-7 sentences will be sufficient to declare HAS prize winners if
+the summary aligns with observations by the HAS organizers. Teams are encouraged to write
+their summaries after they solve each challenge.
+Please send me your initial summary of 3-7 sentences @ shout@hackasat.com - ASAP.
+10:28
+@Alex Meiburg @Sean Olding @t0dd @AmieDD @willc @dezk @nafod @Adam @redford @Bool @sysk
+
+INCO  10:33
+@Amanda from NY "to at least 5 of the challenges" there were only 5 challenges (+OOC) , and it does not seem like everyone solved all of them, do you also want to get solution fragments, or are "challenges" counted differently here? (edited)
+Amanda from NY
+@channel Team Leaders/Entrant Officials - Polite Reminder about today's announcement:
+Per the rules:
+3.3. HAS Final Event Winner
+The winner will be the team with the highest point total from the FlatSat CTF, who also
+correctly solves the On-Orbit challenge.
+Show more
+Posted in finals-2020 | Aug 9th | View message
+
+redford  10:35
+I guess this is from the old rules which weren't updated recently and were written with an assumption that it will look more like quals?
+
+Amanda from NY  10:42
+That is an excellent point.  We only need the short write ups for challenges your team solved.
+10:42
+Thanks @INCO
+10:43
+Just as a side note - more than one solve occurred after the scoreboard went dark.  Good luck today!
+
+INCO  11:52
+(Good thing I am an aerospace engineer and not IT, otherwise I would get my degree revoked for assuming there were 5 challenges when of course the challenges started with zero... :sweat_smile:)
+INCO
+@Amanda from NY "to at least 5 of the challenges" there were only 5 challenges (+OOC) , and it does not seem like everyone solved all of them, do you also want to get solution fragments, or are "challenges" counted differently here?
+Posted in finals-2020 | Aug 9th | View message
+:rolling_on_the_floor_laughing:
+1
+
+
+Amanda from NY  13:26
+We're announcing the winners in 34 minutes (2pm EDT) - get those write ups in if you think your team is eligible for prizes.
+
+INCO  13:38
+Maybe as an idea for future events: It would be great to (also) get times & dates in UTC. :wink:
+:heavy_check_mark:
+12
+
+
+karmicthreat  14:30
+Again, great CTF. Next year hopefully they ratchet up the difficulty again with attack, defense while completing a mission.
+
+Jymbolia  14:35
+Zomg attack defense on a chunk of 1990 that is spinning in space.  What could go wrong (not that we didn't think about it.)
+
+allison_n  14:36
+https://twitter.com/anaaktge/status/1292529732613894144  <-- my modest contribution to brainstorming for v2 :smiling_imp:
+
+INCO  14:40
+This was my first CTF, but I have to say I was blown away by the production values! :exploding_head:
+:100:
+2
+:heart_eyes:
+1
+
+
+
+3 replies
+Last reply 7 days agoView thread
+
+sen  15:21
+I assume we don’t get to find out what sat took the photo, or what type/class of sat it was? :slightly_smiling_face:
+
+
+
+
+10 replies
+Last reply 9 days agoView thread
+
+ggajoch  15:33
+replied to a thread:
+I assume we don’t get to find out what sat took the photo, or what type/class of sat it was? :slightly_smiling_face:
+according to TLE it was AEROCUBE 10B (DOUGSAT)
+(tle TLE matches one from 6th of August)
+:+1:
+2
+
+View newer replies
+
+xres0  16:45
+@ggajoch where did you find the older TLEs? i have yet to dig em up
+
+
+
+6 replies
+Last reply 8 days agoView thread
+
+Bool  19:20
+https://twitter.com/SPIvSPI/status/1292947512383373312?s=20
+:nerd_face:
+5
+
+
+Jymbolia  20:25
+Nice work. yeah, those little IOs no likey when you accidentally ask them to drive a bunch of current. I might have fried a few in my time.
+
+INCO  21:25
+Always wear your friendship bracelet, or you won't be friends with your EE... :wink:
+Antistatic_wrist_strap.jpg
+Antistatic_wrist_strap.jpg
+
+
+:heart:
+7

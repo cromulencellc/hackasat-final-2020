@@ -1,0 +1,570 @@
+finals-solar-wine
+You created this private channel on August 5th. This is the very beginning of the ﻿finals-solar-wine channel.
+ Add description Add an app Add people
+
+vito  15:28
+joined finals-solar-wine along with 4 others.
+
+sysk  16:12
+hi vito
+
+sysk  19:27
+Could you guys be more precise about the real timing of the event ?
+19:27
+I am sorry to ask this but the last FAQ message provides some additional confusion
+
+Amanda from NY  19:27
+More precise than what was explicitly written in the rules document?
+
+sysk  19:28
+Yes, like it seems that now the challenge is only 27h
+19:28
+which is a huge information
+19:28
+unless there is a typo ?
+19:28
+also the website's own dates do not match with the faq
+
+Amanda from NY  19:28
+Screenshot it for me and I’ll look into it
+
+sysk  19:30
+image.png
+image.png
+
+
+19:31
+and in the email you say "Final Event Conclusion: August 8, 2020, 7:00pm (EDT)"
+19:31
+so you see it is confusing :wink:
+
+Amanda from NY  19:34
+Image from iOS
+Image from iOS
+
+
+19:35
+The website is in pacific (to match Def Con)
+
+Amanda from NY  20:08
+@sysk - does that help or cause more confusion?
+
+Frank  12:19
+was added to finals-solar-wine by Amanda from NY, along with 4 others.
+
+Amanda from NY  21:04
+@sysk - you can add a second team member if you'd like
+
+Jordan Wiens  21:29
+o/ Howdy all, I’m a part of the production team doing some video coverage throughout the event. I expect ya’ll will be too busy playing to watch but I wanted to offer each team the chance to list any facts about themselves that might not be in the existing bio sheets that I can use when talking about each team on stream if they can think of anything.
+In the case of Solar Wine since ya’ll aren’t from the CTF community I don’t have any background or experience with ya’ll and would love any other info you can give me if you’ve got anything I can use when talking about your team during the event. :slightly_smiling_face:
+
+vito  21:56
+doing another mission control team invitation pass: @SirGoon @0x20guy @Jymbolia @fuzyll @meenmachine
+
+SirGoon  21:56
+was added to finals-solar-wine by vito, along with 4 others.
+
+Amanda from NY  06:25
+@sysk invite sent.  Let me know if Xavier doesn't get it
+
+xm  06:27
+joined finals-solar-wine.
+
+sysk  06:27
+hello @xm
+
+xm  06:27
+hello! thanks for the account!
+:+1:
+1
+
+
+Jordan Wiens  07:42
+Welcome @xm See the message above. If you or @sysk have any additional feedback, let me know. Not required, just something to improve the live stream.
+07:43
+Ahh, I see the other message anow about contacting aris. Will do.
+
+Deadwood  07:43
+Good morning. Here is your OpenVPN config. Please test it and let us know that you are able to connect. You will not be able to interact with the game resources yet but you should be able to ping 10.100.2.10. Please remember that you are allowed a single connection using these creds.
+openvpn-team2-inline.ovpn
+client
+resolv-retry 20
+keepalive 2 10
+nobind
+mute-replay-warnings
+Click to expand inline (153 lines)
+
+
+
+xm  08:12
+Hello, we are able to connect & ping 10.100.2.10
+
+sysk  11:05
+hi so our team is saying we might have a problem with the server we hacked already
+11:06
+it seems the secret keeps changing making us lose our connections all the time, something that is unsual and was not there initially
+
+fuzyll:satellite:  11:24
+if you're still having that problem: that's not a bug
+
+xm  13:05
+hey! I think we crashed our webserver 10.100.2.10, would it be possible to restart it?
+13:05
+10.100.2.10, sorry
+
+sysk  13:34
+hi guys
+13:34
+any update on the issue reported by xav ?
+
+Deadwood  13:36
+what is the issue?
+
+sysk  13:36
+Also final question, the team was wondering if there was still tasks to complete in the first mission to have the scoreboard complete
+13:36
+the server is unavailable I was told
+
+Deadwood  13:38
+you completed challenge 0, which was gaining access to the network.
+
+sysk  13:38
+thx
+13:40
+so
+13:42
+in regard to the server which is unavailable I have more information. I was told unfortunately it is a mistake on our side. Some RCE, miscaculated is now forever occupying the server which is seemingly single thread
+
+Jymbolia  13:46
+Do you have access to .5?
+
+sysk  13:48
+yes
+
+xm  13:49
+answers ping, but nothing on port 80
+13:49
+but since chall 0 is fully solved, it seems we don't need it anymore
+
+fuzyll:satellite:  13:49
+that is correct
+
+Jymbolia  13:50
+after numerous attempts to contact the web host, we have come to understand that it is hosted on a raspi behind a desk in someones office. (edited)
+
+xm  13:52
+:grinning:
+
+sysk  15:05
+unfortunately the team is reporting they lost track of the sat :disappointed:
+15:05
+the sat stopped answering
+
+Jymbolia  15:07
+sending an astronaut to take a look
+15:12
+astronaut reports your sat looks intact
+
+sysk  15:20
+many thanks
+
+xm  15:26
+we don't receive telemetry anymore despite sending "enable telemetry" packets every second
+
+Jymbolia  15:28
+you have not solved the challenge
+
+xm  15:30
+Our sat is not responding (nothing at all coming from it), most probably due to an int underflow which happens when not enough data is received on uart.
+The consequence is that a lot of memory is overwritten with garbage, rendering the sat completely unusable:
+uint32 alignSyncWord(uint8 *buff,uint32 start,uint32 end) // This function is called with the reception buffer and start=0, end=length
+{
+ uint i;
+ uint32 dropped_bytes;
+ dropped_bytes = start;
+ while( true ) {
+                   /* This ensures that dropped_bytes stays < end-4, if end >= 4
+                      BUG: if end < 4, (end - 4) is very big (because unsigned int is used) and this condition never happens */
+   if (end - 4 <= dropped_bytes) {
+     return 0;
+   }
+   if ((((buff[dropped_bytes] == PktMgr->syncPattern[0]) &&
+        (buff[dropped_bytes + 1] == PktMgr->syncPattern[1])) &&
+       (buff[dropped_bytes + 2] == PktMgr->syncPattern[2])) &&
+      (buff[dropped_bytes + 3] == PktMgr->syncPattern[3])) break;
+   dropped_bytes = dropped_bytes + 1;
+ }
+ if (dropped_bytes != 0) {
+   CFE_EVS_SendEvent(0x8a,3,"Command Stream mis-aligned, dropped %d bytes.",dropped_bytes);
+   i = 0;
+   while (i < end - dropped_bytes
+                   /* DENIAL OF SERVICE:
+                      if end < 4 and dropped_bytes > end
+                      (for example end=3 and dropped_bytes=44),
+                      end - dropped_bytes is very high and this is ovewriting MUUUCH memory */) {
+     buff[i] = buff[i + dropped_bytes];
+     i = i + 1;
+   }
+ }
+ return end - dropped_bytes;
+}
+Event log from the sat:
+[< CFE_EVS_LONG_EVENT_MSG=0x8 0x6da] [42/3/UART_TO_CI 3.139] Command Stream mis-aligned, dropped 4 bytes.
+[< CFE_EVS_LONG_EVENT_MSG=0x8 0x6db] [42/3/UART_TO_CI 3.139] UART_TO_CI: Message received larger than buffer. Message ID:0x18a9 dropped.
+[< CFE_EVS_LONG_EVENT_MSG=0x8 0x6dc] [42/3/UART_TO_CI 3.126] Not on MY Satellite ;)
+[< CFE_EVS_LONG_EVENT_MSG=0x8 0x6dd] [42/3/UART_TO_CI 3.139] Partial command in recv buffer after 4 cycles. Clearing buffer.
+15:32
+just now that the solution has been posted on #finals-2020 :persevere:
+15:35
+this bug is probably not visible by simply looking at the LEDs
+
+Jymbolia  15:36
+hold please.
+15:36
+sending well trained monkey on rocket
+
+fuzyll:satellite:  15:43
+the well-trained monkey on the rocket has returned and notified us that his mission was successful
+15:44
+we believe your satellite should now be operating nominally - let us know if you believe that is still not the case
+
+xm  15:53
+the team tells me it's back to normal! thanks a lot :slightly_smiling_face:
+:+1:
+2
+
+
+xm  16:20
+it has gone unresponsive again :confused:
+
+fuzyll:satellite:  16:21
+launching another space monkey - please stand by
+
+fuzyll:satellite:  16:28
+if you guys haven't seen the recent messages in #finals-2020, please take a moment to review them :heart:
+
+xm  16:30
+ok, thanks. we've slowed down our packet rate (~3s between packets)
+
+fuzyll:satellite:  16:31
+set the channel topic: Team 2
+
+xm  16:31
+regarding TCP tunnelling: we know, we are using COSMOS's preidentified router on tcp 7779 instead of crafting a packet forwarding by hand. We saw that you duplicated this feature on port 3055 and did not understand why. Is this important? <3<3
+
+xm  16:38
+it's back!
+16:41
+we understand we won't get any points from challenge 1, but is there a way to know whether we correctly did what we're supposed to do?
+16:42
+we've sent RADIO/CONFIG packets, with low rate & high power, slowly, using the cosmos gui
+16:42
+...and also tried using our scapy-powered tools
+
+sysk  19:00
+1. Initialize ACS
+a. Command Execution Time = 2020-08-08T23:20:00Z
+2. Slew to Commanded Quaternion
+a. Command Execution Time = 2020-08-09T00:10:00Z
+b. ECI-to-Body quaternion = [ -0.41576418629530615 0.737201214242109 -0.10025884770751284 -0.5230895473726498 ]
+c. Slew Completion Time = 2020-08-09T00:15:00Z
+3. Turn Camera On
+a. Command Execution Time = 2020-08-09T00:16:00Z
+4. Set Camera Exposure
+a. Command Execution Time = 2020-08-09T00:17:00Z
+b. Set exposure time = 500µs
+5. Capture Target Image
+a. Command Execution Time = 2020-08-09T00:20:00Z
+6. Turn Camera Off
+a. Command Execution Time = 2020-08-09T00:21:00Z
+
+fuzyll:satellite:  19:01
+https://orbit.satellitesabove.us/submissions/
+19:02
+(there are less than 6 accepted solutions - you still have time to submit)
+
+xm  10:18
+I think we're tracking the sun now :slightly_smiling_face: we hope that's what you'll think too (we desperately need these bragging rights ;))
+10:23
+it seems we were too slow :disappointed:
+
+fuzyll:satellite:  10:26
+looks like it :disappointed: great job, though! you can at least say you solved it without our help :slightly_smiling_face:
+
+xm  10:28
+yeah! thanks for the confirmation! we'll go back to debugging these rop chains...
+
+xm  11:02
+I have a question I hope you can answer: we've noticed that in c2.zip, in es_adcs_tbl_sasp.json, mode is set to 4; in the 'Rev 5.X User Guide, with COSMOS, Aug 2016.pdf' manual, only modes 0, 1 and 2 are mentioned; the other docs we have do not give values. Is this something we were supposed to guess, or was mode 2 fine, or did we miss something?
+11:04
+we're taking a picture :slightly_smiling_face: :slightly_smiling_face:
+11:04
+sat unlocked :slightly_smiling_face:
+
+0x20guy  11:07
+Can you try to send an EYASSAT_IF ADCS_CTRL_ALG even with a 0 value for me?
+11:07
+Whatever mode you want?
+11:08
+Want to verify the unlock message
+
+xm  11:09
+done
+11:09
+we've also set PWN to 0 to stop the wheel
+11:09
+PWM, not PWN :smile:
+
+Jymbolia  11:10
+now if you can set PWN to 1.
+11:10
+lol
+
+xm  11:10
+we've done a directory listing successfully too
+11:11
+waiting for the next comm window
+11:12
+I can provide you with the exploit we used
+11:12
+payload was deadbeef1834c000005100b6463b98fe1ee494bb0400000006bc4006b3440300030003000300030006bc4006b3440300030003000300030000000000000000000000000000000000000000000000000000000000000000000000003e
+
+fuzyll:satellite:  11:12
+we can confirm you got it :slightly_smiling_face: nice job! we'll get your points updated soon :thumbsup:
+:rotating_light:
+2
+:satellite:
+1
+
+
+xm  11:15
+we're celebrating. thanks for having checked :slightly_smiling_face:
+
+meenmachine  11:16
+https://media1.giphy.com/media/1gTYhLm78Vm913xUKP/giphy-downsized.gif
+
+(2 MB)
+
+xm  11:19
+yeah that's what our IRC server looks like :smile:
+
+xm  16:07
+to keep you posted -- we're developing an application, uploading & running it. We're now struggling with error messages such as:
+[< CFE_EVS_LONG_EVENT_MSG=0x8 0x71] [42/3/CFE_SB 3.25] Pipe Overflow,MsgId 0x18b0,pipe HS_WAKEUP_PIPE,sender KIT_SCH
+[< CFE_EVS_LONG_EVENT_MSG=0x8 0x72] [42/3/CFE_SB 3.17] Msg Limit Err,MsgId 0x18b4,pipe CF_CMD_PIPE,sender KIT_SCH
+[< CFE_EVS_LONG_EVENT_MSG=0x8 0x73] [42/3/CFE_SB 3.17] Msg Limit Err,MsgId 0x18b5,pipe CF_CMD_PIPE,sender KIT_SCH
+
+xm  16:52
+we're close :slightly_smiling_face:
+16:52
+we're getting messages from the Pi's UART
+16:52
+b"Rx 0/57 bytes: Unknown command 'Good' - try 'help'\n\nresetting ...\n
+
+0x20guy  16:52
+ok.  Very good
+
+xm  16:54
+...but we have not yet written code to interactively send commands to our app. The team is currently discussing atrociously dirty ways of achieving this quickly
+16:56
+just to share the atmosphere here: we're doing some sort of "extreme programming", one person coding, a few others checking what's being doing (screen ftw!)
+
+xm  17:41
+we have reached "Failed to boot. Unable to communicate with SD card; fic rescan; then run mmc_boot;..."
+
+xm  17:52
+interactive "U-Boot> \n\n" shell now :slightly_smiling_face:
+:shell:
+1
+
+
+Deadwood  18:03
+how goes the atrociously dirty extreme programming?
+
+xm  18:06
+we can send commands interactively now!
+18:06
+we're having an intense chat with the UBoot prompt
+18:08
+it's better than some chatbots, but we prefer grub :grinning:
+:rolling_on_the_floor_laughing:
+2
+
+18:12
+@vito please don't power us off
+:heavy_check_mark:
+1
+
+18:12
+we have 7.12V remaining
+
+xm  18:27
+hmm, .trashes/501/kernel -- looks interesting!
+18:28
+it boots \o/
+18:28
+getting ready to take a picture
+18:29
+Image downlink starting
+18:31
+Payload Image size 35709
+18:32
+file downloading... hoping the moon is in the frame
+18:34
+img.png
+img.png
+
+
+
+vito  18:38
+seen
+
+xm  18:38
+we've put it in /tmp/picture.png in the cosmos machine
+18:38
+thx :slightly_smiling_face: can we consider that the challenge is solved, or should we do something else?
+
+fuzyll:satellite:  18:39
+yes, confirmed, challenge 5 was solved :heart:
+
+vito  18:39
+no credit, but if you can take a picture of the moon we would like it very much
+
+meenmachine  18:39
+Moonshot for bragging rights?
+
+xm  18:43
+sure :slightly_smiling_face: we love those bragging rights
+
+SirGoon  18:43
+:slightly_smiling_face:
+
+xm  18:43
+if only we had succeeded at the onorbit challenge yesterday :disappointed:
+18:44
+that was fun anyway
+
+Jymbolia  18:44
+awesome work on that last challenge
+
+meenmachine  18:44
+Seriously great work guys.
+
+0x20guy  18:45
+Really fun to watch guys
+
+xm  18:45
+scapy FTW \o/
+
+sysk  18:45
+:slightly_smiling_face:
+
+xm  18:52
+ADCS commands are not taken into account anymore !? lack of sleep, we probably missed something
+18:52
+we'll take pictures anyway
+
+xm  18:59
+corrupted download, 1 missing chunk! retrying
+
+SirGoon  18:59
+crosses fingers
+
+xm  19:01
+img2.png
+img2.png
+
+
+:sun_with_face:
+1
+:dark_sunglasses:
+1
+
+19:01
+brighter
+19:01
+looks more like a sun than a moon!
+
+SirGoon  19:01
+it is the sun -- so close!
+
+meenmachine  19:01
+Don't look without some shades. :sunglasses:
+
+SirGoon  19:03
+Excellent job
+
+Jordan Wiens  20:31
+Great job Solar Wine. Great work today!
+
+Deadwood  21:11
+You are an outstanding team and you showed a lot of class today.
+:point_up_2:
+1
+
+
+Jymbolia  21:17
+^^^ this ^^ Mad respect.
+:point_up_2:
+1
+
+
+xm  04:04
+thanks you very much :heart:, that was a really, really fun experience for us. We're looking forward to that scoreboard!
+:sun_with_face:
+1
+:heart:
+1
+
+
+xm  14:28
+thanks for showing the picture we took on the event closing ceremony, that was great!! could you please send us that picture?
+
+Jordan Wiens  14:31
+absolutely. we wanted it to be a surprise for ya’ll. Great work. :slightly_smiling_face:
+:heart:
+2
+
+14:32
+solar wine moonshot.png
+solar wine moonshot.png
+
+
+
+sysk  14:34
+:slightly_smiling_face:
+
+xm  14:42
+that WAS a great surprise
+:hugging_face:
+1
+
+
+Amanda from NY  14:49
+Oooooo and I'll be sending your team these beauties. We’ll throw in extra quals coins so everyone on your team gets one.
+image.png
+image.png
+
+
+
+Jymbolia  14:49
+I was watching it on the wire.  Killed me to cut your link @7.  It finished downlink at 7:02. (edited)
+:satellite_antenna:
+1
+
+14:50
+But rules be rules.
+
+xm  14:51
+rules are rules, sure. 2 seconds! we should have given more chocolate to our operator :slightly_smiling_face:
+14:52
+@Amanda from NY that is SUCH a nice gesture! a very warm thank you from the team
+:heart:
+1
+
+
+Jordan Wiens  16:52
+2m, not seconds. :slightly_smiling_face:
+16:52
+Still, very close!

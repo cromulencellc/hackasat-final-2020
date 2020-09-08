@@ -1,0 +1,353 @@
+finals-pfs
+You created this private channel on August 5th. This is the very beginning of the ﻿finals-pfs channel.
+ Add description Add an app Add people
+
+vito  15:28
+joined finals-pfs along with 5 others.
+
+nafod  19:11
+hello, I added @Considerthelion as the second member of our team
+
+Aviation Sparrow  12:17
+was added to finals-pfs by Amanda from NY, along with 4 others.
+
+Jordan Wiens  21:20
+o/ Hi folks. I’m a part of the production team doing some video coverage throughout the event. I expect ya’ll will be too busy playing to watch but I wanted to offer each team the chance to list any facts about themselves that might not be in the existing bio sheets that I can use when talking about each team on stream if they can think of anything.
+In the case of PFS if you have no objection I may mention how small of a community the CTF scene is and how between the overlap of colleges and places of work you can often trace lineages between many different teams and how I didn’t even realize I shared connections to some of the folks on the team until after the event. (Without disclosing any exact relationships)
+
+vito  21:56
+doing another mission control team invitation pass: @SirGoon @0x20guy @Jymbolia @fuzyll @meenmachine
+
+SirGoon  21:56
+was added to finals-pfs by vito, along with 4 others.
+
+nafod  23:05
+sup jordan and everyone else. yeah it is a small world haha. I don't know what's on the bio sheet already but we're totally cool with mentioning that stuff
+23:06
+explaining the interconnections between top US ctf teams will look a little like the pepe silvia map from it's always sunny
+:point_up:
+1
+
+23:07
+nothing else immediately comes to mind re: facts but if we think of something tonight I'll let you know
+:+1:
+1
+
+
+Deadwood  07:46
+Good morning. Here is your OpenVPN config. Please test it and let us know that you are able to connect. You will not be able to interact with the game resources yet but you should be able to ping 10.100.6.10. Please remember that you are allowed a single connection using these creds.
+openvpn-team6-inline.ovpn
+client
+resolv-retry 20
+keepalive 2 10
+nobind
+mute-replay-warnings
+Click to expand inline (153 lines)
+
+
+
+nafod  08:01
+hey, we were able to connect and ping that IP
+08:02
+so all is well
+
+nafod  12:58
+hello, we have received points for challenge 1
+12:58
+is there something we are missing regarding challenge 0 on the scoreboard
+12:58
+or should we await further challenges
+
+vito  13:27
+https://finals.2020.hackasat.com/
+13:27
+challenge 0 is a 50-point challenge
+13:27
+the scoreboard with the little pips doesn’t know that
+
+Deadwood  13:27
+your points are being updated
+
+nafod  13:27
+updated how?
+13:28
+and makes sense re:pips, thank you
+
+Deadwood  13:28
+reflecting your solve of challenge 0 and challenge 1
+
+nafod  13:28
+ah ok, thank you
+
+Deadwood  13:31
+your points are accurate.  you have points for both challenge 0 and 1.
+
+nafod  13:31
+great, thanks. my main confusion was just surrounding the scoreboard pips, but it makes sense now
+13:31
+much appreciated
+
+nafod  13:57
+hello, could you clarify the scoring re: poland can into space
+13:57
+I think they solved it >30 minutes after us based on when I sent my message, but they also got 200 points
+
+vito  13:58
+noted
+
+nafod  16:27
+hello - my teammates want me to ask: when we move in front of the sun, we appear to spin and throw our yaw off, but we appear to otherwise track. is this our mistake?
+
+fuzyll:satellite:  16:28
+if you guys haven't seen the recent messages in #finals-2020, please take a moment to review them :heart:
+16:28
+(unrelated to the question you just asked)
+
+nafod  16:29
+fuzyll, numbers demands that I say hi and says you two should talk soon (edited)
+:smile:
+1
+:+1:
+1
+
+16:29
+:slightly_smiling_face:
+
+fuzyll:satellite:  16:31
+set the channel topic: Team 6
+
+nafod  16:45
+quick bump on the question and an additional q - should we be receiving telemetry for both side panels?
+
+0x20guy  16:46
+I'll post the answer in the main chat
+
+nafod  16:46
+thanks
+
+vito  17:21
+y’all got challenge 2
+
+nafod  17:22
+yeah
+
+Considerthelion  17:22
+ty
+17:22
+we watchin
+17:23
+hope the crowd is hype on that sun tracking
+:sun_with_face:
+1
+:sunglasses:
+1
+:male-astronaut:
+1
+
+
+nafod  17:24
+all those years of directly staring into the sun as kids paid off for us
+
+Considerthelion  19:59
+what is this math-a-sat
+:rolling_on_the_floor_laughing:
+1
+:nerd_face:
+1
+:sunglasses:
+1
+
+
+nafod  08:11
+Good morning! could you confirm the time at which we solved challenge 2?
+
+Frank  09:04
+2050 utc yesterday
+
+nafod  09:05
+thanks!
+
+Frank  09:05
+np
+
+nafod  11:33
+can you check on our satellite? it seems unresponsive
+
+Jymbolia  11:35
+sending hard light hologram to look
+
+fuzyll:satellite:  11:35
+(these holograms are pretty expensive - we'll send you a bill later :wink:)
+
+nafod  11:35
+:dollar:
+
+Jymbolia  11:36
+good news is you get to keep the hologram... bad news is you have to go get it.  its only a few hundred Kilometres away.
+11:36
+:arrow_up: that way.
+:satellite:
+3
+
+
+meenmachine  11:37
+The trained monkey asked for a pay raise so we replaced him.
+11:39
+Should be looking good now!
+
+nafod  11:39
+it works, thank you :slightly_smiling_face:
+
+Considerthelion  11:39
+cool holograms. how many monkeys does it take to screw in a satellite, yea know. thanks
+
+Jymbolia  11:39
+don't thank us, thank the hologram.
+
+meenmachine  11:40
+2 monkeys. @Jymbolia and @meenmachine (edited)
+
+nafod  12:27
+hey sorry, any chance it could be reset again... we promise to not throw this payload again :stuck_out_tongue:
+
+Jymbolia  12:29
+attempting to ping pong space debris at your sat to gently poke it.
+
+nafod  18:18
+@vito we would like ground power
+
+Considerthelion  18:57
+while working on power things, can you plz raise d15 high, please?
+
+meenmachine  18:58
+d15?
+
+Amanda from NY  13:15
+@nafod @Considerthelion - need your write ups!
+
+nafod  13:21
+on it, sorry. coming asap
+
+Amanda from NY  13:27
+33 minutes...
+
+nafod  13:32
+very sorry - I just emailed you
+13:32
+@Amanda from NY
+
+Amanda from NY  13:34
+got em
+13:34
+thanks!  i was just worried you were sleeping.  I was calling you like a stalker
+
+nafod  13:34
+it's totally my fault, I'm so sorry for missing all of that haha
+
+Considerthelion  13:34
+ty for posting here
+13:34
+otherwise we would have missed it
+
+nafod  13:35
+thankfully I added @Considerthelion to be responsible haha
+
+Considerthelion  13:50
+@meenmachine are you teasing about d15?
+
+Amanda from NY  14:33
+good thing you got your write up in on time
+
+nafod  14:33
+lmao
+14:33
+thanks for trying so hard to reach us!! we owe you a huge favor for that
+14:33
+and thanks for all your hard work on this event, the challenges were great :slightly_smiling_face:
+:100:
+1
+
+
+Amanda from NY  14:36
+you can buy me a drink (<$20) next year at Def Con
+14:37
+:wink:
+
+Considerthelion  14:39
+sounds good
+
+nafod  14:42
+haha absolutely
+
+Amanda from NY  14:45
+Oooooo and I'll be sending your team these beauties.
+image.png
+image.png
+
+
+:fire:
+1
+
+
+nafod  14:51
+looking real slick
+
+Amanda from NY  14:53
+Did your team get enough Quals coins?
+14:53
+I think i threw "14" in the box.
+
+nafod  15:01
+yeah I believe we got 14 (edited)
+15:01
+yeah, 14 coins and 14 shirts
+
+Amanda from NY  15:07
+so you have enough quals coins?
+
+nafod  15:11
+hah, if you're offering, we have 15 players so one person missed out. but I think we got the max we could
+
+Amanda from NY  15:15
+yup i will send you one more
+
+nafod  15:15
+awesome, thank you
+
+Considerthelion  15:22
+how long does it take to make a 501c3
+
+Amanda from NY  15:22
+No clue...but I can hold your payment until you’re ready
+15:22
+I think the AF is “good for it” ;)
+
+Considerthelion  15:22
+also, can I chat with a chal maker about chal4 some time?
+
+Amanda from NY  15:23
+Yeah ping us again in two weeks...these guys are taking a MUCH needed vacation
+
+Considerthelion  15:24
+fair
+15:24
+really impressively how smoothly you all ran this. and the engagement especially for it being remote. loved the sat orbit room
+
+inukai  09:05
+was added to finals-pfs by nafod.
+
+nafod  09:05
+hey @Amanda from NY, for handling the prize money, we were wondering if it would be possible to change who the money is sent to (instead of me)
+09:05
+sorry for 9am slack ping, lol
+
+Amanda from NY  09:17
+Yup!  It won’t be a problem as long as they have a SSN/tax ID.  Or if you set up an LLC we can send it there if you have a tax ID set up for that.
+
+nafod  09:22
+ok sweet, that sounds good! how should we send that SSN/tax id info to you?
+
+Amanda from NY  09:23
+Yup...if you want to split it into two or three different communications methods that’s good too. You send the first 3 digits here.  The second two via email and the last four via text or signal if you want
+09:24
+Or you could password protect a PDF...or usps the form.  Doesn’t matter to me as long as we can get you guys paid

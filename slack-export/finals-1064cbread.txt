@@ -1,0 +1,227 @@
+finals-1064cbread
+You created this private channel on August 5th. This is the very beginning of the ﻿finals-1064cbread channel.
+ Add description Add an app Add people
+
+vito  15:29
+joined finals-1064cbread along with 4 others.
+
+Alex Meiburg  15:40
+Hi! Should I add the rest of my team here?
+
+vito  15:45
+Please do not :slightly_smiling_face:
+15:45
+Preparing a briefing
+
+Alex Meiburg  01:56
+We're trying to get some -- any -- telemetry off our flatsat. We can talk to it on COSMOS, we can send a command packets and we get heartbeats, but we don't see any telemetry info.
+But, we haven't flashed the new firmware to it. I wasn't clear quite necessary that is. If we can understand most of the satellite's functionality without flashing the firmware, that feel preferrable.
+Should we be able to get telemetry from it, with the stock firmware?
+01:57
+To be precise, currently we:
+Do not see anything in the Data Viewer
+Are able to send command packets, do not see any errors coming back
+Do not get any telemetry packets
+01:57
+This is our cFS Telemetry and Command Server
+image.png
+image.png
+
+
+
+Amanda from NY  10:31
+@Alex Meiburg - sent you an email a few days ago.
+DFAS came back and said that the "SWIFT is incomplete - EFT information not all present". Attached is the form we sent forward. Can you please triple check it? I know you've already reviewed it twice. You might want to swap out the SWIFT number for the bank routing number. It seems like every team that submitted a SWIFT number - DFAS came back and said it was incorrect.
+
+John from Texas  12:06
+was added to finals-1064cbread by Amanda from NY, along with 3 others.
+
+Alex Meiburg  13:27
+ah, we got it sorted out. The SEP switch was depressed (and we didn't know about the Enable jumper), and we hadn't realized that was keeping it off; and it was in Umbilical mode, not radio mode, and for whatever reason we never got the umbilical working very well. But we got it working fine now in radio mode and can talk to it and get real data back.
+:+1:
+1
+
+13:28
+:slightly_smiling_face:
+
+Jordan Wiens  21:00
+was added to finals-1064cbread by Amanda from NY.
+
+Amanda from NY  21:02
+@Alex Meiburg you can add a second team member to the channel if you'd like.
+
+Jordan Wiens  21:10
+o/ Hi folks. I’m a part of the production team doing some video coverage throughout the event. I expect ya’ll will be too busy playing to watch but I wanted to offer each team the chance to list any facts about themselves that might not be in the existing bio sheets that I can use when talking about each team on stream if they can think of anything.
+In the case of 1064CBread I may mention my memories of first meeting the team at CSAW many years ago and how impressive that group of high school students was if you have no objection.
+
+vito  21:55
+doing another mission control team invitation pass: @SirGoon @0x20guy @Jymbolia @fuzyll @meenmachine
+
+SirGoon  21:55
+was added to finals-1064cbread by vito, along with 4 others.
+
+Alex Meiburg  02:11
+@Jordan Wiens Yeah sure, of course! I remember you too. :slightly_smiling_face: I'll ask our team if there's anything else they want to contribute
+02:12
+Question about the pixy: it seems that we would need a microUSB-to-microUSB cable to connect it to the raspi0. Is that correct? Cause we definitely don't have one of those handy xD
+
+Alex Meiburg  02:21
+Edit: just kidding we hadn't found it in our bag. Derp
+:+1:
+1
+
+
+Deadwood  07:42
+Good morning.  Here is your OpenVPN config.  Please test it and let us know that you are able to connect.  You will not be able to interact with the game resources yet but you should be able to ping 10.100.1.10.  Please remember that you are allowed a single connection using these creds.
+openvpn-Team1-inline.ovpn
+client
+resolv-retry 20
+keepalive 2 10
+nobind
+mute-replay-warnings
+Click to expand inline (153 lines)
+
+
+
+Alex Meiburg  09:38
+VPN is working!
+
+Alex Meiburg  14:46
+sorry, what did we actually do for "solving challenge 1"? Like what was the criterion?
+
+Alex Meiburg  15:00
+We are curious
+
+Alex Meiburg  16:01
+We are having a problem and we can't tell if it's deliberate or not. We submit commands to the ADCS, and it doesn't seem to respond to anything. For instance, setting the ADCS_CTRL_ALG should be reflected in the CTRL_MODE telemetry value, at least, it is on our trophy sat. We have tried submitting this, during our communication window, and nothing changes. Similarly, an ADCS_WHEEL_SPEED to stop the wheel does not seem to affect it at all.
+Is this the intended behavior? Please let us know.
+
+meenmachine  16:03
+Everything is working as intended.
+:+1:
+1
+
+
+fuzyll:satellite:  16:27
+if you guys haven't seen the recent messages in #finals-2020, please take a moment to review them :heart:
+
+fuzyll:satellite:  16:30
+set the channel topic: Team 1
+
+Alex Meiburg  16:35
+when we try the solution in the main channel, we get a "channel 3: open failed: connect failed: Connection refused" on the ssh forward.
+16:36
+and cosmos can't connect
+
+fuzyll:satellite:  16:44
+confirmed that your router looks set up correctly and that the port is not open on your .1.5 box - can you restart cosmos for us and see if that helps?
+
+Alex Meiburg  17:25
+yeah it's working now. That definitely improved some things
+:tada:
+2
+:+1:
+2
+
+
+Alex Meiburg  17:52
+We're going to submit a solution for On Orbit. If it gets accepted, can we also later resubmit with what we think is a better solution?
+
+Amanda from NY  17:54
+yes.
+
+Alex Meiburg  18:09
+Our satellite has stopped responding -- stopped sending any telemetry to us, and we're very confused what happened
+18:09
+and wondering if we broke something
+
+fuzyll:satellite:  18:10
+we're deploying our pet space squid to take a look for you, stand by
+
+Jymbolia  18:11
+https://media.tenor.com/images/cea56736de6f287b4130c240d57dfc40/tenor.gif
+
+(22 kB)
+https://media.tenor.com/images/cea56736de6f287b4130c240d57dfc40/tenor.gif
+
+Alex Meiburg  10:15
+What is the "puma" program that's listening on port 7779 and 3055? We didn't have that yesterday and it's stopping our cosmos functionality from working
+
+vito  10:16
+is it the ruby web server puma?
+
+Alex Meiburg  10:16
+maybe -- is that the "router" people were talking about yesterday?
+
+fuzyll:satellite:  10:17
+i'm not 100% sure how the cosmos router is implemented under the hood, but those are the right ports for the routers
+10:19
+INTERFACE LOCAL_CFS_INT tcpip_client_interface.rb 127.0.0.1 3055 3055 nil nil PREIDENTIFIED
+  PROTOCOL WRITE ChecksumProtocol
+  PROTOCOL READ interfaces/cfdp_protocol
+  PROTOCOL WRITE interfaces/cfdp_protocol
+this is the router config on 3055 we set up before the game and messaged yesterday, if that helps you
+
+Alex Meiburg  10:27
+Sorry, I'm really confused now. So yesterday we were using X11 window forwarding, and added the "router" 3055 lines to the X11-forwarded instance we were running, and then connected everything else to a CHAININT to that one
+10:27
+never realized that was not the "Router" config
+10:28
+now the Puma thing is up, and I'm trying to connect to it, but I don't get any telemetry packets, not even the RADIO ones
+
+meenmachine  10:29
+And you're sshing using "ssh -L 3055:127.0.0.1:3055 -X op1@10.100.X.5" ?
+
+fuzyll:satellite:  10:29
+the information we gave yesterday was to connect the 10.100.1.5 cosmos instance, which has a router open on port 3055 (the config above), out to your own local cosmos instance (the port is only open on localhost, as per the config above, which is why we also said you should run something like ssh -L 3055:127.0.0.1:3055 -X op1@10.100.X.5) (edited)
+:point_up_2:
+1
+
+
+Alex Meiburg  10:32
+okay, someone on our team just got it working with
+ssh -L 1337:localhost:7779 op1@10.100.1.5
+and then
+INTERFACE CHAININT tcpip_client_interface.rb localhost 1337 1337 10 5 PREIDENTIFIED
+And he's getting packets from the RADIO now. Should that be ok? Or will that run into the TCP/UDP problem again?
+10:32
+never mind, it's not working now
+10:36
+I'm trying the
+INTERFACE LOCAL_CFS_INT tcpip_client_interface.rb 127.0.0.1 3055 3055 nil nil PREIDENTIFIED
+and it does seem like I get a connection; it's stable and not complaining? But I get zero RADIO packets
+10:36
+whereas yesterday we had a steady countdown
+10:37
+it also seems that, if I send a command, we get disconnected from the 3055 router >_> and then reconnect a few seconds later
+
+brianmct  10:41
+was added to finals-1064cbread by Alex Meiburg.
+
+0x20guy  10:41
+Are you seeing RADIO packets on the remote instance?
+
+Alex Meiburg  10:42
+not sure what you mean by, on the remote instance?
+Currently the set up is just that we're forwarding port 3055 from 10.100.1.5, and then I run cosmos locally that uses a LOCAL_CFS_INT interface to localhost:3055.
+
+fuzyll:satellite:  10:42
+remote instance == 10.100.1.5
+
+Alex Meiburg  10:43
+how can I check if I am getting radio packets there or not?
+
+fuzyll:satellite:  10:51
+see #finals-2020
+
+Alex Meiburg  11:27
+can't get anything :C
+
+Jymbolia  11:33
+we are going to take a peek.
+
+Jymbolia  12:11
+is the radio telemetry target defined on your remote?
+
+brianmct  12:56
+we seem to have the radio stuff working now, thanks for taking a look

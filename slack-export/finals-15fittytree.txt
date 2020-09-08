@@ -1,0 +1,565 @@
+finals-15fittytree
+You created this private channel on August 5th. This is the very beginning of the ﻿finals-15fittytree channel.
+ Add description Add an app Add people
+
+vito  15:29
+joined finals-15fittytree along with 4 others.
+
+Amanda from NY  10:50
+@t0dd - do you want to invite Sean Olding or someone else?
+
+Stayotta Mispace  12:11
+was added to finals-15fittytree by Amanda from NY, along with 3 others.
+
+t0dd:speech_balloon:  17:40
+Yes, Will do!
+:+1:
+1
+
+
+Sean Olding  17:40
+was added to finals-15fittytree by t0dd. Also, Jordan Wiens joined.
+
+Jordan Wiens  21:13
+o/ Hi folks. I’m a part of the production team doing some video coverage throughout the event. I expect ya’ll will be too busy playing to watch but I wanted to offer each team the chance to list any facts about themselves that might not be in the existing bio sheets that I can use when talking about each team on stream if they can think of anything.
+In the case of 15fittytree if you have no objection I may mention how small of a community the CTF scene is and how between the overlap of colleges and places of work you can often trace lineages between many different teams and how I didn’t even realize I shared connections to some of the folks on the team until after the event. (Without disclosing any exact relationships)
+
+Jordan Wiens  21:19
+Oh, whoops, that was the text for another team actually. :stuck_out_tongue: I don’t actually know any good facts about 15fittytree, but would love some. :slightly_smiling_face:
+
+Deadwood  21:20
+I can tell you some stories about Sean. :wink:
+
+Jordan Wiens  21:31
+:smirk:
+
+vito  21:55
+doing another mission control team invitation pass: @SirGoon @0x20guy @Jymbolia @fuzyll @meenmachine
+
+SirGoon  21:55
+was added to finals-15fittytree by vito, along with 4 others.
+
+Deadwood  07:44
+Good morning. Here is your OpenVPN config. Please test it and let us know that you are able to connect. You will not be able to interact with the game resources yet but you should be able to ping 10.100.3.10. Please remember that you are allowed a single connection using these creds.
+openvpn-team3-inline.ovpn
+client
+resolv-retry 20
+keepalive 2 10
+nobind
+mute-replay-warnings
+Click to expand inline (153 lines)
+
+
+
+t0dd:speech_balloon:  07:48
+Thanks!!
+:100:
+1
+
+
+Joshua Christman  07:53
+was added to finals-15fittytree by t0dd.
+
+Joshua Christman  07:54
+you found me!
+
+t0dd:speech_balloon:  07:54
+muahahah
+
+t0dd:speech_balloon:  08:25
+#15FittyTree #Fact2098 We are a species fueled by donuts and coffee
+
+Amanda from NY  08:26
+@t0dd - I'm the bad cop...Teams are limited to 2 team members on this channel.
+
+t0dd:speech_balloon:  08:29
+we can kick @Sean Olding
+
+Sean Olding  08:34
+:wave:
+
+Amanda from NY  08:34
+bye sean - we'll see you on the other side!
+
+Sean Olding  08:34
+left finals-15fittytree.
+
+t0dd:speech_balloon:  08:38
+#15FittyTree #Fact135 One of our members was a college mascot
+08:40
+#15FittyTree #Fact783 One of our members was fired from their previous job for smiling too much
+
+t0dd:speech_balloon:  09:02
+#15FittyTree #Fact129 We had to add sound dampening around the workspace of one of our members, due to heightened average laughter volume.
+09:03
+#15FittyTree #Fact7834 A pair of fake Celine Dion concert tickets had one of our macho team members so excited he pissed himself.
+09:03
+#15FittyTree #Fact7364 One member once had his laptop stolen by a burrito thief
+09:07
+#15FittyTree #Fact08 One of our members doesn't like to wear underwear because it is constricting (so he told me)
+
+t0dd:speech_balloon:  09:12
+#15FittyTree #Fact2 our team motto is “preparation is the enemy of innovation”
+
+t0dd:speech_balloon:  09:25
+@Jordan Wiens see Facts^
+
+t0dd:speech_balloon:  09:26
+@vito I attempted to log in to quals with my creds and was unable to. I'm certain I have the right creds though. Is login disabled?
+
+
+9 replies
+Last reply 14 days agoView thread
+
+Amanda from NY  09:35
+@t0dd - i'll make sure he sees them!
+:laughing:
+1
+
+
+Jordan Wiens  10:40
+Those are amazing. Thanks!
+
+t0dd:speech_balloon:  11:45
+We have connected to the cosmos server from cosmos3 but have not received points
+
+Deadwood  11:46
+you will :slightly_smiling_face:
+
+t0dd:speech_balloon:  11:47
+thx
+
+t0dd:speech_balloon:  12:07
+weve successfully turned on a torque rod
+
+Joshua Christman  12:09
+Is there any transparency into why we got 45 instead of 50 points? Is it time-based?
+
+t0dd:speech_balloon:  12:11
+We got 45.42 according to the scoreboard on the stream
+
+Jymbolia  12:11
+tax
+:rolling_on_the_floor_laughing:
+1
+
+
+fuzyll:satellite:  12:12
+@t0dd @Joshua Christman sorry about that, please see #finals-2020
+:+1:
+1
+
+
+t0dd:speech_balloon:  12:12
+does it at least come with representation
+
+Jymbolia  12:12
+your ballot is in the mail
+:sweat_smile:
+1
+
+
+t0dd:speech_balloon:  12:49
+We have control of our satellite. What proof is needed?
+12:54
+@Amanda from NY
+12:57
+Also are visuals on scoreboard indicitive of additional points available for Challenge 0?
+
+Amanda from NY  12:57
+@vito @fuzyll @0x20guy @Deadwood @Jymbolia@meenmachine
+
+vito  12:58
+See the notes on scoring in #finals-2020
+
+Jymbolia  12:58
+we are aware.
+:+1:
+1
+
+
+t0dd:speech_balloon:  13:01
+@vito I'm more curious about the empty cells in everyone's score bar..is that just a visualization thing or are there 50 pts availabel still in that category?
+
+Deadwood  13:01
+We are evaluating it.
+:+1:
+1
+
+
+vito  13:01
+that’s a visualization thing; i’m mostly going by https://finals.2020.hackasat.com/
+
+t0dd:speech_balloon:  13:19
+approaching 30min mark from PFS scoring. can we get some response on whether we've scored those points?
+13:20
+for C1
+13:24
+Also, what is the message log on https://youtu.be/Mg8bdzamjQw populated with?
+
+YouTubeYouTube | AFResearchLab
+Hack-A-Sat Final Event Live Broadcast
+
+13:28
+@vito @fuzyll @0x20guy @Deadwood @Jymbolia@meenmachine
+:neutral_face:
+1
+
+
+Deadwood  13:32
+information is available in the finals-2020 channel.
+:+1:
+1
+
+
+t0dd:speech_balloon:  13:35
+we get telem every minute. have been since my first message
+13:36
+Times we got telemetry in the last 15 min:
+12:20.48.840
+12:22.00.552
+12:23.07.447
+12:25:45.985
+12:30.50.709
+12:31:58.264
+12:32:05.975
+12:33:09.352
+12:33:17.388
+12:34:24.XXX
+12:34:32.XXX
+12:35:39.833
+13:36
+Thats from our team chat logs from a 12:36 message Easten
+
+t0dd:speech_balloon:  13:56
+Our earliest telem set
+2020_08_07_11_38_43_tlm.csv
+%TARGET,PACKET,PACKET_TIMESECONDS (RAW),MAG_X,MAG_Y,MAG_Z,ROT_X,ROT_Y,ROT_Z,ACC_X,ACC_Y,ACC_Z,SUN_TOP,SUN_BOTTOM,SUN_YAW_ANG,DH_TEMP,REF_TEMP,BATT_TEMP,SA1_TEMP,SA2_TEMP,TOP_A_TEMP,TOP_B_TEMP,BASE_TEMP,PANEL_A_TEMP,PANEL_B_TEMP,V_BATT,V_SA,V_5V,V_3V,I_BATT,I_SA,I_5V,I_3V,I_MB,CMD_WHEEL_SPD,ACT_WHEEL_SPD,PWM,POINTING_ERROR,YAW,YAW_CMD,POSN_X,POSN_Y,POSN_Z,VELN_X,VELN_Y,VELN_Z,
+EPHEM,EPHEM_PKT,1596815670.514642,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1443.9372684008167,-5113.677709123066,4543.07621203675,1.7352083682729147,-4.601944673169172,-5.7172768070585755
+EYASSAT_IF,ADCS,1596815670.514642,26.31999969482422,49.279998779296875,-377.8599853515625,-3.625,-0.5519999861717224,1.5240000486373901,0.04699999839067459,0.012000000104308128,1.0099999904632568,17,1,94.0999984741211,,,,,,,,,,,,,,,,,,,,0.0,6.199999809265137,50,0.0,298.1000061035156,40.0,1443.9372684008167,-5113.677709123066,4543.07621203675,1.7352083682729147,-4.601944673169172,-5.7172768070585755
+EYASSAT_IF,TEMPS,1596815670.514642,26.31999969482422,49.279...
+Click to expand inline (84 lines)
+
+
+13:57
+@vito  @fuzyll @0x20guy @Deadwood @Jymbolia@meenmachine
+
+0x20guy  14:20
+You haven't solved the challenge
+:+1:
+1
+
+
+t0dd:speech_balloon:  15:15
+Verifying on-orbit solution is due tonight even though the execution window is Sunday?
+
+fuzyll:satellite:  15:16
+correct, on-orbit solution is due tonight at 7pm EST
+:heart:
+1
+
+
+t0dd:speech_balloon:  15:55
+@Jordan Wiens that was flawless!!
+:hugging_face:
+1
+
+
+fuzyll:satellite:  16:27
+if you guys haven't seen the recent messages in #finals-2020, please take a moment to review them :heart:
+:+1:
+1
+
+
+fuzyll:satellite:  16:31
+set the channel topic: Team 3
+
+t0dd:speech_balloon:  18:43
+#on-orbit submission
+15FittyTree-onorbit.txt
+1) Initialize ACS
+a) Command Execution Time =    2020-08-09T09:40:49Z
+2) Slew to Commanded Quaternion
+a) Command Execution Time =    2020-08-09T10:20:49Z
+Click to expand inline (21 lines)
+
+
+18:45
+@vito   @fuzyll @0x20guy @Deadwood @Jymbolia@meenmachine
+18:45
+ACK?
+
+vito  18:45
+https://orbit.satellitesabove.us/submissions/
+18:46
+i believe i emailed you an updated password several hours ago
+
+t0dd:speech_balloon:  18:56
+do we get feedback on rejection?
+18:56
+@vito    @fuzyll @0x20guy @Deadwood @Jymbolia@meenmachine
+
+vito  18:57
+@t0dd yes, on rejection you should be able to hit “show” and see the feedback
+
+t0dd:speech_balloon:  19:15
+in our second submission the feedback was :Details: Warning: Errors exist in some command arguments (listed below)
+19:15
+with nothing below
+19:15
+@vito
+
+vito  19:22
+Looks like you did have some accepted anyways :slightly_smiling_face:
+19:22
+(sorry, was in an interview)
+
+t0dd:speech_balloon:  19:22
+you looked great!!
+
+t0dd:speech_balloon:  19:39
+re: our most recent on-orbit submission:
+This is the most accurate solution but violates the window-of-opportunity by only 27seconds...we also wanted to verify the scoring mechanisms work as expected
+19:39
+@vito
+
+vito  19:40
+i just do infrastructure and scoring for it, i haven’t touched a quaternion in 19 years
+:rolling_on_the_floor_laughing:
+1
+
+
+t0dd:speech_balloon:  19:40
+@vito     @fuzyll @0x20guy @Deadwood @Jymbolia@meenmachine
+
+vito  19:41
+you had one accepted
+19:41
+like, a long time ago too
+
+t0dd:speech_balloon:  19:41
+we improved our first accepted submission
+19:42
+the next improvement on that is our most recent submission, violating the woo by 27s
+
+vito  19:42
+i’m happy for you but i’m also going to do our postgame stuff
+:heart:
+1
+
+19:43
+orbit team says “you can stop now”
+:rolling_on_the_floor_laughing:
+2
+
+
+t0dd:speech_balloon:  20:22
+@vito     @fuzyll @0x20guy @Deadwood @Jymbolia@meenmachine.  Can we get an estimate on time left for points towards C2?
+
+t0dd:speech_balloon:  10:07
+we need visual on our sat
+10:07
+will we be getting new live feed links soon?
+10:07
+@vito      @fuzyll @0x20guy @Deadwood @Jymbolia@meenmachine.
+
+Jymbolia  10:08
+don't worry, we are watching.
+
+fuzyll:satellite:  10:09
+(we're also working on those links)
+
+Jymbolia  10:10
+https://www.youtube.com/watch?v=7YvAYIJSSZY
+
+YouTubeYouTube | RockwellVEVO
+Rockwell - Somebody's Watching Me (Official Video)
+
+
+t0dd:speech_balloon:  10:11
+:tired_face:
+10:11
+muh sat...
+
+fuzyll:satellite:  10:13
+see #finals-2020 @t0dd
+
+t0dd:speech_balloon:  10:13
+we gucci
+
+t0dd:speech_balloon:  15:11
+easy on these hints y'all
+15:14
+Also, there's some confusion about the on-orbit submissions.
+15:14
+https://spacesecuritychall.slack.com/archives/G014FL4DANQ/p1596844688228300
+15:17
+states we successfully submitted. But Jordan mentioned we missed the deadline for selection by 3 minutes.
+from Vito: If we have fewer than six accepted submissions, the challenge will remain open until we have six accepted submissions
+15:18
+then from Vito with 20 min until 7pm ET The team with the most accurate, accepted solution submitted before the 7p US Eastern (20 minutes) deadline will have their solution sent to the satellite, and will be specially recognized during the awards ceremony.
+15:20
+What changed?
+
+fuzyll:satellite:  15:20
+if the scoreboard says "accepted" next to your team name, you are still eligible for prize money
+we're going off the scoreboard - not anything said on TV :slightly_smiling_face:
+15:21
+(i believe he may have just been saying your submission was outside of the regular submission window, rather than making any specific commentary on your eligibility)
+:+1:
+1
+
+15:21
+(but, i'm also not watching the stream right now)
+
+t0dd:speech_balloon:  15:21
+yes, but we're equally interested in having our solutionschosen to run on-orbit
+15:23
+and the messaging of deadlines came across unclear
+
+t0dd:speech_balloon:  16:37
+our flat sat is at 7.3V and unable to power on the pi. Our comp sat is 7.1V...Is this expected? We're under the impression then that the pi will not power on the comp sat either..We are sun tracking but concerned the charging system is not rxing enough power
+
+Jymbolia  16:46
+does your power draw change when you power it on?
+
+t0dd:speech_balloon:  16:50
+unknown...will update you when we try next..
+
+t0dd:speech_balloon:  16:57
+Our solution to C4
+turn on GPIO 0 and 1, use UART to upload a good bootloader to /Volumes/boot on the RPi 0, power on
+17:00
+stuck building the docker image, specifically on compiling GCC. But we have enabled the GPIOs. (edited)
+
+Joshua Christman  17:02
+we do have a team trying to use an alternate build method that doesn't require the convenient docker container
+:+1:
+1
+
+
+t0dd:speech_balloon:  17:04
+@Jymbolia on flatsat we're seeing a 350ma-595ma power draw change at Rpi power on. Successfully powered in on now!
+
+t0dd:speech_balloon:  17:49
+What's the plan for getting to c5 with no solves to c4 at t-1hr? (edited)
+17:51
+@vito      @fuzyll @0x20guy @Deadwood @Jymbolia@meenmachine.
+
+vito  17:51
+@t0dd seen
+:+1:
+1
+
+
+meenmachine  17:51
+@t0dd seen
+:+1:
+1
+
+
+fuzyll:satellite:  17:51
+:see_no_evil:
+
+t0dd:speech_balloon:  18:03
+our sat is out of power
+18:04
+we turned off suntracking just now
+
+Jymbolia  18:04
+what leads you to believe you are out of power?
+
+t0dd:speech_balloon:  18:04
+voltage is 7.05
+18:04
+PLIF command kills TLM ACDS
+18:05
+ADCS*
+18:05
+PLIF_POWER
+
+fuzyll:satellite:  18:05
+ongoing discussion, stand by
+
+fuzyll:satellite:  18:11
+@t0dd please see #finals-2020
+
+t0dd:speech_balloon:  18:12
+We do want power!
+
+fuzyll:satellite:  18:12
+yeah, understood haha
+:heart:
+1
+
+
+t0dd:speech_balloon:  18:38
+we cant touch 5 without 4s solution...
+18:38
+any chance of a 4 solution?
+
+vito  18:39
+seen
+
+t0dd:speech_balloon:  18:55
+our c5 solution
+cosmos_capture_img.py
+from ballcosmos.script import *
+from enum import Enum
+from time import time, sleep
+​
+event_msg_id = None
+Click to expand inline (142 lines)
+
+
+18:56
+works on our flatsat :man-shrugging:
+
+t0dd:speech_balloon:  19:17
+@Jordan Wiens great show!
+
+SirGoon  20:14
+GG 15FiftyTree!
+
+Jordan Wiens  20:42
+Thanks so much! Glad my work is (almost) over.
+
+t0dd:speech_balloon:  21:10
+Thank you all! Fantastic execution of a most unique event.
+:+1:
+2
+
+
+t0dd:speech_balloon:  17:03
+At one point during an update @Jordan Wiens menitoned our sat would be shown tracking the sun. Can we get a copy of that clip? (edited)
+
+Deadwood  19:28
+I can send you a link to the raw clip.
+19:29
+https://www.dropbox.com/s/a4mc7mqtriwxcx7/C0002.MP4?dl=0
+19:29
+turn your audio down.  The air compressor right outside is pretty loud :stuck_out_tongue:
+
+t0dd:speech_balloon:  11:37
+Thank You!!
+
+t0dd:speech_balloon:  17:53
+@vito @Deadwood One of our team members uncovered what our team agrees is an error in the On-Orbit problem statement. I've attached our explanation. We're not looking to change the scoreboard, just wanted clarification about the error:
+PDF
+On-Orbit-Dispute.pdf
+1 MB PDF1 MB — Click to view
+
+
+
+t0dd:speech_balloon:  18:14
+@Frank
+
+
+
+
+
+
+vito  10:22
+seen
+:+1:
+1

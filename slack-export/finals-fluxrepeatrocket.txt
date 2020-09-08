@@ -1,0 +1,366 @@
+finals-fluxrepeatrocket
+You created this private channel on August 5th. This is the very beginning of the ﻿finals-fluxrepeatrocket channel.
+ Add description Add an app Add people
+
+vito  15:27
+joined finals-fluxrepeatrocket along with 13 others.
+
+Amanda from NY  21:04
+@dezk - sorry to be the bad cop but each team is limited to two people.  Team leader and one other.
+
+pspaul  21:09
+left finals-fluxrepeatrocket.
+
+Jordan Wiens  21:19
+o/ Hi folks. I’m a part of the production team doing some video coverage throughout the event. I expect ya’ll will be too busy playing to watch but I wanted to offer each team the chance to list any facts about themselves that might not be in the existing bio sheets that I can use when talking about each team on stream if they can think of anything.
+In the case of fluxrepeatrocket I was thinking of mentioning how many teams in the CTF community both organize and play in different competitions and mention hack.lu.
+
+vito  21:56
+doing another mission control team invitation pass: @SirGoon @0x20guy @Jymbolia @fuzyll @meenmachine
+
+SirGoon  21:56
+was added to finals-fluxrepeatrocket by vito, along with 4 others.
+
+Deadwood  07:45
+Good morning. Here is your OpenVPN config. Please test it and let us know that you are able to connect. You will not be able to interact with the game resources yet but you should be able to ping 10.100.4.10. Please remember that you are allowed a single connection using these creds.
+openvpn-team4-inline.ovpn
+client
+resolv-retry 20
+keepalive 2 10
+nobind
+mute-replay-warnings
+Click to expand inline (153 lines)
+
+
+
+dezk  08:22
+We can connect and ping 10.100.4.10! :+1:
+
+Amanda from NY  08:25
+@dezk - we need to clean up the members on this channel - which person are you keeping?  @Sceptic, @Manf, or @rugo
+
+dezk  08:26
+Yeah sorry, a bit busy here trying to setup the satellite, @rugo can stay.
+
+Sceptic  08:26
+left finals-fluxrepeatrocket along with Manf.
+
+rugo  10:48
+Hi, our connection to vpn drops often and is really slow
+10:48
+Is that our fault?
+
+rugo  10:57
+We have 80% packet loss
+
+Jymbolia  10:57
+pushed a fix
+10:57
+sorry. others were experiencing similar
+10:59
+status?
+
+rugo  10:59
+Its not really better
+10:59
+Around 70% loss
+
+Jymbolia  11:00
+kk. looking
+11:04
+I am seeing stale connections that are still natted. can you reconnect your mac ending in e8
+11:05
+or I can bounce it :wink:
+
+rugo  11:06
+bounce
+11:06
+We got admin on the webserver
+11:07
+Is that chal0, should we get points?
+
+Jymbolia  11:07
+congrats
+11:07
+woot
+11:07
+scoring is working correctly
+
+rugo  11:13
+We still have around 50% packet loss
+
+Jymbolia  11:21
+tun is rock solid on our end. I will dig some more to see if I can find a dial to turn
+11:24
+Device
+eth0
+MAC Address
+00:0c:29:4d:5c:b3
+Rx Bytes
+57.48 MB
+Rx Drop
+72
+Rx Errors
+0
+Rx Packets
+675.26 K
+Tx Bytes
+32.69 MB
+Tx Drop
+0
+Tx Errors
+0
+
+rugo  11:58
+We're not sure what chal0 is
+11:59
+We are user on the webservice
+11:59
+Do we have to gain access to 104.70 from where the ssh comes?
+
+rugo  12:13
+VPN doesnt seem to work. Out log:
+Fri Aug  7 15:43:46 2020 daemon.notice openvpn(challenge)[7867]: Initialization Sequence Completed
+Fri Aug  7 15:44:10 2020 daemon.notice openvpn(challenge)[7867]: [server] Inactivity timeout (--ping-restart), restarting
+Fri Aug  7 15:44:10 2020 daemon.notice openvpn(challenge)[7867]: SIGUSR1[soft,ping-restart] received, process restarting
+Fri Aug  7 15:44:15 2020 daemon.notice openvpn(challenge)[7867]: TCP/UDP: Preserving recently used remote address: [AF_INET]12.188.237.74:1194
+Fri Aug  7 15:44:15 2020 daemon.notice openvpn(challenge)[7867]: UDP link local: (not bound)
+Fri Aug  7 15:44:15 2020 daemon.notice openvpn(challenge)[7867]: UDP link remote: [AF_INET]12.188.237.74:1194
+Fri Aug  7 15:44:16 2020 daemon.notice openvpn(challenge)[7867]: [server] Peer Connection Initiated with [AF_INET]12.188.237.74:1194
+Fri Aug  7 15:44:17 2020 daemon.err openvpn(challenge)[7867]: Options error: Unrecognized option or missing or extra parameter(s) in [PUSH-OPTIONS]:1: register-dns (2.4.7)
+Fri Aug  7 15:44:17 2020 daemon.notice openvpn(challenge)[7867]: Preserving previous TUN/TAP instance: tun0
+Fri Aug  7 15:44:17 2020 daemon.notice openvpn(challenge)[7867]: Initialization Sequence Completed
+Fri Aug  7 15:44:40 2020 daemon.notice openvpn(challenge)[7867]: [server] Inactivity timeout (--ping-restart), restarting
+Fri Aug  7 15:44:40 2020 daemon.notice openvpn(challenge)[7867]: SIGUSR1[soft,ping-restart] received, process restarting
+Fri Aug  7 15:44:45 2020 daemon.notice openvpn(challenge)[7867]: TCP/UDP: Preserving recently used remote address: [AF_INET]12.188.237.74:1194
+Fri Aug  7 15:44:45 2020 daemon.notice openvpn(challenge)[7867]: UDP link local: (not bound)
+Fri Aug  7 15:44:45 2020 daemon.notice openvpn(challenge)[7867]: UDP link remote: [AF_INET]12.188.237.74:1194
+Fri Aug  7 15:44:46 2020 daemon.notice openvpn(challenge)[7867]: [server] Peer Connection Initiated with [AF_INET]12.188.237.74:1194
+Fri Aug  7 15:44:47 2020 daemon.err openvpn(challenge)[7867]: Options error: Unrecognized option or missing or extra parameter(s) in [PUSH-OPTIONS]:1: register-dns (2.4.7)
+Fri Aug  7 15:44:47 2020 daemon.notice openvpn(challenge)[7867]: Preserving previous TUN/TAP instance: tun0
+Fri Aug  7 15:44:47 2020 daemon.notice openvpn(challenge)[7867]: Initialization Sequence Completed
+Fri Aug  7 15:45:10 2020 daemon.notice openvpn(challenge)[7867]: [server] Inactivity timeout (--ping-restart), restarting
+Fri Aug  7 15:45:10 2020 daemon.notice openvpn(challenge)[7867]: SIGUSR1[soft,ping-restart] received, process restarting
+12:17
+We have this problem from different locations/networks we tested
+
+Jymbolia  12:20
+I changed your keepalive to 10 120.
+12:20
+what version ovpn are you using?
+12:21
+changed keepalive on the server
+12:21
+IPv4 Address
+12.188.237.74/26
+Device
+eth0
+MAC Address
+00:0c:29:4d:5c:b3
+Rx Bytes
+105.88 MB
+Rx Drop
+72
+Rx Errors
+0
+Rx Packets
+798.18 K
+Tx Bytes
+85.43 MB
+Tx Drop
+0
+Tx Errors
+0
+Tx Packets
+89.11 K
+IPv6 Address
+
+rugo  12:41
+lol, after trying to break out of QEMU, we noticed .bash_history :zipper_mouth_face:
+
+Jymbolia  12:45
+congrats
+
+fuzyll:satellite:  12:47
+yeah, the game is hack a satellite, not hack your way out of a web server VM :stuck_out_tongue: glad you found it eventually :slightly_smiling_face:
+
+rugo  13:01
+Packet loss dropped to 50%, but still high :disappointed:
+13:05
+Should 10.100.4.2 be directly reachable from our openvpn side/our client?
+13:07
+Maybe we have a bug in our network config, or is it intentional that we cant talk to 10.100.4.2 directly?
+13:08
+have to go via 10.100.4.5 or 4.70? Both work, but no direct connection from us to 10.100.4.2. (edited)
+
+Jymbolia  13:41
+You do not have a network problem on 2.
+
+rugo  13:48
+ok thx
+
+Jymbolia  13:51
+no worries.  GLHF
+
+dezk  15:13
+Is it intended that the cosmos configuration on 10.100.4.5 does not get any response back? Currently using x11 forwarding.
+
+0x20guy  15:25
+Not sure what you mean by no responses back
+
+dezk  15:29
+We're sending the enable telemetry command or the radio conmand and we're not getting anything back.
+
+rugo  15:31
+We run cosmos on 10.100.4.5. We have an X11 tunneling, so we can remote control cosmos on 10.100.4.5. But we do not get any responses from 10.100.4.2, which is the peer listed in COSMOS's config.
+
+0x20guy  15:32
+Read the finals-2020 chat
+
+rugo  15:34
+Thanks. But we do not get anything back from the Radio command. We thought we would get a counter until there is a communication window...
+15:35
+2020/08/07 21:34:15.033  INFO: cmd("RADIO CONFIG with HEADER 'RSC:', RATE LOW, POWER HIGH")
+
+Jymbolia  15:36
+hold please
+
+rugo  15:57
+Can you tell us this: If we use Cosmos on 10.100.4.5 and send RADIO CONFIG command with RATE = LOW and POWER = HIGH. Should we get anything back? Because we are not getting anything from the radio. Should we get a counter?
+
+rugo  16:06
+We don't think our sat works properly
+16:06
+We have never sent many commands
+16:06
+Our connection is too horrible anyways
+
+fuzyll:satellite:  16:07
+what about it does not seem to be working? (e.g. is this more than just the question you asked earlier? or..?)
+
+rugo  16:08
+Yes, thats still the question
+rugo
+Can you tell us this: If we use Cosmos on 10.100.4.5 and send RADIO CONFIG command with RATE = LOW and POWER = HIGH. Should we get anything back? Because we are not getting anything from the radio. Should we get a counter?
+Posted in finals-fluxrepeatrocket | Aug 7th | View message
+
+fuzyll:satellite:  16:10
+you should be receiving a telemetry packet back
+16:15
+we're deploying a high-precision catapault to correct the course of your satellite - stand by
+
+fuzyll:satellite:  16:24
+we believe all systems are nominal now...let us know if you have any additional issues
+16:27
+if you guys haven't seen the recent messages in #finals-2020, please take a moment to review them :heart:
+
+fuzyll:satellite:  16:31
+set the channel topic: Team 4
+
+rugo  16:51
+OK, we finally received telemetry in our webapp
+16:51
+I guess the task gets us 0 points by now
+16:51
+Can we still see if we "passed" the task?
+16:54
+Also, I think out puma forwarded died. Can we restart it?
+
+rugo  17:42
+Ok, we got that it starts with cosmos
+17:43
+So did we do what were supposed to do in chal1?
+17:43
+Just so we know
+
+0x20guy  17:43
+It's in the main chat
+17:43
+How to solve it
+
+rugo  17:45
+Yeah so e solved it, but https://finals.2020.hackasat.com/ doesnt say so
+
+vito  17:45
+yeah, we’re querying for the data to update that
+
+rugo  17:54
+Didn't understand that response. Ok, we'll continue on to the next task. Our webapp is full of telemetry.
+
+fuzyll:satellite:  17:56
+we score challenge completion off of things we're monitoring, but we're a bit behind on filling in challenge 1 completions (since it no longer has a non-zero score)
+
+dezk  18:37
+Hey @vito, I have reset my password for the quals, can you update it for the on-orbit challenge login?
+
+vito  18:37
+yeah
+18:39
+pm
+
+dezk  06:07
+We have sent the PL_IF_POWER_ON command and now our local satellite's power regulators power cycles, any guidance for this? We think its the FPGA/Pi Board. We are not entirely sure if the PL_IF_POWER_ON command was the culprit but that was the only thing we changed.
+06:11
+Ah, fixed it, was a short on a solder point under the FPGA/Pi C&DH board...
+
+rugo  07:12
+Is the point decreese counter  paused? If so, is the challenge 2 still worth points?
+
+Jymbolia  07:53
+Sorry guys, organizers are just waking up.  Nice find on the short.  That was probably my fault :white_frowning_face:. I think we will make an announcement about points and decay this morning, if we haven't already.
+
+rugo  08:47
+Hey, are you aware that the systems are still reachable for us? Are we allowed to act on that and continue doing things on the boxes?
+
+Deadwood  09:06
+satellites and ground stations are offline.
+
+rugo  09:08
+Ah OK, so we wouldnt get an answer if we used cosmos on 10.100.4.5
+
+Deadwood  09:10
+correct.  You can talk but no one is listening.
+:point_up_2:
+1
+
+
+rugo  09:10
+ok thx
+:+1:
+1
+
+
+Deadwood  12:50
+Fixing your sat.  You bricked it with all those  A's.
+:sweat_smile:
+1
+
+
+1 reply
+10 days agoView thread
+
+dezk  17:08
+We're really having trouble starting the app on our satellite.
+Always getting the Error "Cannot start app RC:C4000004".
+
+dezk  17:26
+and apparently we are unable to upload any files, we also tried deleting files but that didn't work
+17:27
+This is the error message we are receiving Incoming trans 0.21_16 CANCELLED,CondCode FILESTORE_ERR,dest /cf/skeleton_vanilla_app.obj
+
+dezk  18:07
+We're kind of lost here... The toolchain does not really work for us locally or remote and we cannot upload anything anymore.
+
+dezk  18:19
+@vito we DO want ground power
+
+Amanda from NY  14:47
+Oooooo and I'll be sending your team these beauties. We’ll throw in extra quals coins so everyone on your team gets one.
+14:48
+image.png
+image.png
+
+
+
+dezk  16:42
+Awesome! :slightly_smiling_face:

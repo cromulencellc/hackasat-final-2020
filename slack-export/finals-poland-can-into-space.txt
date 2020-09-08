@@ -1,0 +1,730 @@
+finals-poland-can-into-space
+You created this private channel on August 5th. This is the very beginning of the ﻿finals-poland-can-into-space channel.
+ Add description Add an app Add people
+
+vito  15:26
+joined finals-poland-can-into-space along with 4 others.
+
+Amanda from NY  19:29
+@redford ...you need to add Adam.
+
+redford  19:30
+he's not on Slack I think and he's still out of power because of the storm :confused:
+
+Amanda from NY  19:31
+What storm?
+19:36
+@redford - what storm?
+
+Amanda from NY  19:41
+The rules state: Each team must identify one Entrant Official and one Team Leader. The Entrant Official and the Team Leader may be the same individual. The Entrant Official must be a U.S. citizen or permanent resident, must speak English and will serve as the official administrative point of contact for communications with the HAS organizers. The Team Leader must be a U.S. citizen or permanent resident, must speak English and will serve as the official technical point of contact for communications with the HAS organizers. (edited)
+
+redford  19:49
+yesterday he sent us a message saying that his vicinity lost electricity after a tropical storm
+19:49
+we didn't get any contact from him since then
+
+Amanda from NY  19:49
+Isn’t he in Philadelphia?
+
+redford  19:50
+I think he's in NY, but he moved recently and I'm not really sure
+19:51
+ad rules: I know them, we selected the leader and he fulfills or the requirements.
+19:51
+we're trying to contact him again, as he has our flatsat
+19:52
+he had UPS at home, but I guess it ran out of power now
+
+Amanda from NY  19:52
+Tomorrow he might have your money too ;)
+
+redford  19:52
+he's our good friend, no worries :wink:
+
+Amanda from NY  19:53
+I hope he surfaces in time for the competition. (edited)
+
+redford  19:53
+our whole team knows him for more than 10 years, so we're not afraid of any wrongdoing from his side
+
+Amanda from NY  19:54
+He knows he’s the comms POC right?
+
+redford  19:54
+yes
+19:55
+I'm sorry, but what's the problem here? We are doing any tricks or so, he just lost power and is not available right now
+19:56
+we didn't do anything questionable or shady but you seem to suggest that he's not really a part of our team or something like that...
+
+Amanda from NY  19:56
+Who said there was a problem?  We’re trying to establish communications per the rules for your benefit.
+
+redford  19:59
+"He knows he’s the comms POC right?" - you talked with him already on email, he definitely knows this :wink: ad our benefit - the most beneficial for us would be to continue as we did so far - that we have a few people to which all emails and comms are directed
+19:59
+single PoC is a single point of failure :wink:
+
+Amanda from NY  19:59
+Rules said you could choose two different people.
+
+redford  19:59
+like with the rules update, which arrived to him while he was out of power - that's why we prefer to have more people handling comms
+20:00
+yeah, but only he's a US citizen
+20:00
+so no one else was eligible
+
+Amanda from NY  20:06
+No problem :). International collaboration was always the goal of the program.  We’re just trying to make sure all the teams are complying with the rules.  It’s confusing when the team leader/entrant official isn’t in the communications. I’m sure you understand
+20:07
+Let us know if/when your ready to add him to the slack channel and we’ll be happy to help :)
+
+redford  20:09
+yeah, but it would be much easier if you allowed PoC to be multiple people (2/3) and without citizenship requirement
+20:09
+please consider this for the next year (if you plan to organize next editions :slightly_smiling_face: )
+:+1:
+1
+
+
+redford  20:58
+FYI: Adam just sent another message: they still don't have electricity, internet nor gas
+
+Deadwood  21:13
+Ugh.  I empathize with them.  Florida is used to such storms and so are some other states, but not up there.
+
+redford  21:15
+yeah, seems NY wasn't really prepared for this (edited)
+21:15
+he doesn't even have cell phone signal, he had to drive quite long to get connection
+21:18
+in the worst case, how bad is if we won't have access to the flatsat?
+21:19
+our current plan is running it on a generator he rented from a neighbor, but without cell signal there's no way to connect... :confused:
+
+Deadwood  21:23
+Hopefully you got to use it prior to the outage.
+
+redford  21:23
+yeah, but not too much
+21:24
+assembling everything took some time
+
+redford  07:54
+hmm, it still doesn't look good, no electricity nor internet
+
+Frank  12:18
+was added to finals-poland-can-into-space by Amanda from NY, along with 3 others. Also, Adam joined.
+
+Adam  15:00
+Hello
+15:01
+Since last couple of days half of long island is cut off from the external world. We don't have electricity, we don't have internet neither mobile service
+15:01
+today I was lucky to get one of the portable power generator and I was able to get access to my computer
+15:02
+However, I don't know for how long I'll be able to do it because the restoration of the all media is not done yet
+15:02
+they predict that maybe it can be done until end of this week
+15:02
+this is the main reason why I can't come to the slack and receive all emails
+
+Amanda from NY  16:03
+thanks for coming on Adam - Do you want to "deputize" @redford to speak on your behalf in slack?
+16:03
+given the power/connectivity issues?
+
+Adam  16:05
+yes please
+
+Amanda from NY  16:05
+thanks @Adam
+:+1:
+1
+
+
+redford  16:05
+thanks for allowing this!
+:+1:
+1
+
+
+redford  20:38
+Would it be possible to get the original FPGA blob? we updated the FPGA from the most recent firmware package you sent, but after we updated it we can't flash cFS and basically everything broke :confused:
+20:38
+we'd like to try reflashing the FPGA to the original version
+
+Deadwood  20:41
+did you power cycle the flatsat to load the new FPGA bitstream?
+
+redford  20:42
+yup
+20:42
+we kept it without power for a few seconds
+
+Adam  20:43
+It is worth to mention that we have NOT reflash ADCS since we don't have USBatp cable
+
+Deadwood  20:44
+FW_Loader gave no errors?
+
+Adam  20:44
+we flashed FPGA correctly - no problems
+20:44
+image.png
+image.png
+
+
+20:45
+I've trying to reflash cFS without connected ADCS and with connected ADCS
+20:45
+there is no differences
+
+Deadwood  20:46
+ok will be in touch shortly.
+
+Jordan Wiens  21:01
+was added to finals-poland-can-into-space by Amanda from NY.
+
+redford  21:05
+oh, hey Jordan :)
+
+0x20guy  21:06
+was added to finals-poland-can-into-space by Deadwood.
+
+Jordan Wiens  21:24
+Howdy!
+21:25
+How goes it? Don’t mind the boiler plate copy-paste below I’m sending to all teams. :wink:
+o/ Howdy all, I’m a part of the production team doing some video coverage throughout the event. I expect ya’ll will be too busy playing to watch but I wanted to offer each team the chance to list any facts about themselves that might not be in the existing bio sheets that I can use when talking about each team on stream if they can think of anything.
+In the case of Poland Can Into Space I’m thinking of mentioning either the countryball reference or the history of dragon sector as one of the all-time-winningest CTF teams if you have no objection
+
+redford  21:28
+How goes it?
+not well, we bricked our flatsat by installing the update :stuck_out_tongue:
+:grimacing:
+1
+
+21:29
+and also had a tropical storm "incident", so our flatsat is right now gas-powered from a generator
+21:29
+ad the ideas: sure
+21:30
+but don't forget p4, they are also quite good :slightly_smiling_face:
+
+Jordan Wiens  21:30
+I don’t disagree! I just know the DS side better personally. :slightly_smiling_face: I’ll try to make sure my commentary doesn’t leave anyone out.
+
+redford  21:31
+:slightly_smiling_face:
+
+Jordan Wiens  21:31
+I don’t want to distract from the setup/prep, appreciate that. Good luck!
+
+redford  21:32
+no worries, I can't into hardware, so I'm just waiting for others to hopefully fix this :wink:
+21:32
+while we're at this, @Deadwood any updates? :wink:
+
+0x20guy  21:35
+@redford You got it right?
+
+redford  21:36
+what do you mean by "it"?
+21:36
+@0x20guy ^
+
+0x20guy  21:39
+Sorry, maybe I got it wrong.  I thought you were hoping to get the FPGA bitstream from the quals kit
+
+Deadwood  21:40
+He is.  I'm about to send it.  Slurping down some food but I'm back now.
+
+redford  21:40
+awesome!
+21:41
+@0x20guy if by "quals kit" you mean the flatsat then yes :wink: we'd like to try downgrading to the original one and checking if it will work again
+
+Deadwood  21:42
+Binary
+openMSP430_fpga (1).bit
+4 MB Binary4 MB — Click to download
+
+
+
+redford  21:42
+thanks a lot!
+
+vito  21:56
+doing another mission control team invitation pass: @SirGoon @0x20guy @Jymbolia @fuzyll @meenmachine
+
+SirGoon  21:56
+was added to finals-poland-can-into-space by vito, along with 3 others.
+
+redford  22:04
+@Deadwood @0x20guy ok, we reverted the FPGA to the old firmware and everything works again
+22:04
+any ideas?
+
+0x20guy  22:14
+What symptom were you seeing on the new bitstream? @redford (edited)
+22:14
+Just couldn't connect from grmon?
+
+Adam  22:25
+Nothing was working. Satellite didn't boot, radio didn't work, couldn't connect from the COSMOS
+22:26
+so no commands could be sent (telemetry enable etc)
+22:26
+everything was silent
+22:26
+all diods were red
+22:26
+grmon didn't work neither
+22:26
+however when we revert bitstream on FPGA
+22:26
+everything started to work like before
+22:27
+however, cFS still gives us initialization failure when using grmon
+22:27
+we didn't verify that before we started to reflash FPGA
+
+0x20guy  22:42
+Was the light on top of the FPGA orange or off after programming the new bitstream?
+22:42
+And cycling power?
+22:43
+What type of initialization failure are you getting in cFS? And is that with the new prom or old?
+
+Deadwood  07:47
+Good morning. Here is your OpenVPN config. Please test it and let us know that you are able to connect. You will not be able to interact with the game resources yet but you should be able to ping 10.100.8.10. Please remember that you are allowed a single connection using these creds.
+openvpn-team8-inline.ovpn
+client
+resolv-retry 20
+keepalive 2 10
+nobind
+mute-replay-warnings
+Click to expand inline (153 lines)
+
+
+
+redford  09:57
+where's the competition scoreboard? we'd like to test our credentials
+
+vito  10:00
+https://finals.2020.hackasat.com/ is the scoreboard
+10:01
+The special credentials stuff isn’t live yet, but it will be the username Redford and whatever your quals password was at the end of quals
+10:01
+https://quals.2020.hackasat.com is still up if you want to check
+
+quals.2020.hackasat.comquals.2020.hackasat.com
+Hack-A-Sat
+Hack-A-Sat is the 2020 Space Security Challenge
+
+redford  10:06
+ok, thanks!
+10:06
+any ETA?
+
+vito  10:47
+On the login credentials? Not yet.
+
+redford  10:52
+ack
+10:53
+so, right now only the challenge0 is running and we need to solve it to proceed?
+
+vito  10:54
+yes
+
+redford  10:54
+btw. ad flatsat I think pi3 finally made it work on the update, but he's not online right now
+10:54
+and still out of power :confused:
+
+vito  10:55
+Yeah, that sucks re: the power thing
+10:55
+I was all ready for the storm here, closed the shutters and everything
+
+redford  12:37
+what's the goal after we connected to the satellite? we enabled telemetry, but still didn't get any more points
+12:38
+could you publish what triggers getting points?
+
+redford  13:40
+@0x20guy @Deadwoodwe changed power to high and rate to low and now have stable communication with the satellite, but still no points in the scoreboard
+13:40
+you said: "Demonstrate consistent telemetry to solve challenge 1"
+13:40
+so we did this
+13:41
+hmm, nevermind, we just got points, but with a significant delay
+13:41
+is this normal?
+
+Deadwood  13:43
+we had code changes to the scoreboard's database queries that needed to get pushed.
+
+redford  13:43
+so, in the future it won't be delayed?
+
+Deadwood  13:49
+we update the database as we confirm a challenge has been solved by analyzing network data and satellite telemetry.
+13:50
+you get points effective from when you solved it, not from when we confirm it.
+
+redford  13:50
+so, this is manual?
+13:50
+this check whether we solved it?
+
+Deadwood  13:53
+Due to the nature of this CTF, with potentially multiple ways to achieve the goals, we do use subject matter expertise to confirm scoring.
+
+redford  13:55
+I see, thanks for explanation
+
+redford  14:12
+@0x20guy @Deadwood how can we get the rest of the points for the challenge0? we only got 50 points which is a half of the progressbar on the scoreboard
+14:12
+should we root the server?
+
+vito  14:12
+challenge 0 is only 50 points
+14:12
+nobody has more than 50 points for it
+14:13
+this is an issue with the 3d visualization that is outside of my control
+14:13
+https://finals.2020.hackasat.com/ is mine
+
+redford  14:14
+oh
+14:15
+ok
+14:15
+are all challenges binary? like 0/max (modulo decay)
+
+vito  14:15
+yeah
+
+redford  14:15
+or the progress bar will actually be used for later challs?
+
+vito  14:15
+and that’s kind of something else you’re about to notice
+14:16
+challenge 1 was misscored for you due to a programming error on my part
+14:16
+pfs got it at 1652, your team got it at 1736, and that meant it should’ve decayed
+
+redford  14:16
+uh
+14:16
+that's confusing...
+
+vito  14:17
+it is! that’s how i beefed the sql
+
+redford  14:25
+@vito what are the point values for the remaining challenges? also 200?
+
+redford  15:24
+We have a communication issue with the satellite. We're not receiving any telemetry regardless of sending enable telemetry command. We're only getting:
+00000000: 57 49 4E 3A 00 00                                WIN:
+as RADIO COMM WINDOW
+15:24
+could you take a look? we're afraid that we bricked it :confused:
+
+0x20guy  15:27
+You have not solved the challenge
+
+redford  15:30
+what do you mean?
+15:32
+at some point the satellite stopped working
+
+0x20guy  15:32
+Can you follow the instructions in finals-2020 and report back if you have a problem
+
+redford  15:32
+maybe you could reset the satellite and possibly the ground station?
+15:33
+sorry, but which instructions?
+15:33
+we already solved challenge 1
+
+0x20guy  15:33
+K.  Looking...
+
+fuzyll:satellite:  15:53
+re: #finals-2020 chat...your satellite is one of the ones being looked at, apologies for the delay
+15:57
+after deploying an astronaut to look at your satellite, we believe your satellite should now be functional
+15:57
+please let us know if that doesn't appear to be the case
+
+redford  15:58
+thanks, we'll take a look
+16:00
+seems to work, we'll try to reproduce steps from chall1 now
+:+1:
+2
+
+16:04
+hmm, we still can't enable telemetry
+16:04
+despite we could (previously)
+
+meenmachine  16:05
+Everything seems to be working as intended.
+
+redford  16:09
+We think the issue is with COSMOS version mismatch when sending telecommands (eg. to enable telemetry). We thought we took everything from the remote machine, but apparently not, and sending telecommand from wrong cosmos version bricks the satellite :disappointed:
+16:13
+could you reset it again?
+
+fuzyll:satellite:  16:14
+yep, an astronaut is looking at it currently - stand by
+
+redford  16:14
+thanks
+16:15
+sample COSMOS logs from the one running on your server: (we use it through X11, but it's too slow to be usable, clicking anything barely works)
+2020/08/07 16:04:46.045  ERROR: UART_TO_CI ENABLE_TELEMETRY received with actual packet length of 15 but defined length of 8
+2020/08/07 16:09:05.852  ERROR: CFE_ES SEND_APP_INFO received with actual packet length of 35 but defined length of 28
+16:17
+(this happened when we tried to contact it from our local COSMOS  instance, but running on the files copied from your server)
+
+fuzyll:satellite:  16:28
+if you guys haven't seen the recent messages in #finals-2020, please take a moment to review them :heart:
+
+redford  16:28
+already looking into them, thanks!
+
+fuzyll:satellite:  16:31
+set the channel topic: Team 8
+
+redford  16:38
+ok, we think that we fixed the problem now, but we need one more restart (or whatever you did when we requested for the first time) because the satellite is bricked now, could you do this?
+
+redford  16:45
+ok, it started to works again
+16:45
+whatever you did, thanks!
+:+1:
+1
+
+
+redford  17:03
+hmm
+17:03
+we sent this command:
+17:03
+command.png
+command.png
+
+
+17:03
+and the satellite got bricked again
+
+0x20guy  17:12
+It's not bricked...see the main chat
+:male-astronaut:
+1
+
+
+redford  17:20
+we know about these pauses in telemetry, but this seems to be a different issue
+17:21
+I'll invite @ggajoch here, will be easier than me proxing all the questions/issues (he's analyzing the issue right now)
+
+ggajoch  17:21
+was added to finals-poland-can-into-space by redford.
+
+ggajoch  18:17
+We got a response Cmd Checksum failed. CmdCode:0 - and the satellite is not responding anymore
+could you please reboot our satellite?
+
+0x20guy  18:23
+Fixed you.
+
+redford  18:23
+thanks!
+18:23
+works now
+
+redford  18:55
+could you reboot it again?
+18:55
+seems that the quickstat command bricks the satellite :confused:
+18:55
+after we get a single "checksum failed" the satellite is bricked
+
+Jymbolia  18:57
+Will reboot in 3 min.
+
+0x20guy  18:58
+I did it in 1 min, so you have 2 min
+
+Amanda from NY  09:35
+@Adam @redford - did you guys get the problem solved that you needed @ggajoch for?
+
+redford  09:51
+we debugged the issue yesterday and it seems that there is a bug in your ruby code
+09:52
+@ggajoch will describe it in a moment
+
+ggajoch  10:18
+hi, at the moment we changed the mode of our satellite to sunpointing, but after finishing rotation (confirmed by graphs) we lost the communication
+10:21
+regarding the ruby issue, we've diagnosed that certain command (such as downloading non-existent file) causes the cosmos connected to the hardware to crash .
+This log is from our flatsat, on the competition flatsat the connection drops and we are unable to connect after that
+2020/08/07 21:06:22.527  FATAL: Fatal Exception! Exiting...
+2020/08/07 21:06:22.527  FATAL: ArgumentError : ["/home/pi3/Downloads/Update/Cosmos/cosmos/lib/cfdp/cfdp.rb:19:in `conditionCodeToStr'", "/home/pi3/Downloads/Update/Cosmos/cosmos/config/targets/CFDP/lib/cfdp_transaction.rb:873:in `handlePDUReceived'", "/home/pi3/Downloads/Update/Cosmos/cosmos/config/targets/CFDP/lib/cfdp_engine.rb:483:in `block in handlePDUReceived'", "/home/pi3/Downloads/Update/Cosmos/cosmos/config/targets/CFDP/lib/cfdp_engine.rb:431:in `synchronize'", "/home/pi3/Downloads/Update/Cosmos/cosmos/config/targets/CFDP/lib/cfdp_engine.rb:431:in `handlePDUReceived'", "/home/pi3/Downloads/Update/Cosmos/cosmos/config/targets/CFDP/lib/interfaces/cfdp_protocol.rb:42:in `block in read_packet'"]
+. Expected object of class Integer. Received NilClass
+/home/pi3/Downloads/Update/Cosmos/cosmos/lib/utils_visiona/utils.rb:224:in `verifyInput'
+/home/pi3/Downloads/Update/Cosmos/cosmos/lib/cfdp/cfdp.rb:19:in `conditionCodeToStr'
+/home/pi3/Downloads/Update/Cosmos/cosmos/config/targets/CFDP/lib/cfdp_transaction.rb:873:in `handlePDUReceived'
+/home/pi3/Downloads/Update/Cosmos/cosmos/config/targets/CFDP/lib/cfdp_engine.rb:483:in `block in handlePDUReceived'
+/home/pi3/Downloads/Update/Cosmos/cosmos/config/targets/CFDP/lib/cfdp_engine.rb:431:in `synchronize'
+/home/pi3/Downloads/Update/Cosmos/cosmos/config/targets/CFDP/lib/cfdp_engine.rb:431:in `handlePDUReceived'
+/home/pi3/Downloads/Update/Cosmos/cosmos/config/targets/CFDP/lib/interfaces/cfdp_protocol.rb:42:in `block in read_packet'
+2020/08/07 21:06:23.529  FATAL: Fatal Exception! Exiting...
+2020/08/07 21:06:23.529  FATAL: ThreadError : can't alloc thread
+/home/pi3/Downloads/Update/Cosmos/cosmos/config/targets/CFDP/lib/cfdp_transaction.rb:121:in `new'
+/home/pi3/Downloads/Update/Cosmos/cosmos/config/targets/CFDP/lib/cfdp_transaction.rb:121:in `finishLogFile'
+/home/pi3/Downloads/Update/Cosmos/cosmos/config/targets/CFDP/lib/cfdp_transaction.rb:77:in `finalize'
+/home/pi3/Downloads/Update/Cosmos/cosmos/config/targets/CFDP/lib/cfdp_engine.rb:153:in `block in finalize'
+/home/pi3/Downloads/Update/Cosmos/cosmos/config/targets/CFDP/lib/cfdp_engine.rb:153:in `each'
+/home/pi3/Downloads/Update/Cosmos/cosmos/config/targets/CFDP/lib/cfdp_engine.rb:153:in `finalize'
+/home/pi3/Downloads/Update/Cosmos/cosmos/config/targets/CFDP/lib/cfdp_engine_task.rb:85:in `ensure in call'
+/home/pi3/Downloads/Update/Cosmos/cosmos/config/targets/CFDP/lib/cfdp_engine_task.rb:85:in `call'
+/home/pi3/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/cosmos-4.4.2/lib/cosmos/tools/cmd_tlm_server/background_tasks.rb:42:in `block in start'
+
+fuzyll:satellite:  10:22
+thanks for the traceback - we'll take a look
+
+ggajoch  10:24
+ok, we've got the telemetry back and the satellite is still in sunpointing
+
+ggajoch  13:18
+can we ask for a reboot our cosmos? the same happened again and probably cosmos crashed
+
+meenmachine  13:19
+We're looking into it.
+
+fuzyll:satellite:  13:25
+on our end, we see all the data flowing to your cosmos box that we expect
+are you still seeing an issue? is there a reason you can't reboot your own cosmos instance?
+
+ggajoch  13:28
+thanks, I did that again, now it seems to work - no sure why telemetry stopped then, without any visibile crashes  on our side
+:+1:
+1
+
+
+redford  16:52
+re: chall 4
+16:52
+we figured out the bootloader hack long ago
+16:52
+we've been just working on getting a working code built and uploaded via cosmos, which is being a problem
+16:52
+(cosmos, that is)
+
+0x20guy  16:53
+Okay.  Thanks
+
+redford  16:57
+(we also have the exploit code, but we have problems correctly building and uploading it)
+16:58
+so, we're just fighting with technical issues right now
+
+0x20guy  16:59
+Just reset you
+
+redford  17:20
+current status: Failed to start TFTP from /cf/a.out, RC = 0xC4000004
+
+ggajoch  17:53
+could you please reboot our satellite? probably we ran something bad
+
+fuzyll:satellite:  17:55
+@Deadwood says he just did - is it still not working for you?
+
+ggajoch  17:58
+yep, we get telemetry back, thanks
+
+ggajoch  18:18
+@vito please DO change batteries
+
+redford  12:56
+our short write-ups:
+12:56
+> challenge 0:
+>
+> 1. Login, go to /admin and read debug info
+> 2. @secrets=["LAHHqzEeY7qV5ygrl9dydusOTo0Gj4sKG"], used to sign cookie session is present in debug info
+> 3. modify script from https://www.blue-lotus.net/def-con-ctf-qualifier-2013-3dub-3-writeup/ and craft session with user_name = admin and is_admin = TRUE
+> 4. got to /admin and now you have command execution
+> 5. get ssh private key from /home/user/id_rsa and read /home/user/.bash_history to find target op1@10.100.8.5
+> 6. ssh to server
+>
+> challenge 1:
+>
+> 1. to enable telemetry we send ENABLE_TELEMETRY telecommand
+> 2. to improve radio comm we wind out the RADIO -> CONFIG command, setting up the rate low and power high - increasing radio budget link
+>
+> on-orbit:
+>
+> 1. We've decided to first try to reproduce the example, and then use our solution to solve the final challenge.
+> 2. We've used the following code for the naive solution of the example satellite: https://paste.q3k.org/paste/VyZL0klG#7sKQvovgCbM1dBbwFKEXF9GLgW6EgMp4AWelOmOClco (this reproduces the example solution). We've just naively computed the necessary vectors and checked with the provided quaternion.
+> 3. After that, we've reversed the computation to compute the solution quaternion for example data and ensured that our solution still works: https://paste.q3k.org/paste/NYAL2xWy#KEeAn35jwLhobMWCrk3l0vt995fxBScQDF79qtV6L07
+> 4. This solution was used to generate our original plan: https://paste.q3k.org/paste/H+-MSjVh#hID62sKhdoa642LBZyvLlbdmE5AcaUHnfXn9ge4dfzt (edited)
+12:57
+(hmm, sorry, Slack didn't catch the formatting :/)
+
+Amanda from NY  13:10
+@redford - email them to shout@hackasat.com
+
+redford  13:11
+ah, right
+
+redford  13:18
+done
+
+Adam  14:22
+Hi, is it possible to get an image file of the moonshot? :)
+
+Amanda from NY  14:34
+we were hoping Dr. Roper could tweet it first!
+14:34
+We're going to get the photo printed and framed for you guys
+
+Adam  14:39
+ah, thx! sure :slightly_smiling_face:
+
+Amanda from NY  14:39
+but we'll definitely get you the softcopy soon
+
+Adam  14:40
+awesome - thx! :slightly_smiling_face:
+
+redford  14:45
+We're going to get the photo printed and framed for you guys
+that's awesome! thanks :heart:
+
+Amanda from NY  14:48
+Oooooo and I'll be sending your team these beauties. We’ll throw in extra quals coins so everyone on your team gets one.
+image.png
+image.png
+
+
+:heart:
+1
