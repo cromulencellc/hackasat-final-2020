@@ -1,0 +1,17 @@
+1. Initialize ACS
+a. Command Execution Time = 2020-06-24T19:20:00Z
+3. Turn Camera On
+a. Command Execution Time = 2020-06-24T20:01:55Z
+2. Slew tO Commanded Quaternion
+a. Command Execution Time = 2020-06-24T20:02:00Z
+b. Eci-to-Body Quaternion = [0.7619357063982332, 0.45577716758310355, -0.4567493951593444, 0.05568790575090904]
+c. Slew Completion Time = 2020-06-24T20:06:15Z
+4. Set Camera Exposure
+a. Command Execution Time = 2020-06-24T20:06:20Z
+b. Set exposure time  = 300
+4. Capture Target Image
+a. Command Execution Time = 2020-06-24T20:06:30Z
+5. Turn Camera Off
+a. Command Execution Time = 2020-06-24T20:06:35Z
+
+

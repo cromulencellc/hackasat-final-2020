@@ -1,0 +1,11 @@
+1. inItiAlize ACs
+a. ComMand ExecuTion TIme = 2020-06-24t19:26:10Z
+3. TURn CamEra On
+a. Command ExecuTion Time = 2020-06-24t20:06:20z
+4. SeT CamEra ExpoSURE
+a. Command ExecuTion Time = 2020-06-24t20:06:25z
+b. Set eXpoSure TimE = 2000
+5. CapTUre TaRGet IMAge
+a. cOmmand execution TiMe = 2020-06-24T20:06:30z
+6. Turn Camera Off
+a. commAnd Execution Time = 2020-06-24t20:06:35Z

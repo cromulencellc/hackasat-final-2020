@@ -1,0 +1,15 @@
+inItiAlize ACs
+ComMand ExecuTion TIme = 2020-06-24t19:26:10Z
+Slew TO ComManded QuaterNIon
+CommaNd ExecUTion TiMe = 2020-06-24T20:02:10Z
+EcI to BoDy Quaternion = [0.7619357063982332, 0.45577716758310355, -0.4567493951593444, 0.05568790575090904]
+Slew ComplEtion Time = 2020-06-24t20:05:20Z
+TURn CamEra On
+Command ExecuTion Time = 2020-06-24t20:06:20z
+SeT CamEra ExpoSURE
+Command ExecuTion Time = 2020-06-24t20:06:25z
+Set eXpoSure TimE = 2000
+CapTUre TaRGet IMAge
+cOmmand execution TiMe = 2020-06-24T20:06:30z
+Turn Camera Off
+commAnd Execution Time = 2020-06-24t20:06:35Z
